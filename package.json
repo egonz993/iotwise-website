@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "dev": "next",
-        "build": "next build",
+        "build": "next build && next export -o build",
+        "deploy": "aws s3 sync build s3://iotwise-website",
         "start": "next start"
     },
     "author": "EnvyTheme.com",
