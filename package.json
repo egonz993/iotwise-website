@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "next",
         "build": "next build && next export -o build",
-        "deploy": "aws --profile iotwise-egonzalez s3 sync build s3://iotwise.co",
+        "deploy": "next build && next export -o build && aws --profile iotwise-egonzalez s3 sync build s3://iotwise.co",
         "start": "next start"
     },
     "author": "EnvyTheme.com",
