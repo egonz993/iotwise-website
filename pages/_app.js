@@ -23,8 +23,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Jumpx - React Next.js AI & IT Startup Template</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="IoT Wise - Soluciones para el Inenet de las Cosas" />
+        <meta name="keywords" content="iot, iiot, wireless, lorawan, lte, wisun, sigfox, smart city" />
+        <meta name="author" content="E'Gonzalez" />
+        
+        <title>IoT Wise</title>
       </Head>
 
       <Component {...pageProps} />
