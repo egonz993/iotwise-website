@@ -16,7 +16,7 @@ const Footer = () => {
                 data-aos-delay="200"
               >
                 <Link href="/" className="logo">
-                  <img src="/images/white-logo.png" alt="Image" />
+                  <img src="/images/white-logo.png" alt="Image" width={150} />
                 </Link>
 
                 <p>

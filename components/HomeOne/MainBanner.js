@@ -14,7 +14,7 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="100"
                 >
-                  Specialized Artificial Intelligence Startup
+                  Somos Expertos en el Internet de las Cosas (IoT)
                 </h1>
 
                 <p
@@ -22,9 +22,7 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="200"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida risus commodo
+                  Ofrecemos soluciones innovadoras y personalizadas para optimizar tus operaciones y mejorar la eficiencia. Descubre el potencial de la conectividad inteligente con IoTWise.
                 </p>
 
                 <div 
@@ -33,21 +31,21 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="300"
                 >
-                  <Link href="/about-1" className="default-btn">
-                    Learn More
-                  </Link>
+                  <a href="https://store.iotwise.co" target="_blank" className="default-btn px-5">
+                    TIENDA
+                  </a>
 
-                  <Link href="/contact" className="default-btn">
-                    Contact Us
-                  </Link>
+                  <a href="https://saas.iotwise.co" target="_blank" className="default-btn px-5">
+                    CONSOLA
+                  </a>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-6">
               {/* Main Image */}
-              <div className="banner-main-img banner-one-main-img">
-                <img src="/images/home-one/main-img1.png" alt="Image" />
+              <div className="banner-main-img banner-one-main-img animate__animated animate__fadeInUp">
+                <img src="/images/iot/iot-04.png" alt="Image" />
               </div>
 
               {/* Banner Shape Images */}
@@ -69,8 +67,9 @@ const MainBanner = () => {
                 />
                 <img
                   className="animate__animated animate__fadeInRight animate__fast"
-                  src="/images/home-one/shape4.png"
+                  src="/images/iot-logo-white.svg"
                   alt="Image"
+                  width={250}
                 />
               </div>
             </div>

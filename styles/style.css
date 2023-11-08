@@ -501,7 +501,7 @@ Default Btn Area Style
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  background-color: #1dd3f8;
+  background-color: #254391;
   display: inline-block;
 }
 .default-btn::before {

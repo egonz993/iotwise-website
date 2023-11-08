@@ -115,6 +115,18 @@ const Navbar = () => {
                   </Link>
                 </li>
                 
+                {/* Blog */}
+                <li className="nav-item">
+                  <Link
+                    href="/blog/"
+                    className={`nav-link ${
+                      currentPath == "/blog/" && "active"
+                    }`}
+                  >
+                    Blog
+                  </Link>
+                </li>
+                
                 {/* Contact */}
                 <li className="nav-item">
                   <Link
@@ -131,8 +143,8 @@ const Navbar = () => {
 
               {/* Login Button */}
               <div className="others-options">
-                <Link href="/login/" className="default-btn link-dark">
-                  Ingresar <i className="bx bx-log-in-circle"></i>
+                <Link href="/login/" className="default-btn">
+                  Empieza Gratis <i className="bx bx-log-in-circle"></i>
                 </Link>
               </div>
 
