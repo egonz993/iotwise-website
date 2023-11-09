@@ -4,7 +4,7 @@ import Link from "next/link";
 const MainBanner = () => {
   return (
     <>
-      <section className="main-banner-area main-banner-area-one">
+      <section className="main-banner-area main-banner-area-one" style={{minHeight:'100vh'}}>
         <div className="container-fluid">
           <div className="row align-items-center">
             <div className="col-lg-6">
