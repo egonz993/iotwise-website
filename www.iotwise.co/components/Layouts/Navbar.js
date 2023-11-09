@@ -103,18 +103,6 @@ const Navbar = () => {
                   </Link>
                 </li>
                 
-                {/* Pricing */}
-                <li className="nav-item">
-                  <Link
-                    href="/pricing/"
-                    className={`nav-link ${
-                      currentPath == "/pricing/" && "active"
-                    }`}
-                  >
-                    Precios
-                  </Link>
-                </li>
-                
                 {/* Blog */}
                 <li className="nav-item">
                   <Link

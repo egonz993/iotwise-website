@@ -31,9 +31,6 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="300"
                 >
-                  <a href="https://cms.iotwise.co" target="_blank" className="default-btn px-5 bg-success">
-                    <i className="bx bx-shield-alt-2"/> ADMIN
-                  </a>
                   
                   <a href="https://store.iotwise.co" target="_blank" className="default-btn px-5">
                     TIENDA
@@ -42,18 +39,23 @@ const MainBanner = () => {
                   <a href="https://saas.iotwise.co" target="_blank" className="default-btn px-5">
                     CONSOLA
                   </a>
+                  
+                  <a href="https://cms.iotwise.co" target="_blank" className="default-btn px-5 bg-success">
+                    <i className="bx bx-shield-alt-2"/> ADMIN
+                  </a>
 
                 </div>
               </div>
             </div>
 
             <div className="col-lg-6">
-              {/* Main Image */}
-              <div className="banner-main-img banner-one-main-img animate__animated animate__fadeInUp">
+
+               {/* Banner Main Image */}
+              <div className="animate__animated animate__fadeInUp animate__fast">
                 <img src="/images/iot/iot-04.png" alt="Image" />
               </div>
 
-              {/* Banner Shape Images */}
+              {/* Banner Shape Images 
               <div className="banner-img">
                 <img
                   className="animate__animated animate__fadeInUp animate__fast"
@@ -76,7 +78,7 @@ const MainBanner = () => {
                   alt="Image"
                   width={250}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
