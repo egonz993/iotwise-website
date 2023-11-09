@@ -1,7 +1,7 @@
 {
-    "name": "jumpx",
-    "version": "2.1.0",
-    "description": "Jumpx - React Next.js AI & IT Startup Template",
+    "name": "iotwise.co",
+    "version": "1.0.0",
+    "description": "IoT Wise - Expertos en el Inenet de las Cosas",
     "main": "index.js",
     "scripts": {
         "dev": "next",
@@ -10,7 +10,7 @@
         "clear-cache": "aws --profile iotwise-egonzalez cloudfront create-invalidation --distribution-id EEQP3T664OMXA --paths \"/*\"",
         "start": "next start"
     },
-    "author": "EnvyTheme.com",
+    "author": "E'Gonzalez",
     "license": "ISC",
     "dependencies": {
         "@uidotdev/usehooks": "^2.4.1",

@@ -31,6 +31,10 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="300"
                 >
+                  <a href="https://cms.iotwise.co" target="_blank" className="default-btn px-5 bg-success">
+                    <i className="bx bx-shield-alt-2"/> ADMIN
+                  </a>
+                  
                   <a href="https://store.iotwise.co" target="_blank" className="default-btn px-5">
                     TIENDA
                   </a>
@@ -38,6 +42,7 @@ const MainBanner = () => {
                   <a href="https://saas.iotwise.co" target="_blank" className="default-btn px-5">
                     CONSOLA
                   </a>
+
                 </div>
               </div>
             </div>
