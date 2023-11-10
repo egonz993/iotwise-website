@@ -19,19 +19,19 @@ export default function Index1() {
 
       <Features />
 
-      <About />
+      {/* <About /> */}
 
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
 
-      <Services />
+      {/* <Services /> */}
 
-      <MakeYourBusiness />
+      {/* <MakeYourBusiness /> */}
 
-      <WhatWeOffer />
+      {/* <WhatWeOffer /> */}
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
-      <News />
+      {/* <News /> */}
 
       <Footer />
     </>

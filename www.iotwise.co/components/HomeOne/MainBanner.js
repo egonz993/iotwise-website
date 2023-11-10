@@ -14,7 +14,7 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="100"
                 >
-                  Somos Expertos en el Internet de las Cosas (IoT)
+                  Expertos en el Internet de las Cosas (IoT)
                 </h1>
 
                 <p
@@ -22,7 +22,7 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="200"
                 >
-                  Ofrecemos soluciones innovadoras y personalizadas para optimizar tus operaciones y mejorar la eficiencia. Descubre el potencial de la conectividad inteligente con IoTWise.
+                  Soluciones inteligentes para optimizar operaciones en tus proyectos IoT. Descubre el potencial de las comunicaciones con LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más.
                 </p>
 
                 <div 

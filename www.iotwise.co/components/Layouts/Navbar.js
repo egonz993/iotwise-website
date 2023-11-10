@@ -20,16 +20,6 @@ const Navbar = () => {
   const toggleNavbar = () => {
     setMenu(!menu);
   };
-  React.useEffect(() => {
-    let elementId = document.getElementById("navbar");
-    document.addEventListener("scroll", () => {
-      if (window.scrollY > 150) {
-        elementId.classList.add("is-sticky");
-      } else {
-        elementId.classList.remove("is-sticky");
-      }
-    });
-  });
 
   const classOne = menu
     ? "collapse navbar-collapse mean-menu"
@@ -40,12 +30,12 @@ const Navbar = () => {
 
   return (
     <>
-      <div id="navbar" className="navbar-area fixed-top">
+      <div id="navbar" className={`navbar-area fixed-top ${isScrolled ? 'is-sticky': ''}`}>
         <nav className="navbar navbar-expand-md navbar-light">
           <div className="container">
             <Link href="/" className="navbar-brand">
               <h2 className="link-light d-block d-lg-none">IoT Wise</h2>
-              <img className="d-none d-lg-block" src="/images/white-logo.png" alt="logo"  width={isScrolled ? 50 : 150}/>
+              <img className="d-none d-lg-block" src={isScrolled ? "/images/white-logo.png" : "/images/iotwise-logo-white.svg"} alt="logo"  width={isScrolled ? 50 : 150}/>
             </Link>
 
             {/* Toggle navigation */}

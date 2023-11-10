@@ -3,27 +3,29 @@ import Link from "next/link";
 
 const featuresData = [
   {
-    iconName: "bx bx-shopping-bag",
-    title: "Data Science",
+    iconName: "bx bx-store",
+    title: "Tienda Online",
     shortText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, maxime ipsum praesentium culpa expedita.",
-    viewDetails: "/service-details",
+      "Encuentra una amplia variedad de opciones para tus sensores IoT con tecnologías LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más",
+    viewDetails: "https://store.iotwise.co",
+    target: '_blank',
     aosDelay: "100",
   },
   {
-    iconName: "flaticon-engineer",
-    title: "Data Engineer",
+    iconName: "bx bx-laptop",
+    title: "Software as a Service",
     shortText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, maxime ipsum praesentium culpa expedita.",
-    viewDetails: "/service-details",
+      "Herramientas online que puedes utilizar para evaluar y configurar tus dispositivos IoT, desde pruebas de covertura hasta configuraciones automatiadas.",
+    viewDetails: "https://saas.iotwise.co",
+    target: '_blank',
     aosDelay: "200",
   },
   {
-    iconName: "flaticon-success",
-    title: "Facing AI Challenges",
+    iconName: "flaticon-engineer",
+    title: "Asesoría y Capacitación",
     shortText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, maxime ipsum praesentium culpa expedita.",
-    viewDetails: "/service-details",
+      "Tenemos más de 18 años de experiencia ejecutando proyectos del Internet de Las Cosas. Agenda gratis una reunion virtual. ",
+    viewDetails: "/meet",
     aosDelay: "300",
   },
 ];
@@ -37,7 +39,7 @@ const Features = () => {
             {featuresData &&
               featuresData.slice(0, 3).map((value, i) => (
                 <div
-                  className="col-lg-4 col-sm-6 p-0"
+                  className="col-lg-4 col-sm-6 p-0 "
                   data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay={value.aosDelay}
@@ -48,9 +50,10 @@ const Features = () => {
                     <h3>{value.title}</h3>
                     <p>{value.shortText}</p>
 
-                    <Link href={value.viewDetails} className="read-more-icon">
+                    <Link href={value.viewDetails} target={value.target} className="read-more-icon">
                       <span className="flaticon-right-arrow"></span>
                     </Link>
+
                   </div>
                 </div>
               ))}

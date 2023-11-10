@@ -16,15 +16,11 @@ const Footer = () => {
                 data-aos-delay="200"
               >
                 <Link href="/" className="logo">
-                  <img src="/images/white-logo.png" alt="Image" width={150} />
+                  <img src="/images/iotwise-logo-white.svg" alt="Image" width={150} />
                 </Link>
 
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quaerat molestiae corporis, magni maxime perferendis ducimus
-                  totam officiis sit exercitationem sed odio debitis minus
-                  cumque dolores dicta.
-                </p>
+                {/* <p>Soluciones inteligentes para optimizar operaciones en tus proyectos IoT. Descubre el potencial de las comunicaciones con LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más.</p> */}
+                <p>Expertos en el Internet de las Cosas</p>
 
                 <ul className="social-icon">
                   <li>
@@ -33,18 +29,18 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/" target="_blank">
-                      <i className="bx bxl-twitter"></i>
+                    <a href="https://instagram.com/" target="_blank">
+                      <i className="bx bxl-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/" target="_blank">
+                      <i className="bx bxl-youtube"></i>
                     </a>
                   </li>
                   <li>
                     <a href="https://www.linkedin.com/" target="_blank">
                       <i className="bx bxl-linkedin"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.pinterest.com/" target="_blank">
-                      <i className="bx bxl-pinterest-alt"></i>
                     </a>
                   </li>
                 </ul>
@@ -58,92 +54,24 @@ const Footer = () => {
                 data-aos-duration="1200"
                 data-aos-delay="300"
               >
-                <h3>Services</h3>
+                <h3>Qué ofrecemos</h3>
                 <ul>
                   <li>
-                    <Link href="/service-details">
+                    <Link href="https://store.iotwise.co" target="_blank">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      Big Data
+                      Tienda Online
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service-details">
+                    <Link href="https://saas.iotwise.co" target="_blank">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      UI/UX Design
+                      Software as a Service
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service-details">
+                    <Link href="/meet">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      Desktop Application
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/service-details">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Mobile Application
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/service-details">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Product Engineering
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/service-details">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Machine Learning
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div
-                className="single-widget"
-                data-aos="fade-in"
-                data-aos-duration="1200"
-                data-aos-delay="400"
-              >
-                <h3>Important Links</h3>
-
-                <ul>
-                  <li>
-                    <Link href="/about-1">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      About Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/pricing">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Pricing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/team">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Team
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/contact">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Support
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/testimonials">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Testimonials
+                      Asesoría y Capacitación
                     </Link>
                   </li>
                 </ul>
@@ -160,22 +88,61 @@ const Footer = () => {
                 <h3>Information</h3>
 
                 <ul className="information">
-                  <li className="address">
-                    <i className="flaticon-call"></i>
-                    <span>Phone</span>
-                    +882-569-756
-                  </li>
-
+                  
                   <li className="address">
                     <i className="flaticon-envelope"></i>
-                    <span>Email</span>
-                    hello@jumpx.com
+                    <span>Correo</span>
+                    info@iotwise.co
                   </li>
 
                   <li className="address">
                     <i className="flaticon-maps-and-flags"></i>
-                    <span>Address</span>
-                    123, Western Road, Melbourne Australia
+                    <span>Ubicación</span>
+                    Medellín, Colombia
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6">
+              <div
+                className="single-widget"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="400"
+              >
+                <h3>Enlaces de interés</h3>
+
+                <ul>
+                  <li>
+                    <Link href="/">
+                      <i className="right-icon bx bx-chevrons-right"></i>
+                      Inicio
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about">
+                      <i className="right-icon bx bx-chevrons-right"></i>
+                      Nosotros
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services">
+                      <i className="right-icon bx bx-chevrons-right"></i>
+                      Servicios
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog">
+                      <i className="right-icon bx bx-chevrons-right"></i>
+                      Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact">
+                      <i className="right-icon bx bx-chevrons-right"></i>
+                      Contacto
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -195,7 +162,7 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-lg-4">
               <div className="copy-right">
-                <p>Copyright &copy; {currentYear} Jumpx. All Rights Reserved</p>
+                <p>Copyright &copy; {currentYear} IoT Wise. All Rights Reserved</p>
               </div>
             </div>
 
@@ -215,9 +182,9 @@ const Footer = () => {
             <div className="col-lg-3">
               <div className="designed">
                 <p>
-                  Designed By <i className="bx bx-heart"></i>{" "}
-                  <a href="https://envytheme.com/" target="_blank">
-                    EnvyTheme
+                  Designed By {" "}
+                  <a href="https://egonzalez.web.app/" target="_blank">
+                    E'Gonzalez
                   </a>
                 </p>
               </div>
