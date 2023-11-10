@@ -1475,7 +1475,7 @@ Offer Area Style
   padding-right: 30px;
   padding-top: 25px;
   padding-bottom: 25px;
-  padding-left: 110px;
+  padding-left: 25px;
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px dotted #1dd3f8;
@@ -1486,7 +1486,6 @@ Offer Area Style
   position: absolute;
   left: 30px;
   top: 28px;
-  background-color: #eeeefe;
   display: inline-block;
   width: 60px;
   height: 60px;
@@ -1509,41 +1508,6 @@ Offer Area Style
   transform: translateY(-5px);
 }
 
-.col-lg-4:nth-child(2) .single-offer {
-  border-color: #76b8f5;
-}
-.col-lg-4:nth-child(2) .single-offer i {
-  background-color: #e8f3fd;
-  color: #76b8f5;
-}
-.col-lg-4:nth-child(3) .single-offer {
-  border-color: #1ccdca;
-}
-.col-lg-4:nth-child(3) .single-offer i {
-  background-color: #e6fdfc;
-  color: #1ccdca;
-}
-.col-lg-4:nth-child(4) .single-offer {
-  border-color: #f9ca54;
-}
-.col-lg-4:nth-child(4) .single-offer i {
-  background-color: #fcf3dc;
-  color: #f9ca54;
-}
-.col-lg-4:nth-child(5) .single-offer {
-  border-color: #ff896b;
-}
-.col-lg-4:nth-child(5) .single-offer i {
-  background-color: #fde2db;
-  color: #ff896b;
-}
-.col-lg-4:nth-child(6) .single-offer {
-  border-color: #50d890;
-}
-.col-lg-4:nth-child(6) .single-offer i {
-  background-color: #e7fdf1;
-  color: #50d890;
-}
 
 .service-card {
   background-color: #ffffff;
@@ -1677,6 +1641,10 @@ Business  Area Style
 /*
 Industries Area Style
 ======================================================*/
+.industries-area  {
+  background-color: #eee;
+  /* background-color: #C0CDE3; */
+}
 .industries-area .industries-content h3 {
   margin-bottom: 15px;
 }
@@ -1719,9 +1687,8 @@ Industries Area Style
 }
 .industries-area .industries-list-tab .tabs li {
   position: relative;
-  background-color: #ffffff;
-  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
-  border-radius: 60px 0 0 60px;
+  background-color: transparent;
+  /* box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05); */
   transition: all 0.6s ease;
   overflow: hidden;
   z-index: 1;
@@ -1747,7 +1714,6 @@ Industries Area Style
   height: 100%;
   background-color: #1dd3f8;
   z-index: -1;
-  border-radius: 60px 0 0 60px;
   transition: all 0.6s ease;
 }
 .industries-area .industries-list-tab .tabs li i {
@@ -1784,7 +1750,6 @@ Industries Area Style
 }
 .industries-area .industries-list-tab .tabs li:hover::before {
   width: 100%;
-  border-radius: 60px 0 0 60px;
 }
 .industries-area .industries-list-tab .tabs li.current i {
   color: #ffffff;
@@ -1801,7 +1766,6 @@ Industries Area Style
 }
 .industries-area .industries-list-tab .tabs li.current::before {
   width: 100%;
-  border-radius: 60px 0 0 60px;
 }
 .industries-area .industries-img {
   text-align: center;
@@ -2525,9 +2489,8 @@ Industries Serve Area Style
 
 .single-industries {
   position: relative;
-  background-color: #ffffff;
+  background-color: #ffffffff;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
-  border-radius: 60px 0 0 60px;
   transition: all 0.6s ease;
   overflow: hidden;
   z-index: 1;
@@ -2555,7 +2518,6 @@ Industries Serve Area Style
   height: 100%;
   background-color: #1dd3f8;
   z-index: -1;
-  border-radius: 60px 0 0 60px;
   transition: all 0.6s ease;
 }
 .single-industries i {
@@ -2601,8 +2563,22 @@ Industries Serve Area Style
 }
 .single-industries:hover::before {
   width: 100%;
+}
+
+.industries-area .tab-left .tabs li
+.industries-area .tab-left .tabs li::before,
+.industries-area .tab-left .tabs li:hover::before,
+.industries-area .tab-left .tabs li.current::before {
   border-radius: 60px 0 0 60px;
 }
+
+.industries-area .tab-right .tabs li
+.industries-area .tab-right .tabs li::before,
+.industries-area .tab-right .tabs li:hover::before,
+.industries-area .tab-right .tabs li.current::before {
+  border-radius: 0 60px 60px 0;
+}
+
 
 /*
 Brand Area Serve Area Style

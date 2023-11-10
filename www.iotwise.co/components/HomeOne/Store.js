@@ -1,35 +1,36 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react'
 
-const About = () => {
-  return (
-    <>
-      <section className="about-area pb-100">
+export default function Store() {
+
+    return (
+      <>
+        <section className="store-area pb-100">
         <div className="container">
           <div className="row align-items-center">
+
             <div className="col-lg-6 d-none d-lg-block">
-              <div 
+              <div
                 className="about-img"
                 data-aos="fade-in"
                 data-aos-duration="1200"
                 data-aos-delay="100"
               >
-                <img src="/images/iot/iot-02_.png" alt="Image" />
+                <img src="/images/iot/iot-06.png" alt="Image" />
               </div>
             </div>
 
             <div className="col-lg-6">
-              <div 
+              <div
                 className="about-content"
                 data-aos="fade-in"
                 data-aos-duration="1200"
                 data-aos-delay="200"
               >
-                <span>Nosotros</span>
+                <span><a href='https://store.iotwise.co'>store.iotwise.co</a></span>
                 <h2>
-                  Somos Expertos en IoT
+                Tienda Online
                 </h2>
-                <p>Con más de 18 años de experiencia, somos líderes en el campo del Internet de las cosas (IoT). Nuestra vasta trayectoria refleja un profundo conocimiento y experiencia en el diseño, implementación y optimización de soluciones IoT, posicionándonos como expertos de confianza en este emocionante y dinámico sector tecnológico.</p>
+                <p>Encuentra una amplia variedad de opciones para tus sensores IoT con tecnologías LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más</p>
 
                 <div className="row">
                   <div className="col-lg-6 col-sm-6">
@@ -67,16 +68,12 @@ const About = () => {
                   </div>
                 </div>
 
-                <Link href="/about" className="default-btn">
-                  Conócenos
-                </Link>
               </div>
             </div>
+
           </div>
         </div>
       </section>
     </>
   );
 };
-
-export default About;

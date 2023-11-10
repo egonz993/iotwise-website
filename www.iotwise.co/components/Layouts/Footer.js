@@ -85,7 +85,7 @@ const Footer = () => {
                 data-aos-duration="1200"
                 data-aos-delay="500"
               >
-                <h3>Information</h3>
+                <h3>Contacto</h3>
 
                 <ul className="information">
                   

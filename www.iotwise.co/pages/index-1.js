@@ -2,13 +2,12 @@ import Navbar from "../components/Layouts/Navbar";
 import MainBanner from "../components/HomeOne/MainBanner";
 import Features from "../components/HomeOne/Features";
 import About from "../components/HomeOne/About";
-import WhyChooseUs from "../components/HomeOne/WhyChooseUs";
-import Services from "../components/HomeOne/Services";
-import MakeYourBusiness from "../components/Common/MakeYourBusiness";
+import Technologies from "../components/HomeOne/Technologies";
 import WhatWeOffer from "../components/HomeOne/WhatWeOffer";
-import Testimonials from "../components/Common/Testimonials";
-import News from "../components/Common/News";
 import Footer from "../components/Layouts/Footer";
+import Store from "../components/HomeOne/Store";
+import SaaS from "../components/HomeOne/SaaS";
+import Consulting from "../components/HomeOne/Consulting";
 
 export default function Index1() {
   return (
@@ -19,19 +18,17 @@ export default function Index1() {
 
       <Features />
 
-      {/* <About /> */}
+      <About />
 
-      {/* <WhyChooseUs /> */}
+      <Technologies />
 
-      {/* <Services /> */}
+      <WhatWeOffer />
 
-      {/* <MakeYourBusiness /> */}
+      <Store />
 
-      {/* <WhatWeOffer /> */}
+      <SaaS />
 
-      {/* <Testimonials /> */}
-
-      {/* <News /> */}
+      <Consulting />
 
       <Footer />
     </>
