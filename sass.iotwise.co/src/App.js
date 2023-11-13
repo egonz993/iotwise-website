@@ -14,6 +14,7 @@ function App() {
           rel="noopener noreferrer"
         >
           <img src={logo} className="App-logo" alt="logo" />
+          <h2>Página en Construcción</h2>
           <p>www.iotwise.co</p>
         </a>
       </header>

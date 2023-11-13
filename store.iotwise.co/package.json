@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "react-scripts build && aws --profile iotwise-egonzalez s3 sync build s3://store.iotwise.co",
-    "clear-cache": "aws --profile iotwise-egonzalez cloudfront create-invalidation --distribution-id E1LG0S9KTX2T8N --paths \"/*\""
+    "clear-cache": "aws --profile iotwise-egonzalez cloudfront create-invalidation --distribution-id EYH7SQ16H81SQ --paths \"/*\""
   },
   "eslintConfig": {
     "extends": [
