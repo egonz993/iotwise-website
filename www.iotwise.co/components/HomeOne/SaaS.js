@@ -19,7 +19,7 @@ export default function SaaS() {
                 <h2>
                 Nuestro Software
                 </h2>
-                <p>Herramientas online que puedes utilizar para evaluar y configurar tus dispositivos IoT, desde pruebas de covertura hasta configuraciones automatiadas.</p>
+                <p>Herramientas online que puedes utilizar para evaluar y configurar tus dispositivos IoT, desde pruebas de covertura hasta configuraciones automatizadas.</p>
 
                 <div className="row">
                   <div className="col-lg-6 col-sm-6">

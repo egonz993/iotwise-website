@@ -15,7 +15,7 @@ const featuresData = [
     iconName: "bx bx-laptop",
     title: "Software as a Service",
     shortText:
-      "Herramientas online que puedes utilizar para evaluar y configurar tus dispositivos IoT, desde pruebas de covertura hasta configuraciones automatiadas.",
+      "Herramientas online que puedes utilizar para evaluar y configurar tus dispositivos IoT, desde pruebas de covertura hasta configuraciones automatizadas.",
     viewDetails: "https://saas.iotwise.co",
     target: '_blank',
     aosDelay: "200",
@@ -24,7 +24,7 @@ const featuresData = [
     iconName: "flaticon-engineer",
     title: "Asesoría y Capacitación",
     shortText:
-      "Tenemos más de 18 años de experiencia ejecutando proyectos del Internet de Las Cosas. Agenda gratis una reunion virtual. ",
+      "Tenemos más de 18 años de experiencia ejecutando proyectos del Internet de Las Cosas. Agenda gratis una reunion virtual de 30 minutos con nuestros expertos.",
     viewDetails: "/meet",
     aosDelay: "300",
   },
