@@ -1,40 +1,41 @@
 import React from "react";
-import NewsSidebar from "./NewsSidebar";
 import Link from "next/link";
-import CommentsArea from "./CommentsArea";
 
 const NewsDetailsContent = () => {
   return (
     <>
-      <section className="news-details-area ptb-100">
+      <section className="news-details-area">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 col-md-12">
-              <div className="blog-details-desc">
-                <div className="article-image">
-                  <img
-                    src="/images/blog-details/blog-details.jpg"
-                    alt="Image"
-                  />
-                </div>
+            <div className="blog-details-desc">
+              <div>
 
                 <div className="article-content">
-                  <div className="entry-meta">
+
+                  <h3>Web development the best work in the future for the world</h3>
+
+                  <div className="entry-meta my-2">
                     <ul>
                       <li>
-                        <span>Posted On:</span> February 20 , 2020
+                        <span>Fecha:</span> 03 de febrero del 2023
                       </li>
                       <li>
-                        <span>Posted By:</span>
-                        <Link href="#">John Anderson</Link>
+                        <span>Autor:</span>
+                        <Link href="https://egonzalez.web.app" target="_blank">E'Gonzalez</Link>
                       </li>
                     </ul>
                   </div>
+                </div>
 
-                  <h3>
-                    Web development the best work in the future for the world
-                  </h3>
+                <div className="article-image bg-white">
+                  <img
+                    src="/images/iot/iot-10.png"
+                    alt="Image"
+                    width={'50%'}
+                  />
+                </div>
 
+                <div className="pt-5">
                   <p>
                     Quuntur magni dolores eos qui ratione voluptatem sequi
                     nesciunt. Neque porro quia non numquam eius modi tempora
@@ -96,63 +97,52 @@ const NewsDetailsContent = () => {
                   </p>
                 </div>
 
-                <div className="article-footer">
-                  <div className="article-tags">
-                    <span>
-                      <i className="bx bx-share-alt"></i>
-                    </span>
-                    <Link href="#">Share</Link>
-                  </div>
-
-                  <div className="article-share">
-                    <ul className="social">
-                      <li>
-                        <a href="https://www.facebook.com/" target="_blank">
-                          <i className="bx bxl-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.twitter.com/" target="_blank">
-                          <i className="bx bxl-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.linkedin.com/" target="_blank">
-                          <i className="bx bxl-linkedin"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.pinterest.com/" target="_blank">
-                          <i className="bx bxl-pinterest-alt"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="post-navigation">
-                  <div className="navigation-links">
-                    <div className="nav-previous">
-                      <Link href="#">
-                        <i className="bx bx-left-arrow-alt"></i> Prev Post
-                      </Link>
-                    </div>
-
-                    <div className="nav-next">
-                      <Link href="#">
-                        Next Post <i className="bx bx-right-arrow-alt"></i>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Comments Area */}
-                <CommentsArea />
               </div>
-            </div>
 
-            <div className="col-lg-4 col-md-12">
-              <NewsSidebar />
+              <div className="article-footer">
+                <div className="article-tags">
+                  <span>
+                    <i className="bx bx-share-alt"></i>
+                  </span>
+                  <Link href="#">Share</Link>
+                </div>
+
+                <div className="article-share">
+                  <ul className="social">
+                    <li>
+                      <a href="https://www.facebook.com/" target="_blank">
+                        <i className="bx bxl-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.twitter.com/" target="_blank">
+                        <i className="bx bxl-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/" target="_blank">
+                        <i className="bx bxl-linkedin"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="post-navigation">
+                <div className="navigation-links">
+                  <div className="nav-previous">
+                    <Link href="#">
+                      <i className="bx bx-left-arrow-alt"></i> Prev Post
+                    </Link>
+                  </div>
+
+                  <div className="nav-next">
+                    <Link href="#">
+                      Next Post <i className="bx bx-right-arrow-alt"></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

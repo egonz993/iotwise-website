@@ -53,17 +53,11 @@ const ContactForm = () => {
     <div className="main-contact-area pb-100">
       <div className="container">
         <div className="section-title">
-          <span>Contact Us</span>
-          <h2>Drop us a message for any query</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
-            quibusdam deleniti porro praesentium. Aliquam minus quisquam velit
-            in at nam.
-          </p>
+          <p>También puedes enviarnos un mensaje en cualquier momento a través de nuestro formulario de contacto y te responderemos lo antes posible</p>
         </div>
 
         <div className="row align-items-center">
-          <div className="col-lg-6 col-md-12">
+          <div className="col-lg-6 col-12">
             <div className="contact-wrap contact-pages mb-0">
               <div className="contact-form">
                 <form onSubmit={handleSubmit}>
@@ -73,7 +67,7 @@ const ContactForm = () => {
                         <input
                           type="text"
                           name="name"
-                          placeholder="Name"
+                          placeholder="Nombre y Apellido"
                           className="form-control"
                           value={contact.name}
                           onChange={handleChange}
@@ -86,7 +80,7 @@ const ContactForm = () => {
                         <input
                           type="text"
                           name="email"
-                          placeholder="Email"
+                          placeholder="correo@example.com"
                           className="form-control"
                           value={contact.email}
                           onChange={handleChange}
@@ -94,39 +88,14 @@ const ContactForm = () => {
                         />
                       </div>
                     </div>
-                    <div className="col-lg-6 col-sm-6">
-                      <div className="form-group">
-                        <input
-                          type="text"
-                          name="number"
-                          placeholder="Phone number"
-                          className="form-control"
-                          value={contact.number}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-6">
-                      <div className="form-group">
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="Subject"
-                          className="form-control"
-                          value={contact.subject}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                    </div>
+
                     <div className="col-lg-12 col-md-12">
                       <div className="form-group">
                         <textarea
                           name="text"
                           cols="30"
                           rows="6"
-                          placeholder="Write your message..."
+                          placeholder="Escribe aquí tu mensaje..."
                           className="form-control"
                           value={contact.text}
                           onChange={handleChange}
@@ -136,7 +105,7 @@ const ContactForm = () => {
                     </div>
                     <div className="col-lg-12 col-sm-12">
                       <button type="submit" className="default-btn btn-two">
-                        Send Message
+                        Enviar
                       </button>
                     </div>
                   </div>
@@ -145,7 +114,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className="col-lg-6 col-md-12">
+          <div className="col-lg-6 col-12 d-none d-lg-block">
             <div className="contact-img">
               <img src="/images/contact-img.png" alt="Image" />
             </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const About = () => {
+const AboutSection = () => {
   return (
     <>
       <section className="about-area pt-100">
@@ -74,4 +74,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;

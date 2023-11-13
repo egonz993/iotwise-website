@@ -5,7 +5,7 @@ const WhatWeOffer = () => {
 
   return (
     <>
-      <section className="industries-area pb-100">
+      <section className="industries-area pb-100 bg-light">
         <div className="container">
           <div className="section-title pt-5">
             <h2>Sectores Industriales</h2>

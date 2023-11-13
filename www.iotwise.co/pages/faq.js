@@ -19,8 +19,6 @@ export default function Faq() {
 
       <FaqContent />
 
-      <AskQuestionForm />
-
       <Footer />
     </>
   );
