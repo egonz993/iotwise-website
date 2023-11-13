@@ -110,17 +110,17 @@ const NewsDetailsContent = () => {
                 <div className="article-share">
                   <ul className="social">
                     <li>
-                      <a href="https://www.facebook.com/" target="_blank">
+                      <a title="link to facebook" href="https://www.facebook.com/" target="_blank">
                         <i className="bx bxl-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.twitter.com/" target="_blank">
+                      <a title="link to twitter" href="https://www.twitter.com/" target="_blank">
                         <i className="bx bxl-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/" target="_blank">
+                      <a title="link to linkedin" href="https://www.linkedin.com/" target="_blank">
                         <i className="bx bxl-linkedin"></i>
                       </a>
                     </li>

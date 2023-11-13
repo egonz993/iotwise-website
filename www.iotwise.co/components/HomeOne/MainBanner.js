@@ -32,16 +32,12 @@ const MainBanner = () => {
                   data-aos-delay="300"
                 >
                   
-                  <a href="https://store.iotwise.co" target="_blank" className="default-btn px-5">
+                  <a title="link to store" href="https://store.iotwise.co" target="_blank" className="default-btn px-5">
                     TIENDA
                   </a>
 
-                  <a href="https://saas.iotwise.co" target="_blank" className="default-btn px-5">
+                  <a title="link to console" href="https://saas.iotwise.co" target="_blank" className="default-btn px-5">
                     CONSOLA
-                  </a>
-                  
-                  <a href="https://cms.iotwise.co" target="_blank" className="default-btn px-5 bg-success">
-                    <i className="bx bx-shield-alt-2"/> ADMIN
                   </a>
 
                 </div>
@@ -49,36 +45,9 @@ const MainBanner = () => {
             </div>
 
             <div className="col-lg-6">
-
-               {/* Banner Main Image */}
               <div className="animate__animated animate__fadeInUp animate__fast">
                 <img src="/images/iot/iot-04.png" alt="Image" />
               </div>
-
-              {/* Banner Shape Images 
-              <div className="banner-img">
-                <img
-                  className="animate__animated animate__fadeInUp animate__fast"
-                  src="/images/home-one/shape1.png"
-                  alt="Image"
-                />
-                <img
-                  className="animate__animated animate__fadeInUp animate__fast"
-                  src="/images/home-one/shape2.png"
-                  alt="Image"
-                />
-                <img
-                  className="animate__animated animate__fadeInRight animate__fast"
-                  src="/images/home-one/shape3.png"
-                  alt="Image"
-                />
-                <img
-                  className="animate__animated animate__fadeInRight animate__fast"
-                  src="/images/iot-logo-white.svg"
-                  alt="Image"
-                  width={250}
-                />
-              </div> */}
             </div>
           </div>
         </div>

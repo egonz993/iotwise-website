@@ -24,22 +24,22 @@ const Footer = () => {
 
                 <ul className="social-icon">
                   <li>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a title="link to facebook" href="https://www.facebook.com/" target="_blank">
                       <i className="bx bxl-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://instagram.com/" target="_blank">
+                    <a title="link to instagram" href="https://www.instagram.com/" target="_blank">
                       <i className="bx bxl-instagram"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/" target="_blank">
+                    <a title="link to youtube" href="https://www.youtube.com/" target="_blank">
                       <i className="bx bxl-youtube"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/" target="_blank">
+                    <a title="link to linkedin" href="https://www.linkedin.com/" target="_blank">
                       <i className="bx bxl-linkedin"></i>
                     </a>
                   </li>
@@ -54,7 +54,7 @@ const Footer = () => {
                 data-aos-duration="1200"
                 data-aos-delay="300"
               >
-                <h3>Qué ofrecemos</h3>
+                <h5 className="link-light">Qué ofrecemos</h5>
                 <ul>
                   <li>
                     <Link href="https://store.iotwise.co" target="_blank">
@@ -85,7 +85,7 @@ const Footer = () => {
                 data-aos-duration="1200"
                 data-aos-delay="500"
               >
-                <h3>Contacto</h3>
+                <h5 className="link-light">Contacto</h5>
 
                 <ul className="information">
                   
@@ -111,7 +111,7 @@ const Footer = () => {
                 data-aos-duration="1200"
                 data-aos-delay="400"
               >
-                <h3>Enlaces de interés</h3>
+                <h5 className="link-light">Enlaces de interés</h5>
 
                 <ul>
                   <li>
@@ -142,6 +142,12 @@ const Footer = () => {
                     <Link href="/contact">
                       <i className="right-icon bx bx-chevrons-right"></i>
                       Contacto
+                    </Link>
+                  </li>
+                  <li>
+                    <Link target="_blank" href="https://cms.iotwise.co">
+                      <i className="right-icon bx bx-chevrons-right"></i>
+                      Administradores
                     </Link>
                   </li>
                 </ul>

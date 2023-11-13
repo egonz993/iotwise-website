@@ -5,8 +5,8 @@ import Head from "next/head"
 export default function PageHead({title, description, image}) {
     return (
         <Head>
-            <meta charset="UTF-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta charSet="UTF-8" />
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
             <meta name="author" content="E'Gonzalez" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />

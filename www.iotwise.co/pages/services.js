@@ -1,9 +1,13 @@
 import React from "react";
 import Navbar from "../components/Layouts/Navbar";
 import PageBanner from "../components/Common/PageBanner";
-import ServicesStyleThree from "../components/Services/ServicesStyleThree";
 import Footer from "../components/Layouts/Footer";
 import PageHead from "../components/Common/PageHead";
+import Features from "../components/HomeOne/Features";
+import Store from "../components/HomeOne/Store";
+import SaaS from "../components/HomeOne/SaaS";
+import Consulting from "../components/HomeOne/Consulting";
+import ContactForm from "../components/Contact/ContactForm";
 
 export default function Services() {
   return (
@@ -16,14 +20,17 @@ export default function Services() {
 
       <Navbar />
 
-      <PageBanner
-        pageTitle="Services Style Three"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Services Style Three"
-      />
+      <PageBanner pageTitle="Nuestros Servicios" />
 
-      <ServicesStyleThree />
+      <Features />
+
+      <Store />
+
+      <SaaS />
+
+      <Consulting />
+
+      <ContactForm />
 
       <Footer />
     </>

@@ -34,7 +34,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-md navbar-light">
           <div className="container">
             <Link href="/" className="navbar-brand">
-              <h2 className="link-light d-block d-lg-none">IoT Wise</h2>
+              <img className="d-block d-lg-none" src="/images/iotwise-logo-white.svg" alt="logo"  width={50}/>
               <img className="d-none d-lg-block" src={isScrolled ? "/images/white-logo.png" : "/images/iotwise-logo-white.svg"} alt="logo"  width={isScrolled ? 50 : 150}/>
             </Link>
 

@@ -101,9 +101,6 @@ const Technologies = () => {
                 <div className="single-offer border-0 bg-transparent">
                   {/* <i className={value.iconName}></i> */}
                   <Link href={value.href} target="_blank" ><img src={value.image} alt={value.title} /></Link>
-                  <h3>
-                    {/* <Link href={value.viewDetails}>{value.title}</Link> */}
-                  </h3>
                 </div>
               </div>
             ))}

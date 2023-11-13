@@ -4,18 +4,14 @@ import PageBanner from "../components/Common/PageBanner";
 import ContactInfo from "../components/Contact/ContactInfo";
 import ContactForm from "../components/Contact/ContactForm";
 import Footer from "../components/Layouts/Footer";
+import MeetForm from "../components/Contact/MeetForm";
 
 export default function Contact1() {
   return (
     <>
       <Navbar />
 
-      <PageBanner
-        pageTitle="Contact Style One"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Contact Style One"
-      />
+      <PageBanner pageTitle="Contáctanos" />
 
       <ContactInfo />
 

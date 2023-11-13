@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const About = () => {
+const AboutComponent = () => {
   return (
     <>
       <section className="about-area pb-100">
@@ -14,7 +14,7 @@ const About = () => {
                 data-aos-duration="1200"
                 data-aos-delay="100"
               >
-                <img src="/images/iot/iot-02_.png" alt="Image" />
+                <img src="/images/iot/iot-03.png" alt="Image" />
               </div>
             </div>
 
@@ -79,4 +79,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutComponent;

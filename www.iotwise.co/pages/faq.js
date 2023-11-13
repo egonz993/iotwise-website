@@ -10,12 +10,8 @@ export default function Faq() {
     <>
       <Navbar />
 
-      <PageBanner
-        pageTitle="Frequently Asked Questions"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Frequently Asked Questions"
-      />
+      <PageBanner pageTitle="Preguntas y Respuestas Frecuentes" />
+
 
       <FaqContent />
 

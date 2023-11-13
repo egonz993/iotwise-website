@@ -20,6 +20,9 @@ export default function Consulting() {
                 <p className='mt-3'>AGENDA GRATIS UNA SESIÓN VIRTUAL</p>
                 <img src="/images/iot/iot-15.png" alt="Image" width={500} />
               </Link>
+
+              <Link href="/meet" className='default-btn mt-1'>AGENDA GRATIS UNA SESIÓN VIRTUAL</Link>
+
             </div>
           </div>
         </div>

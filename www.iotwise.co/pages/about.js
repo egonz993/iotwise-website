@@ -1,13 +1,11 @@
 import React from "react";
 import Navbar from "../components/Layouts/Navbar";
 import PageBanner from "../components/Common/PageBanner";
-import AboutSection from "../components/AboutTwo/About";
-import WhyChooseUs from "../components/AboutTwo/WhyChooseUs";
-import MakeYourBusiness from "../components/Common/MakeYourBusiness";
-import Testimonials from "../components/Common/Testimonials";
-import PartnerSlider from "../components/Common/PartnerSlider";
 import Footer from "../components/Layouts/Footer";
 import PageHead from "../components/Common/PageHead";
+import Technologies from "../components/HomeOne/Technologies";
+import WhatWeOffer from "../components/HomeOne/WhatWeOffer";
+import AboutComponent from "../components/HomeOne/About";
 
 export default function About() {
   return (
@@ -20,22 +18,15 @@ export default function About() {
 
       <Navbar />
 
-      <PageBanner
-        pageTitle="About Style Two"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="About Style Two"
-      />
+      <PageBanner pageTitle="Nosotros" />
 
-      <AboutSection />
+      <div className="pt-5">
+        <AboutComponent />
+      </div>
 
-      <WhyChooseUs />
+      <Technologies />
 
-      <MakeYourBusiness />
-
-      <Testimonials />
-
-      <PartnerSlider />
+      <WhatWeOffer />
 
       <Footer />
     </>

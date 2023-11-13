@@ -9,12 +9,7 @@ export default function Login() {
     <>
       <Navbar />
 
-      <PageBanner
-        pageTitle="Login"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Login"
-      />
+      <PageBanner pageTitle="Iniciar Sesión" />
 
       <div className="user-area-all-style log-in-area ptb-100">
         <div className="container">
@@ -22,40 +17,18 @@ export default function Login() {
             <div className="col-12">
               <div className="contact-form-action">
                 <div className="form-heading text-center">
-                  <h3 className="form-title">Login to your account!</h3>
+                  <h4 className="form-title">Inicia Sesión</h4>
                 </div>
+                <div className="text-center">
+                  <h6 className="form-title">¿No tines una cuenta? <Link title="link to signup" href="/sign-up" >Crea una aquí</Link></h6>
+                  <div className="text-center pb-3">
+                    <img src="/images/iotwise-logo-black.svg" width={120} />
+                  </div>
+                </div>
+
 
                 <form>
                   <div className="row">
-                    <div className="col-lg-4 col-md-4 col-sm-12">
-                      <a
-                        href="https://www.google.com/"
-                        className="default-btn mb-30"
-                        target="_blank"
-                      >
-                        <i className="bx bxl-google"></i> Google
-                      </a>
-                    </div>
-
-                    <div className="col-lg-4 col-md-4 col-sm-12">
-                      <a
-                        href="https://www.facebook.com/"
-                        className="default-btn mb-30"
-                        target="_blank"
-                      >
-                        <i className="bx bxl-facebook"></i> Facebook
-                      </a>
-                    </div>
-
-                    <div className="col-lg-4 col-md-4 col-sm-12">
-                      <a
-                        href="https://www.twitter.com/"
-                        className="default-btn mb-30"
-                        target="_blank"
-                      >
-                        <i className="bx bxl-twitter"></i> Twitter
-                      </a>
-                    </div>
 
                     <div className="col-12">
                       <div className="form-group">
@@ -63,7 +36,7 @@ export default function Login() {
                           className="form-control"
                           type="text"
                           name="name"
-                          placeholder="Username or Email"
+                          placeholder="tu_correo@dominio.com"
                         />
                       </div>
                     </div>
@@ -74,47 +47,24 @@ export default function Login() {
                           className="form-control"
                           type="password"
                           name="password"
-                          placeholder="Password"
+                          placeholder="Contraseña"
                         />
                       </div>
                     </div>
 
-                    <div className="col-lg-6 col-sm-6 form-condition">
-                      <div className="agree-label">
-                        <div className="form-check">
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            id="gridCheck"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="gridCheck"
-                          >
-                            Remember me
-                          </label>
-                        </div>
-                      </div>
-                    </div>
 
-                    <div className="col-lg-6 col-sm-6">
+                    <div className="col-12 pb-4">
                       <Link href="/recover-password" className="forget">
-                        Forgot my password?
+                        ¿Olvidaste tu clave?
                       </Link>
                     </div>
 
                     <div className="col-12">
                       <button className="default-btn btn-two" type="submit">
-                        Log In Now
+                        Iniciar Sesión
                       </button>
                     </div>
 
-                    <div className="col-12">
-                      <p className="account-desc">
-                        Not a member?
-                        <Link href="/sign-up">Register</Link>
-                      </p>
-                    </div>
                   </div>
                 </form>
               </div>

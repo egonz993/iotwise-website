@@ -9,12 +9,7 @@ export default function RecoverPassword() {
     <>
       <Navbar />
 
-      <PageBanner
-        pageTitle="Recover Password"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Recover Password"
-      />
+      <PageBanner pageTitle="Recuperar contraseña" />
 
       <section className="user-area-all-style recover-password-area ptb-100">
         <div className="container">
@@ -22,13 +17,10 @@ export default function RecoverPassword() {
             <div className="col-12">
               <div className="contact-form-action">
                 <div className="form-heading text-center">
-                  <h3 className="form-title">Reset Password!</h3>
+                  <h3 className="form-title">Recuperar contraseña</h3>
 
-                  <p className="reset-desc">
-                    Enter the email of your account to reset the password. Then
-                    you will receive a link to email to reset the password. If
-                    you have any issue about reset password{" "}
-                    <Link href="/contact">contact us.</Link>
+                  <p className="reset-desc">Ingrese el correo electrónico de su cuenta para restablecer la contraseña. Luego recibirá un enlace al correo electrónico para restablecerla. Si tiene algún problema para restablecer la contraseña {" "}
+                    <Link href="/contact">Contáctenos</Link>
                   </p>
                 </div>
 
@@ -40,29 +32,29 @@ export default function RecoverPassword() {
                           className="form-control"
                           type="text"
                           name="name"
-                          placeholder="Enter Email Address"
+                          placeholder="tu_correo@dominio.com"
                         />
                       </div>
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-sm-6">
                       <Link href="/login" className="now-log-in font-q">
-                        Log In
+                        Iniciar Sesión
                       </Link>
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-sm-6">
                       <p className="now-register">
-                        Not a member? &nbsp;
+                        ¿No tienes cuenta? &nbsp;
                         <Link href="/sign-up" className="font-q">
-                          Register
+                          Registrate
                         </Link>
                       </p>
                     </div>
 
                     <div className="col-12">
                       <button className="default-btn btn-two" type="submit">
-                        Reset Password
+                        Solicitar enlace de recuperación
                       </button>
                     </div>
                   </div>

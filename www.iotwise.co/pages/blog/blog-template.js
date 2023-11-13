@@ -16,12 +16,7 @@ export default function BlogTemplate() {
 
       <Navbar />
 
-      <PageBanner
-        pageTitle="Blog Template"
-        homePageUrl="/blog"
-        homePageText="Blog"
-        activePageText="Blog Template"
-      />
+      <PageBanner pageTitle="Blog | Article" />
 
       <NewsDetailsContent />
 

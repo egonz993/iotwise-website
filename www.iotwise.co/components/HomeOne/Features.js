@@ -15,7 +15,7 @@ const featuresData = [
     iconName: "bx bx-laptop",
     title: "Software as a Service",
     shortText:
-      "Herramientas online que puedes utilizar para evaluar y configurar tus dispositivos IoT, desde pruebas de covertura hasta configuraciones automatizadas.",
+      "Herramientas online que puedes utilizar para evaluar y configurar tus dispositivos IoT, desde pruebas de cobertura hasta configuraciones automatizadas.",
     viewDetails: "https://saas.iotwise.co",
     target: '_blank',
     aosDelay: "200",

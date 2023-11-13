@@ -107,22 +107,22 @@ const BlogDetailsContent = () => {
                   <div className="article-share">
                     <ul className="social">
                       <li>
-                        <a href="https://www.facebook.com/" target="_blank">
+                        <a title="Link to facebook" href="https://www.facebook.com/" target="_blank">
                           <i className="bx bxl-facebook"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.twitter.com/" target="_blank">
+                        <a title="Link to twitter" href="https://www.twitter.com/" target="_blank">
                           <i className="bx bxl-twitter"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.linkedin.com/" target="_blank">
+                        <a title="Link to linkedin" href="https://www.linkedin.com/" target="_blank">
                           <i className="bx bxl-linkedin"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.pinterest.com/" target="_blank">
+                        <a title="Link to pinterest" href="https://www.pinterest.com/" target="_blank">
                           <i className="bx bxl-pinterest-alt"></i>
                         </a>
                       </li>

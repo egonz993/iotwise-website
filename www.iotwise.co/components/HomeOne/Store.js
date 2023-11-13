@@ -28,10 +28,10 @@ export default function Store() {
                 data-aos-delay="200"
               >
                 <h2>Tienda Online</h2>
-                <span><a href='https://store.iotwise.co'>store.iotwise.co</a></span>
+                <span><a title="link to store" href='https://store.iotwise.co'>store.iotwise.co</a></span>
                 <p>Los sensores IoT desempeñan un papel crucial en la creación de entornos inteligentes y eficientes, en IoT Wise comprendemos la importancia de contar con la conectividad adecuada para garantizar el mejor rendimiento. Explora nuestra extensa gama de soluciones para sensores y módulos IoT, donde podrás descubrir una amplia variedad de opciones que abarcan diversas tecnologías de conectividad, entre las que se incluyen LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchas más.</p>
 
-                <Link href="https://store.iotwise.co/" target="_blank" className='btn btn-primary'>
+                <Link href="https://store.iotwise.co/" target="_blank" className='default-btn'>
                     <i className='bx bx-cart' /> Ir a la Tienda
                 </Link>
 

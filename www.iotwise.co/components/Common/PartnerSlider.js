@@ -3,46 +3,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper";
 
 const partnerData = [
-  {
-    image: "/images/brands/brand1.png",
-    url: "#",
-  },
-  {
-    image: "/images/brands/brand2.png",
-    url: "#",
-  },
-  {
-    image: "/images/brands/brand3.png",
-    url: "#",
-  },
-  {
-    image: "/images/brands/brand4.png",
-    url: "#",
-  },
-  {
-    image: "/images/brands/brand5.png",
-    url: "#",
-  },
-  {
-    image: "/images/brands/brand6.png",
-    url: "#",
-  },
-  {
-    image: "/images/brands/brand7.png",
-    url: "#",
-  },
-  {
-    image: "/images/brands/brand8.png",
-    url: "#",
-  },
-  {
-    image: "/images/brands/brand9.png",
-    url: "#",
-  },
-  {
-    image: "/images/brands/brand10.png",
-    url: "#",
-  },
+  {image: "/images/iot/logo-lorawan.png"},
+  {image: "/images/iot/logo-sigfox.png"},
+  {image: "/images/iot/logo-nbiot.png"},
+  {image: "/images/iot/logo-ltem.png"},
+  {image: "/images/iot/logo-zigbee.png"},
+  {image: "/images/iot/logo-bluetooth.png"},
+  {image: "/images/iot/logo-wifi.png"},
+  {image: "/images/iot/logo-gsm.png"},
+  {image: "/images/iot/logo-3gpp.png"},
+  {image: "/images/iot/logo-lte.png"},
+  {image: "/images/iot/logo-wisun.png"},
+  {image: "/images/iot/logo-nfc.png"},
 ];
 
 const PartnerSlider = () => {
@@ -79,7 +51,7 @@ const PartnerSlider = () => {
               partnerData.map((value, i) => (
                 <SwiperSlide key={i}>
                   <a href={value.url} target="_blank">
-                    <img src={value.image} alt="Image" />
+                    <img src={value.image} alt="Image" width={75} />
                   </a>
                 </SwiperSlide>
               ))}
