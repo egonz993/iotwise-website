@@ -1,7 +1,7 @@
 {
     "name": "iotwise.co",
     "version": "1.0.0",
-    "description": "IoT Wise - Expertos en el Inenet de las Cosas",
+    "description": "IoT Wise - Expertos en el Internet de las Cosas",
     "main": "index.js",
     "scripts": {
         "dev": "next",

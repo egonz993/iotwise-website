@@ -25,11 +25,11 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="IoT Wise - Expertos en el Inenet de las Cosas" />
+        <meta name="description" content="IoT Wise - Expertos en el Internet de las Cosas" />
         <meta name="keywords" content="iot, iiot, wireless, lorawan, lte, wisun, sigfox, smart city" />
         <meta name="author" content="E'Gonzalez" />
         
-        <title>IoT Wise</title>
+        <title>IoT Wise | Expertos en IoT</title>
       </Head>
 
       <Component {...pageProps} />
