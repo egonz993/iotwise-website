@@ -4,7 +4,7 @@
 	 viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#1D56D2;}
-	.st1{fill:#FFFFFF;}
+	.st1{fill:#222222;}
 </style>
 <image style="overflow:visible;" width="663" height="481" xlink:href="data:image/jpeg;base64,/9j/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABh
 Y3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAA
@@ -991,5 +991,15 @@ EBAwgICAgICAgICAgICAg4LrZbXyOmfb6F8ryXOldSQOkc4nJLnmMuJJ6eKD/9k=" transform="mat
 			c-0.41-28.24,22.79-51.14,51.89-51.2C437.84,356.79,460.99,379.41,461.43,405.45z"/>
 		<rect x="958.31" y="201.41" class="st0" width="70.76" height="70.76"/>
 	</g>
+	<path class="st1" d="M303.94,682.23h31.11l-31.8,244.38h-47.01l-26.62-216.04l-26.62,216.04h-46.66l-31.8-244.38h31.11
+		l25.23,220.53l27.65-220.53h41.82l28,220.53L303.94,682.23z"/>
+	<path class="st1" d="M435.71,926.61V682.23h33.18v244.38H435.71z"/>
+	<polygon class="st1" points="805.85,898.95 805.85,818.07 863.87,818.07 863.87,790.42 805.85,790.42 805.85,710.22 870.14,710.22 
+		870.14,682.23 773.01,682.23 773.01,926.61 870.49,926.61 870.49,898.95 	"/>
+	<path class="st1" d="M645.49,790.42h-42.52c-4.84,0-6.22-1.73-6.22-6.57v-68.44c0-4.84,1.38-6.22,6.22-6.22h35.95
+		c4.84,0,6.57,1.38,6.57,6.22v26.22v3.85h32.12v-3.45l0.03,0v-26.96c0-25.58-7.95-33.53-33.18-33.53H597.1
+		c-25.23,0-32.84,7.95-32.84,33.53v68.44c0,24.89,7.6,33.18,32.84,33.18h42.52c5.19,0,6.57,1.38,6.57,6.22v70.51
+		c0,4.84-1.38,6.22-6.57,6.22h-37.33c-4.84,0-6.22-1.38-6.22-6.22v-33.18h-32.84v3.46v2.79v26.94c0,25.93,7.95,34.22,33.18,34.22
+		h49.08c25.23,0,33.18-8.29,33.18-34.22v-70.17C678.68,798.37,670.73,790.42,645.49,790.42z"/>
 </g>
 </svg>
