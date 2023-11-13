@@ -45,14 +45,14 @@ const technologiesData = [
     href: "https://www.google.com/"
   },
   {
-    image: "/images/iot/logo-3gpp.png",
-    title: "3GPP",
+    image: "/images/iot/logo-gsm.png",
+    title: "gsm",
     viewDetails: "/service-details",
     href: "https://www.google.com/"
   },
   {
-    image: "/images/iot/logo-gsm.png",
-    title: "gsm",
+    image: "/images/iot/logo-3gpp.png",
+    title: "3GPP",
     viewDetails: "/service-details",
     href: "https://www.google.com/"
   },
