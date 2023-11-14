@@ -11,7 +11,7 @@ export default function Contact1() {
     <>
       <Navbar />
 
-      <PageBanner pageTitle="Contáctanos" />
+      <PageBanner pageTitle="CONTÁCTANOS" />
 
       <ContactInfo />
 

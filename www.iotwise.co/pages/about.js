@@ -18,7 +18,7 @@ export default function About() {
 
       <Navbar />
 
-      <PageBanner pageTitle="Nosotros" />
+      <PageBanner pageTitle="NOSOTROS" />
 
       <div className="pt-5">
         <AboutComponent />

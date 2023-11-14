@@ -20,7 +20,7 @@ export default function Services() {
 
       <Navbar />
 
-      <PageBanner pageTitle="Nuestros Servicios" />
+      <PageBanner pageTitle="NUESTROS SERVICIOS" />
 
       <Features />
 

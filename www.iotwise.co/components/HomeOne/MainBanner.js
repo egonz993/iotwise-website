@@ -14,13 +14,14 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="100"
                 >
-                  Expertos en el Internet de las Cosas (IoT)
+                  EXPERTOS EN EL INTERNET DE LAS COSAS (IoT)
                 </h1>
 
                 <p
                   data-aos="fade-in"
                   data-aos-duration="1200"
                   data-aos-delay="200"
+                  className="mt-5"
                 >
                   Soluciones inteligentes para tus proyectos IoT. Descubre el potencial de las comunicaciones con LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más.
                 </p>
@@ -44,9 +45,9 @@ const MainBanner = () => {
               </div>
             </div>
 
-            <div className="col-lg-6">
+            <div className="col-lg-6 mt-5">
               <div className="animate__animated animate__fadeInUp animate__fast">
-                <img src="/images/iot/iot-04.png" alt="Image" />
+                <img src="/images/iot/iot-09.png" alt="Image" />
               </div>
             </div>
           </div>

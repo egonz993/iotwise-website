@@ -105,7 +105,7 @@ const ContactForm = () => {
                     </div>
                     <div className="col-lg-12 col-sm-12">
                       <button type="submit" className="default-btn btn-two">
-                        Enviar
+                        ENVIAR
                       </button>
                     </div>
                   </div>

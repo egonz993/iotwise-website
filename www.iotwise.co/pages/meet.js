@@ -9,7 +9,7 @@ export default function Meet() {
     <>
       <Navbar />
 
-      <PageBanner pageTitle="Agenda una cita gratis" />
+      <PageBanner pageTitle="AGENDAR UNA SESIÓN GRATIS" />
 
       <div className="pt-5">
         <MeetForm />

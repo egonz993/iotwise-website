@@ -9,7 +9,7 @@ export default function SignUp() {
     <>
       <Navbar />
 
-      <PageBanner pageTitle="Únete a Nosotros" />
+      <PageBanner pageTitle="ÚNETE A NOSOTROS" />
 
       <div className="user-area-all-style sign-up-area ptb-100">
         <div className="container">

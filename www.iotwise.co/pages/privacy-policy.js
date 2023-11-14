@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
     <>
       <Navbar />
 
-      <PageBanner pageTitle="Políticas de Privacidad" />
+      <PageBanner pageTitle="POLÍTICAS DE PRIVACIDAD" />
 
 
       <div className="text-container ptb-100">

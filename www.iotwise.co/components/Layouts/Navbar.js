@@ -122,7 +122,7 @@ const Navbar = () => {
               {/* Login Button */}
               <div className="others-options">
                 <Link href="/login/" className="default-btn">
-                  Empieza Gratis <i className="bx bx-log-in-circle"></i>
+                  INICIAR SESIÓN <i className="bx bx-log-in-circle"></i>
                 </Link>
               </div>
 

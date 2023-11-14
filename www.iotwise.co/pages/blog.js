@@ -44,7 +44,7 @@ export default function Blog() {
 
       <Navbar />
 
-      <PageBanner pageTitle="Blog" />
+      <PageBanner pageTitle="BLOG" />
 
       <BlogGridCard articles={articles} />
 

@@ -9,7 +9,7 @@ export default function RecoverPassword() {
     <>
       <Navbar />
 
-      <PageBanner pageTitle="Recuperar contraseña" />
+      <PageBanner pageTitle="RECUPERAR CONTRASEÑA" />
 
       <section className="user-area-all-style recover-password-area ptb-100">
         <div className="container">

@@ -9,7 +9,7 @@ export default function Login() {
     <>
       <Navbar />
 
-      <PageBanner pageTitle="Iniciar Sesión" />
+      <PageBanner pageTitle="INICIAR SESIÓN" />
 
       <div className="user-area-all-style log-in-area ptb-100">
         <div className="container">

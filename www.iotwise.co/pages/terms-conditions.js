@@ -8,7 +8,7 @@ export default function TermsConditions() {
     <>
       <Navbar />
 
-      <PageBanner pageTitle="Términos y Condiciones" />
+      <PageBanner pageTitle="TÉRMINOS Y CONDICIONES" />
 
       <div className="text-container ptb-100">
         <div className="container">
