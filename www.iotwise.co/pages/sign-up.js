@@ -3,8 +3,47 @@ import Navbar from "../components/Layouts/Navbar";
 import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/Layouts/Footer";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
+import { Auth } from "../services/firebase/auth.service"
+import { Database } from "../services/firebase/database.service";
 
 export default function SignUp() {
+
+  const router = useRouter()
+
+  const [txtName, setTxtName] = React.useState("")
+  const [txtLastName, setTxtLastName] = React.useState("")
+  const [txtEmail, setTxtEmail] = React.useState("")
+  const [txtPassword, setTxtPassword] = React.useState("")
+
+  const name = React.useRef()
+  const lastname = React.useRef()
+  const email = React.useRef()
+  const password = React.useRef()
+
+  const handleSignupForm = async () => {
+
+    const auth = Auth.getInstance()
+    const result = await auth.createUserWithEmailAndPassword(txtEmail, txtPassword)
+
+    if(result.hasOwnProperty("uid")){
+      await Database.set(`users/${result.uid}`, {
+        uid: result.uid,
+        name: txtName,
+        lastname: txtLastName,
+        email: txtEmail,
+        location: "",
+        rol: "user",
+      })
+      
+      router.push("/user")
+    }
+    else{
+      alert(result)
+    }
+  }
+
+
   return (
     <>
       <Navbar />
@@ -27,11 +66,15 @@ export default function SignUp() {
                 </div>
 
 
-                <form autoComplete="off">
+                <form onSubmit={(e) => e.preventDefault()}>
                   <div className="row">
                     <div className="col-md-12 col-sm-12">
                       <div className="form-group">
                         <input
+                          ref={name}
+                          value={txtName}
+                          onChange={(e) => setTxtName(e.target.value)}
+                          autoComplete="off"
                           className="form-control"
                           type="text"
                           name="name"
@@ -43,9 +86,13 @@ export default function SignUp() {
                     <div className="col-md-12 col-sm-12">
                       <div className="form-group">
                         <input
+                          ref={lastname}
+                          value={txtLastName}
+                          onChange={(e) => setTxtLastName(e.target.value)}
+                          autoComplete="off"
                           className="form-control"
                           type="text"
-                          name="name"
+                          name="lastname"
                           placeholder="Apellido"
                         />
                       </div>
@@ -54,6 +101,10 @@ export default function SignUp() {
                     <div className="col-md-12 col-sm-12">
                       <div className="form-group">
                         <input
+                          ref={email}
+                          value={txtEmail}
+                          onChange={(e) => setTxtEmail(e.target.value)}
+                          autoComplete="off"
                           className="form-control"
                           type="email"
                           name="email"
@@ -65,6 +116,10 @@ export default function SignUp() {
                     <div className="col-md-12 col-sm-12">
                       <div className="form-group">
                         <input
+                          ref={password}
+                          value={txtPassword}
+                          onChange={(e) => setTxtPassword(e.target.value)}
+                          autoComplete="off"
                           className="form-control"
                           type="password"
                           name="password"
@@ -74,7 +129,7 @@ export default function SignUp() {
                     </div>
 
                     <div className="col-12">
-                      <button className="default-btn btn-two" type="submit">
+                      <button className="default-btn btn-two" onClick={handleSignupForm}>
                         Registrarme gratis
                       </button>
                     </div>

@@ -65,7 +65,7 @@ const Footer = () => {
                   <li>
                     <Link href="https://saas.iotwise.co" target="_blank">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      Software as a Service
+                      IoT Planner®
                     </Link>
                   </li>
                   <li>

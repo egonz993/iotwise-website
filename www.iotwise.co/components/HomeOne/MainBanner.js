@@ -34,11 +34,11 @@ const MainBanner = () => {
                 >
                   
                   <a title="link to store" href="https://store.iotwise.co" target="_blank" className="default-btn px-5">
-                    TIENDA
+                    TIENDA ONLINE
                   </a>
 
                   <a title="link to console" href="https://saas.iotwise.co" target="_blank" className="default-btn px-5">
-                    CONSOLA
+                    IoT Planner®
                   </a>
 
                 </div>

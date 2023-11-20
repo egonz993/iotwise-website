@@ -35,13 +35,13 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="IoT Wise | Expertos en IoT" />
         <meta property="og:description" content="Expertos en el Internet de las Cosas" />
-        <meta property="og:image" content="https://iotwise.co/images/favicon.ico" />
+        <meta property="og:image" content="https://iotwise.co/images/iotwise-logo-black-512x512.png" />
         
         <meta property="og:site_name" content="IoT Wise" />
         <meta property="og:locale" content="es_419" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta property="og:url" content="https://iotwise.co" />
-        <meta property="og:secure_url" content="https://iotwise.co/images/favicon.ico" />
+        <meta property="og:secure_url" content="https://iotwise.co/images/iotwise-logo-black-512x512.png" />
         <meta property="og:image:alt" content="Expertos en IoT" />
         <meta property="og:image:width" content="663" />
         <meta property="og:image:height" content="481" />

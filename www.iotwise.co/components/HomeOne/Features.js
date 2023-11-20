@@ -5,17 +5,15 @@ const featuresData = [
   {
     iconName: "bx bx-store",
     title: "Tienda Online",
-    shortText:
-      "Encuentra una amplia variedad de opciones para tus sensores IoT con tecnologías LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más",
+    shortText: "Encuentra una amplia variedad de opciones para tus sensores IoT con tecnologías LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más",
     viewDetails: "https://store.iotwise.co",
     target: '_blank',
     aosDelay: "100",
   },
   {
     iconName: "bx bx-laptop",
-    title: "Software as a Service",
-    shortText:
-      "Herramientas online que puedes utilizar para evaluar y configurar tus dispositivos IoT, desde pruebas de cobertura hasta configuraciones automatizadas.",
+    title: "IoT Planner®",
+    shortText: "Herramientas online que puedes utilizar para evaluar y configurar tus dispositivos IoT, desde pruebas de cobertura hasta configuraciones automatizadas.",
     viewDetails: "https://saas.iotwise.co",
     target: '_blank',
     aosDelay: "200",

@@ -546,6 +546,9 @@ Default Btn Area Style
 .default-btn:hover::after {
   right: 200px;
 }
+.default-btn-success {
+  background-color: #1d56d2;
+}
 
 .popup-youtube {
   cursor: pointer;
@@ -3114,6 +3117,12 @@ Page Title Area Style
   color: #ffffff;
   font-size: 40px;
   font-weight: 700;
+}
+.page-title-area .page-title-content h6 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
 }
 .page-title-area .page-title-content ul {
   padding-left: 0;

@@ -3,9 +3,7 @@ import Link from "next/link";
 
 const PageBanner = ({
   pageTitle,
-  homePageUrl,
-  homePageText,
-  activePageText,
+  pageSubtitle
 }) => {
   return (
     <>
@@ -13,6 +11,7 @@ const PageBanner = ({
         <div className="container">
           <div className="page-title-content">
             <h2>{pageTitle}</h2>
+            <h6>{pageSubtitle}</h6>
             </div>
         </div>
       </div>

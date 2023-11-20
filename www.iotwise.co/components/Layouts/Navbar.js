@@ -1,20 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 import Link from "next/link";
 import { useScrolled } from "../../hooks/useScrolled";
+import { useAuth } from "../../hooks/useAuth";
+import { useCurrentPath } from "../../hooks/useCurrentPath";
 
 const Navbar = () => {
 
   const isScrolled = useScrolled();
+  
+  // Add active class to current path link
+  const currentPath = useCurrentPath()
 
-  // Add active class
-  const [currentPath, setCurrentPath] = useState("");
-  const router = useRouter();
-  // console.log(router.asPath)
+  const {isAuth, userEmail} = useAuth()
 
-  useEffect(() => {
-    setCurrentPath(router.asPath);
-  }, [router]);
+  const [showLoginBtn, setShowLoginbtn] = React.useState(true)
+  React.useEffect(() => {
+    const excludePaths = ["/user/", "/login/", "/sign-up/", "/recover-password/"]
+    setShowLoginbtn(!excludePaths.includes(currentPath))
+  }, [currentPath])
+
 
   const [menu, setMenu] = React.useState(true);
   const toggleNavbar = () => {
@@ -27,6 +31,8 @@ const Navbar = () => {
   const classTwo = menu
     ? "navbar-toggler navbar-toggler-right collapsed"
     : "navbar-toggler navbar-toggler-right";
+
+    
 
   return (
     <>
@@ -74,7 +80,7 @@ const Navbar = () => {
                   <Link
                     href="/about/"
                     className={`nav-link ${
-                      currentPath == "/about-1/" && "active"
+                      currentPath == "/about/" && "active"
                     }`}
                   >
                     Nosotros
@@ -120,9 +126,9 @@ const Navbar = () => {
               </ul>
 
               {/* Login Button */}
-              <div className="others-options">
-                <Link href="/login/" className="default-btn">
-                  INICIAR SESIÓN <i className="bx bx-log-in-circle"></i>
+              <div className="others-options_">
+                <Link href={`${isAuth ? "/user" : "/login"}`} className={`default-btn ${isAuth ? "default-btn-success" : ""} ${showLoginBtn ? '' : 'd-none'}`}>
+                  {isAuth ? userEmail.toUpperCase() : "INICIAR SESIÓN"} <i className="bx bx-log-in-circle"></i>
                 </Link>
               </div>
 
