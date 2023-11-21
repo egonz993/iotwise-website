@@ -5,7 +5,7 @@ export default function Consulting() {
 
   return (
     <>
-      <section className="consulting-area pt-5">
+      <section className="consulting-area pt-5" id='consulting'>
         <div className="container">
           <div className="section-title">
             <h2>Asesoría y Capacitación</h2>

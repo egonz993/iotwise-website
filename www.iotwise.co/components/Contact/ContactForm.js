@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import axios from "axios";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-const MySwal = withReactContent(Swal);
-import baseUrl from "../../utils/baseUrl";
+import { SendEmail } from "../../services/resend/send-email.service";
 
-const alertContent = () => {
+const MySwal = withReactContent(Swal);
+
+const alertContent = (st) => {
   MySwal.fire({
-    title: "Congratulations!",
-    text: "Your message was successfully send and will back to you soon",
+    title: "Hemos recibido tu mensaje!",
+    text: "Te hemos enviado un correo de confirmación y pronto uno de nuestros asesores se pondrá en contacto contigo",
     icon: "success",
-    timer: 2000,
-    timerProgressBar: true,
     showConfirmButton: false,
   });
 };
@@ -31,22 +29,48 @@ const ContactForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContact((prevState) => ({ ...prevState, [name]: value }));
-    // console.log(contact)
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     try {
-      const url = `${baseUrl}/api/contact`;
-      const { name, email, number, subject, text } = contact;
-      const payload = { name, email, number, subject, text };
-      const response = await axios.post(url, payload);
-      console.log(response);
-      setContact(INITIAL_STATE);
-      alertContent();
+
+      // Send Email to info@iotwise.co
+      await SendEmail({
+        subject: `Contacto | www.iotwise.co | ${contact.subject}`,
+        text: `Nuevo mensaje desde www.iotwise.co\n\n
+          Asunto: ${contact.subject}\n
+          Nombre: ${contact.name}\n
+          Correo: ${contact.email}\n
+          Contenido: ${contact.text}\n
+        `,
+        to: [
+          "info@iotwise.co"
+        ]
+      })
+
+      // Send confirmation email to user
+      await SendEmail({
+        subject: `Contacto | www.iotwise.co | ${contact.subject}`,
+        text: `Hemos recibido tu mensaje\n\n
+          Asunto: ${contact.subject}\n
+          Nombre: ${contact.name}\n
+          Correo: ${contact.email}\n
+          Contenido: ${contact.text}\n\n
+          Te responderemos lo antes posible por este mismo medio.
+        `,
+        to: [
+          contact.email
+        ]
+      })
+
+      alertContent()
+      setContact(INITIAL_STATE)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
+
   };
 
   return (
@@ -89,7 +113,21 @@ const ContactForm = () => {
                       </div>
                     </div>
 
-                    <div className="col-lg-12 col-md-12">
+                    <div className="col-12">
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          name="subject"
+                          placeholder="Asunto"
+                          className="form-control"
+                          value={contact.subject}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-12">
                       <div className="form-group">
                         <textarea
                           name="text"

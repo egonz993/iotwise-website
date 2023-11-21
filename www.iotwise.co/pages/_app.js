@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
 
         <meta name="author" content="E'Gonzalez" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="keywords" content="iot, internet de las cosas, iot planner, cloouder, lorawan, lte, wisun, sigfox, smart city" />
+        <meta name="keywords" content="iot, internet de las cosas, iot senpai, cloouder, lorawan, lte, wisun, sigfox, smart city" />
         <meta name="description" content="Expertos en el Internet de las Cosas" />
 
         {/* <!-- Etiquetas Open Graph --> */}

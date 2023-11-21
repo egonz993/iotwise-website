@@ -92,7 +92,7 @@ export const UserOverview = () => {
                             <a href='https://saas.iotwise.co' target='_blank' className='text-center col-lg-4'>
                                 <div className="single-features">
                                     <i className="bx bx-laptop"></i>
-                                    <h3>IoT Planner®</h3>
+                                    <h3>IoT Senpai®</h3>
                                 </div>
                             </a>
 

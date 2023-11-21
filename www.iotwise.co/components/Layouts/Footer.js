@@ -69,9 +69,9 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://planner.app.iotwise.co" target="_blank">
+                    <Link href="https://senpai.app.iotwise.co" target="_blank">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      IoT Planner®
+                      IoT Senpai®
                     </Link>
                   </li>
                   <li>
