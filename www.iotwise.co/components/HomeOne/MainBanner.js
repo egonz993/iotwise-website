@@ -1,7 +1,22 @@
 import React from "react";
 import Link from "next/link";
+import { useAuth } from "../../hooks/useAuth";
+import { useCurrentPath } from "../../hooks/useCurrentPath";
 
 const MainBanner = () => {
+
+  const {isAuth, userEmail} = useAuth()
+  
+  // Add active class to current path link
+  const currentPath = useCurrentPath()
+
+  const [showLoginBtn, setShowLoginbtn] = React.useState(true)
+  React.useEffect(() => {
+    const excludePaths = ["/user/", "/login/", "/sign-up/", "/recover-password/"]
+    setShowLoginbtn(!excludePaths.includes(currentPath))
+  }, [currentPath])
+
+
   return (
     <>
       <section className="main-banner-area main-banner-area-one" style={{minHeight:'100vh'}}>
@@ -14,7 +29,7 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="100"
                 >
-                  EXPERTOS EN EL INTERNET DE LAS COSAS (IoT)
+                  EXPERTOS EN EL INTERNET DE LAS COSAS
                 </h1>
 
                 <p
@@ -32,15 +47,14 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="300"
                 >
-                  
-                  <a title="link to store" href="https://store.iotwise.co" target="_blank" className="default-btn px-5">
-                    TIENDA ONLINE
-                  </a>
 
-                  <a title="link to console" href="https://saas.iotwise.co" target="_blank" className="default-btn px-5">
-                    IoT Planner®
-                  </a>
-
+                {/* Login Button */}
+                <div className="others-options_">
+                  <Link href={`${isAuth ? "/user" : "/login"}`} className={`default-btn ${isAuth ? "default-btn-success" : ""} ${showLoginBtn ? '' : 'd-none'}`}>
+                    {isAuth ? userEmail.toUpperCase() : "EMPIEZA GRATIS"} <i className="bx bx-log-in-circle" /> 
+                  </Link>
+                </div>
+                
                 </div>
               </div>
             </div>

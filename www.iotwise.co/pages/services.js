@@ -5,9 +5,10 @@ import Footer from "../components/Layouts/Footer";
 import PageHead from "../components/Common/PageHead";
 import Features from "../components/HomeOne/Features";
 import Store from "../components/HomeOne/Store";
-import SaaS from "../components/HomeOne/SaaS";
+import SaaS from "../components/HomeOne/IoTPlanner";
 import Consulting from "../components/HomeOne/Consulting";
 import ContactForm from "../components/Contact/ContactForm";
+import Cloouder from "../components/HomeOne/Cloouder";
 
 export default function Services() {
   return (
@@ -27,6 +28,8 @@ export default function Services() {
       <Store />
 
       <SaaS />
+
+      <Cloouder />
 
       <Consulting />
 

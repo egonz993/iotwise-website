@@ -4,9 +4,10 @@ import Features from "../components/HomeOne/Features";
 import Technologies from "../components/HomeOne/Technologies";
 import Footer from "../components/Layouts/Footer";
 import Store from "../components/HomeOne/Store";
-import SaaS from "../components/HomeOne/SaaS";
+import IoTPlanner from "../components/HomeOne/IoTPlanner";
 import Consulting from "../components/HomeOne/Consulting";
 import ContactForm from "../components/Contact/ContactForm";
+import Cloouder from "../components/HomeOne/Cloouder";
 
 export default function Index() {
   return (
@@ -21,7 +22,9 @@ export default function Index() {
 
       <Store />
 
-      <SaaS />
+      <IoTPlanner />
+
+      <Cloouder />
 
       <Consulting />
 

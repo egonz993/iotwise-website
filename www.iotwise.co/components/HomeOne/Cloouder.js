@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 
-export default function Store() {
+export default function Cloouder() {
 
     return (
       <>
@@ -16,7 +16,7 @@ export default function Store() {
                 data-aos-duration="1200"
                 data-aos-delay="100"
               >
-                <img src="/images/iot/iot-13.png" alt="Image" />
+                <img src="/images/iot/iot-16.png" alt="Image" />
               </div>
             </div>
 
@@ -27,11 +27,11 @@ export default function Store() {
                 data-aos-duration="1200"
                 data-aos-delay="200"
               >
-                <h2>Tienda Online</h2>
-                <p>Los sensores IoT desempeñan un papel crucial en la creación de entornos inteligentes y eficientes, en IoT Wise comprendemos la importancia de contar con la conectividad adecuada para garantizar el mejor rendimiento. Explora nuestra extensa gama de soluciones para sensores y módulos IoT, donde podrás descubrir una amplia variedad de opciones que abarcan diversas tecnologías de conectividad, entre las que se incluyen LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchas más.</p>
+                <h2>Cloouder®</h2>
+                <p>Con nuestro Dashboard, tendrás acceso a una interfaz fácil de usar que te permite monitorear en tiempo real el rendimiento y el estado de tus dispositivos IoT. Podrás personalizar la visualización de datos según tus necesidades específicas, creando paneles que reflejen la información más relevante para tu proyecto. Ya sea que estés gestionando un sistema de automatización en el hogar, una red de sensores industriales o cualquier otro tipo de proyecto IoT, nuestro Dashboard se adapta a ti.</p>
 
-                <Link href="https://store.iotwise.co/" target="_blank" className='default-btn'>
-                    <i className='bx bx-cart' /> IR A LA TIENDA
+                <Link href="https://cloouder.app.iotwise.co/" target="_blank" className='default-btn'>
+                    PRUEBALO GRATIS
                 </Link>
 
               </div>

@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-        <h2>Sistema de Gestión de Contenidos</h2>
+        <h2>IoT Planner®</h2>
         <a
           className="App-link"
           href="https://www.iotwise.co"

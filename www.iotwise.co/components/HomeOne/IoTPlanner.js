@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 
-export default function SaaS() {
+export default function IoTPlanner() {
 
   return (
     <>
@@ -17,11 +17,10 @@ export default function SaaS() {
                 data-aos-delay="200"
               >
                 <h2>IoT Planner®</h2>
-                <span><a title="link to app" href='https://saas.iotwise.co'>saas.iotwise.co</a></span>
                 <p>Descubre una solución integral para la gestión eficiente de tus dispositivos IoT con nuestro Software en la Nube. Nuestra plataforma te ofrece un conjunto de herramientas en línea diseñadas para simplificar, potenciar y automatizar la evaluación y configuración de tus dispositivos IoT de manera efectiva y sin complicaciones.</p>
 
-                  <Link href="https://saas.iotwise.co/" target="_blank" className='default-btn'>
-                      EMPIEZA GRATIS
+                  <Link href="https://planner.app.iotwise.co/" target="_blank" className='default-btn'>
+                      PRUEBALO GRATIS
                   </Link>
 
               </div>

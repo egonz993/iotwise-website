@@ -57,21 +57,27 @@ const Footer = () => {
                 <h5 className="link-light">Qué ofrecemos</h5>
                 <ul>
                   <li>
+                    <Link href="/meet">
+                      <i className="right-icon bx bx-chevrons-right"></i>
+                      Asesoría y Capacitación
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="https://store.iotwise.co" target="_blank">
                       <i className="right-icon bx bx-chevrons-right"></i>
                       Tienda Online
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://saas.iotwise.co" target="_blank">
+                    <Link href="https://planner.app.iotwise.co" target="_blank">
                       <i className="right-icon bx bx-chevrons-right"></i>
                       IoT Planner®
                     </Link>
                   </li>
                   <li>
-                    <Link href="/meet">
+                    <Link href="https://cloouder.app.iotwise.co" target="_blank">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      Asesoría y Capacitación
+                      Cloouder®
                     </Link>
                   </li>
                 </ul>
@@ -133,21 +139,15 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Blog
-                    </Link>
-                  </li>
-                  <li>
                     <Link href="/contact">
                       <i className="right-icon bx bx-chevrons-right"></i>
                       Contacto
                     </Link>
                   </li>
                   <li>
-                    <Link target="_blank" href="https://cms.iotwise.co">
+                    <Link href="/blog">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      Administradores
+                      Blog
                     </Link>
                   </li>
                 </ul>

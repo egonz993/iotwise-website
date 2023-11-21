@@ -8,7 +8,7 @@ const MeetForm = () => {
     <div className="main-contact-area pb-100">
       <div className="container">
         <div className="section-title">
-          <p>Agenda gratis una reunion virtual de 30 minutos con nuestros expertos.</p>
+          <p>Agenda gratis una reunion virtual de 30 minutos con nuestros expertos</p>
         </div>
 
         <div className="row align-items-center">

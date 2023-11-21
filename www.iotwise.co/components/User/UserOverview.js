@@ -75,24 +75,31 @@ export const UserOverview = () => {
                     {/* Aquí widgets de control y aplicaciones */}
                     <div className='card h-100 p-4'>
                         <div className='text-center py-3'>
-                            <img src='/images/iotwise-logo-black-rectangular.png' alt='User Image' width={120} />
+                            <img src='/images/iotwise-logo-black.svg' alt='User Image' width={120} />
                         </div>
 
                         <h4 className='text-center'>Servicios Disponibles</h4>
 
                         <div className='row py-5'>
 
-                            <a href='https://store.iotwise.co' target='_blank' className='text-center col-lg-6'>
+                            <a href='https://store.iotwise.co' target='_blank' className='text-center col-lg-4'>
                                 <div className="single-features">
                                     <i className="bx bx-store"></i>
                                     <h3>Tienda Online</h3>
                                 </div>
                             </a>
 
-                            <a href='https://saas.iotwise.co' target='_blank' className='text-center col-lg-6'>
+                            <a href='https://saas.iotwise.co' target='_blank' className='text-center col-lg-4'>
                                 <div className="single-features">
                                     <i className="bx bx-laptop"></i>
                                     <h3>IoT Planner®</h3>
+                                </div>
+                            </a>
+
+                            <a href='https://saas.iotwise.co' target='_blank' className='text-center col-lg-4'>
+                                <div className="single-features">
+                                    <i className="bx bx-cloud"></i>
+                                    <h3>Cloouder®</h3>
                                 </div>
                             </a>
 

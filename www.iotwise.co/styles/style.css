@@ -79,6 +79,21 @@ This files table contents are outlined below>>>>>
 /*
 Default Style
 ============================*/
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: #050b50;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #1d56d2;
+  outline: 1px solid #1d56d2;
+}
+
 body {
   padding: 0;
   margin: 0;

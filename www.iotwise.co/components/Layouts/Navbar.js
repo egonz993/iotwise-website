@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { useScrolled } from "../../hooks/useScrolled";
-import { useAuth } from "../../hooks/useAuth";
 import { useCurrentPath } from "../../hooks/useCurrentPath";
 
 const Navbar = () => {
@@ -10,14 +9,6 @@ const Navbar = () => {
   
   // Add active class to current path link
   const currentPath = useCurrentPath()
-
-  const {isAuth, userEmail} = useAuth()
-
-  const [showLoginBtn, setShowLoginbtn] = React.useState(true)
-  React.useEffect(() => {
-    const excludePaths = ["/user/", "/login/", "/sign-up/", "/recover-password/"]
-    setShowLoginbtn(!excludePaths.includes(currentPath))
-  }, [currentPath])
 
 
   const [menu, setMenu] = React.useState(true);
@@ -99,18 +90,6 @@ const Navbar = () => {
                   </Link>
                 </li>
                 
-                {/* Blog */}
-                <li className="nav-item">
-                  <Link
-                    href="/blog/"
-                    className={`nav-link ${
-                      currentPath == "/blog/" && "active"
-                    }`}
-                  >
-                    Blog
-                  </Link>
-                </li>
-                
                 {/* Contact */}
                 <li className="nav-item">
                   <Link
@@ -122,15 +101,20 @@ const Navbar = () => {
                     Contacto
                   </Link>
                 </li>
+                
+                {/* Blog */}
+                <li className="nav-item">
+                  <Link
+                    href="/blog/"
+                    className={`nav-link ${
+                      currentPath == "/blog/" && "active"
+                    }`}
+                  >
+                    Blog
+                  </Link>
+                </li>
 
               </ul>
-
-              {/* Login Button */}
-              <div className="others-options_">
-                <Link href={`${isAuth ? "/user" : "/login"}`} className={`default-btn ${isAuth ? "default-btn-success" : ""} ${showLoginBtn ? '' : 'd-none'}`}>
-                  {isAuth ? userEmail.toUpperCase() : "INICIAR SESIÓN"} <i className="bx bx-log-in-circle"></i>
-                </Link>
-              </div>
 
             </div>
           </div>
