@@ -12,7 +12,7 @@ export default function User() {
 
       <PageBanner 
         pageTitle="PERFIL DE USUARIO" 
-        pageSubtitle="Un solo usuario para todas nuestras aplicaciones"
+        pageSubtitle="Un sola cuenta para todas nuestras aplicaciones"
       />
 
       <UserOverview />

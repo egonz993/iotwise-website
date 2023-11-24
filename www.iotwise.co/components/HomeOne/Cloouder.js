@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import React from 'react'
+import { useAuth } from '../../hooks/useAuth';
 
 export default function Cloouder() {
 
-    return (
-      <>
-        <section className="store-area pb-100 pt-5" id='cloouder'>
+  const { isAuth } = useAuth()
+
+  return (
+    <>
+      <section className="store-area pb-100 pt-5 bg-light" id='cloouder'>
         <div className="container">
           <div className="row align-items-center">
 
@@ -30,8 +33,8 @@ export default function Cloouder() {
                 <h2>Cloouder®</h2>
                 <p>Con nuestro Dashboard, tendrás acceso a una interfaz fácil de usar que te permite monitorear en tiempo real el rendimiento y el estado de tus dispositivos IoT. Podrás personalizar la visualización de datos según tus necesidades específicas, creando paneles que reflejen la información más relevante para tu proyecto. Ya sea que estés gestionando un sistema de automatización en el hogar, una red de sensores industriales o cualquier otro tipo de proyecto IoT, nuestro Dashboard se adapta a ti.</p>
 
-                <Link href="https://cloouder.app.iotwise.co/" target="_blank" className='default-btn'>
-                    PRUEBALO GRATIS
+                <Link href="https://cloouder.app.iotwise.co" target='_blank' className='default-btn'>
+                  {isAuth ? 'IR A LA CONSOLA' : 'PRUEBALO GRATIS'}
                 </Link>
 
               </div>

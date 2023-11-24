@@ -1,0 +1,18 @@
+.loading-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loading-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 3em;
+  margin-top: 0.5em;
+}

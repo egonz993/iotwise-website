@@ -1,0 +1,122 @@
+.terminal {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-color: transparent;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.terminal .water-mark {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  background-color: #000000ea;
+}
+@media only screen and (max-width: 600px) {
+  .terminal  {
+    background-size: 80%;
+  }
+}
+
+.terminal .output::-webkit-scrollbar {
+  width: 0.3em;
+  background-color: #050b50;
+}
+ 
+.terminal .output::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.terminal .output::-webkit-scrollbar-thumb {
+  background-color: #1d56d2;
+  outline: 1px solid #1d56d2;
+}
+
+.terminal {
+  font-family: 'Courier New', monospace;
+  background-color: #0c0c0c;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  color: #ddd;
+}
+
+.terminal .output {
+  width: 100%;
+  height: calc(100vh - 2em);
+  overflow-y: auto;
+}
+
+
+.terminal .output ::selection {
+  background-color: #ffcc00;
+  color: #000;
+}
+.terminal .output-time {
+  color: #444;
+}
+
+.terminal .output-user {
+  color: #777;
+}
+
+.terminal .input-box {
+  position: relative;
+  bottom: 0;
+  height: 2em;
+}
+.terminal input,
+.terminal .form-control {
+  color: #ddd;
+  border: 0;
+  background: rgba(255, 255, 255, 0);
+}
+
+.terminal input::placeholder,
+.terminal .form-control::placeholder {
+  /* color: #3DCBF2; */
+  color: #444;
+}
+
+.terminal input:focus,
+.terminal .form-control:focus {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.terminal .btn-option {
+  background-color: transparent;
+  color: #aaa;
+  font-size: 20px;
+  border: 0;
+}
+
+.terminal .btn-option:hover {
+  color: #fff;
+}
+
+.terminal .no-select {
+  user-select: none;
+}
+
+
+
+/* ESTILOS PARA LAS DIFERENTES CLASES DE TEXTO EN LA TERMINAL*/
+
+.terminal .user-input {
+  color: #fff;
+}
+
+.terminal .output {
+  color: #777;
+}
+
+.terminal .terminal-info {
+  color: rgb(64, 192, 192);
+}
+
+.terminal .terminal-error {
+  color: #900;
+}

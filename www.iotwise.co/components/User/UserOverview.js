@@ -89,14 +89,14 @@ export const UserOverview = () => {
                                 </div>
                             </a>
 
-                            <a href='https://saas.iotwise.co' target='_blank' className='text-center col-lg-4'>
+                            <a href='https://senpai.app.iotwise.co' target='_blank' className='text-center col-lg-4'>
                                 <div className="single-features">
                                     <i className="bx bx-laptop"></i>
                                     <h3>IoT Senpai®</h3>
                                 </div>
                             </a>
 
-                            <a href='https://saas.iotwise.co' target='_blank' className='text-center col-lg-4'>
+                            <a href='https://cloouder.app.iotwise.co' target='_blank' className='text-center col-lg-4'>
                                 <div className="single-features">
                                     <i className="bx bx-cloud"></i>
                                     <h3>Cloouder®</h3>

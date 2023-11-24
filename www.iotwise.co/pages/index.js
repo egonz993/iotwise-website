@@ -8,6 +8,7 @@ import Consulting from "../components/HomeOne/Consulting";
 import ContactForm from "../components/Contact/ContactForm";
 import Cloouder from "../components/HomeOne/Cloouder";
 import IoTSenpai from "../components/HomeOne/IoTSenpai";
+import AboutComponent from "../components/HomeOne/About";
 
 export default function Index() {
 
@@ -18,6 +19,8 @@ export default function Index() {
       <MainBanner />
 
       <Features />
+
+      <AboutComponent />
 
       <Technologies />
 

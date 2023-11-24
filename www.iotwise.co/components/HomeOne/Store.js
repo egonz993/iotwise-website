@@ -5,7 +5,7 @@ export default function Store() {
 
     return (
       <>
-        <section className="store-area pb-100 pt-5" id='store'>
+        <section className="store-area pb-100 pt-5 bg-light" id='store'>
         <div className="container">
           <div className="row align-items-center">
 

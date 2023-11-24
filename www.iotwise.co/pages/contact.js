@@ -4,7 +4,7 @@ import PageBanner from "../components/Common/PageBanner";
 import ContactInfo from "../components/Contact/ContactInfo";
 import ContactForm from "../components/Contact/ContactForm";
 import Footer from "../components/Layouts/Footer";
-import MeetForm from "../components/Contact/MeetForm";
+import Consulting from "../components/HomeOne/Consulting";
 
 export default function Contact1() {
   return (
@@ -14,6 +14,8 @@ export default function Contact1() {
       <PageBanner pageTitle="CONTÁCTANOS" />
 
       <ContactInfo />
+
+      <Consulting />
 
       <ContactForm />
 

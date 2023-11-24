@@ -5,7 +5,7 @@ const featuresData = [
   {
     iconName: "bx bx-store",
     title: "Tienda Online",
-    shortText: "Encuentra una amplia variedad de opciones para tus sensores IoT con tecnologías inalámbricas como LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más",
+    shortText: "Encuentra una amplia variedad de opciones para tus sensores IoT con tecnologías inalámbricas como LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más.",
     viewDetails: "#store",
     aosDelay: "100",
   },
@@ -26,7 +26,7 @@ const featuresData = [
   {
     iconName: "flaticon-engineer",
     title: "Asesoría y Capacitación",
-    shortText: "Haz realidad tus proyectos e ideas con el acompañamiento de nuestros mentores «IoT Senpai». Agenda gratis una reunion virtual con nuestros especialistas (30 min)",
+    shortText: "Haz realidad tus proyectos e ideas con el acompañamiento de nuestro equipo de expertos. Puedes agenda una sesión virtual gratuita de 30 minutos con nuestros asesores.",
     viewDetails: "#consulting",
     aosDelay: "300",
   },

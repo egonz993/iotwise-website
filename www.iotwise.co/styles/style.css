@@ -562,7 +562,9 @@ Default Btn Area Style
   right: 200px;
 }
 .default-btn-success {
-  background-color: #1d56d2;
+  /*background-color: #1d56d2;*/
+  background-color: #3dcbf2;
+  color: #00042c;
 }
 
 .popup-youtube {

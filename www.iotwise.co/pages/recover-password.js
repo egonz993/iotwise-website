@@ -37,7 +37,10 @@ export default function RecoverPassword() {
     <>
       <Navbar />
 
-      <PageBanner pageTitle="RECUPERAR CONTRASEÑA" />
+      <PageBanner 
+        pageTitle="RECUPERAR CONTRASEÑA" 
+        pageSubtitle="Un sola cuenta para todas nuestras aplicaciones"
+      />
 
       <section className="user-area-all-style recover-password-area ptb-100">
         <div className="container">

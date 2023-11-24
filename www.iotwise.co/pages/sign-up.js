@@ -48,7 +48,10 @@ export default function SignUp() {
     <>
       <Navbar />
 
-      <PageBanner pageTitle="ÚNETE A NOSOTROS" />
+      <PageBanner 
+        pageTitle="ÚNETE A LA COMUNIDAD IOT WISE" 
+        pageSubtitle="Un sola cuenta para todas nuestras aplicaciones"
+      />
 
       <div className="user-area-all-style sign-up-area ptb-100">
         <div className="container">

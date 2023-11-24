@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HomePage } from './pages/HomePage';
+import { LoginPage } from './pages/LoginPage';
+import "bootstrap/dist/css/bootstrap.min.css"
+import { AuthComponent } from './components/AuthComponent/AuthComponent';
+import { TerminalScreen } from './components/Terminal/TerminalScreen';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <h2>IoT Senpai®</h2>
-        <a
-          className="App-link"
-          href="https://www.iotwise.co"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Página en Construcción</h2>
-          <p>www.iotwise.co</p>
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+
+        {/* Index */}
+        <Route path="/" element={<AuthComponent />}>
+
+          {/* Index */}
+          <Route path="/"  element={<Navigate redirect to="app" />} />
+
+          {/* Console  */}
+          <Route path='app' element={<HomePage />} />
+
+          {/* Terminal  */}
+          <Route path='terminal' element={<TerminalScreen />} />
+
+        </Route>
+
+        {/* Login  */}
+        <Route path='login' element={<LoginPage />} />
+
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 

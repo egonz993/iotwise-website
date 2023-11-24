@@ -19,9 +19,7 @@ const Footer = () => {
                   <img src="/images/iotwise-logo-white.svg" alt="Image" width={150} />
                 </Link>
 
-                {/* <p>Soluciones inteligentes para optimizar operaciones en tus proyectos IoT. Descubre el potencial de las comunicaciones con LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más.</p> */}
-                <p>Expertos en el Internet de las Cosas</p>
-
+                <p>Síguenos en nuestras redes</p>
                 <ul className="social-icon">
                   <li>
                     <a title="link to facebook" href="https://www.facebook.com/" target="_blank">
@@ -57,7 +55,7 @@ const Footer = () => {
                 <h5 className="link-light">Qué ofrecemos</h5>
                 <ul>
                   <li>
-                    <Link href="/meet">
+                    <Link href="/contact">
                       <i className="right-icon bx bx-chevrons-right"></i>
                       Asesoría y Capacitación
                     </Link>
