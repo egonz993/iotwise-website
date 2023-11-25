@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const useTerminalRecord = ({ inputRef, setInput }) => {
+export const useSerialPortRecord = ({ inputRef, setInput }) => {
 
   const [records, setRecord] = React.useState([""])
   const [recordIdx, setRecordIdx] = React.useState(0)

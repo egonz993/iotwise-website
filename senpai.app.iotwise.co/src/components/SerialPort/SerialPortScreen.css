@@ -1,39 +1,39 @@
-.terminal {
+.serial-port {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 50%;
   background-color: transparent;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-.terminal .water-mark {
+.serial-port .water-mark {
   width: 100%;
   overflow: hidden;
   height: 100%;
   background-color: #000000ea;
 }
 @media only screen and (max-width: 600px) {
-  .terminal  {
+  .serial-port  {
     background-size: 80%;
   }
 }
 
-.terminal .output::-webkit-scrollbar {
+.serial-port .output::-webkit-scrollbar {
   width: 0.3em;
   background-color: #050b50;
 }
  
-.terminal .output::-webkit-scrollbar-track {
+.serial-port .output::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
  
-.terminal .output::-webkit-scrollbar-thumb {
+.serial-port .output::-webkit-scrollbar-thumb {
   background-color: #1d56d2;
   outline: 1px solid #1d56d2;
 }
 
-.terminal {
+.serial-port {
   font-family: 'Courier New', monospace;
   background-color: #0c0c0c;
   overflow: hidden;
@@ -42,81 +42,99 @@
   color: #ddd;
 }
 
-.terminal .output {
+.serial-port .output {
   width: 100%;
   height: calc(100vh - 2em);
   overflow-y: auto;
 }
 
 
-.terminal .output ::selection {
+.serial-port .output ::selection {
   background-color: #ffcc00;
   color: #000;
 }
-.terminal .output-time {
+.serial-port .output-time {
   color: #444;
 }
 
-.terminal .output-user {
+.serial-port .output-user {
   color: #777;
 }
 
-.terminal .input-box {
+.serial-port .input-box {
+  background-color: #000;
   position: relative;
   bottom: 0;
   height: 2em;
 }
-.terminal input,
-.terminal .form-control {
+.serial-port input,
+.serial-port .form-control {
   color: #ddd;
   border: 0;
   background: rgba(255, 255, 255, 0);
 }
 
-.terminal input::placeholder,
-.terminal .form-control::placeholder {
+.serial-port input::placeholder,
+.serial-port .form-control::placeholder {
   /* color: #3DCBF2; */
   color: #444;
 }
 
-.terminal input:focus,
-.terminal .form-control:focus {
+.serial-port .placeholder-light::placeholder {
+  /* color: #3DCBF2; */
+  color: #fff;
+}
+
+
+.serial-port input:focus,
+.serial-port .form-control:focus {
   border: 0;
   outline: none;
   box-shadow: none;
 }
 
-.terminal .btn-option {
+.serial-port .btn-option {
   background-color: transparent;
   color: #aaa;
   font-size: 20px;
   border: 0;
 }
 
-.terminal .btn-option:hover {
+.serial-port .btn-option:hover {
   color: #fff;
 }
 
-.terminal .no-select {
+.serial-port .no-select {
   user-select: none;
 }
 
-
-
-/* ESTILOS PARA LAS DIFERENTES CLASES DE TEXTO EN LA TERMINAL*/
-
-.terminal .user-input {
-  color: #fff;
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
 }
 
-.terminal .output {
+.serial-port .blink {
+  animation: blink 1s infinite;
+}
+/* ESTILOS PARA LAS DIFERENTES CLASES DE TEXTO EN LA TERMINAL*/
+
+.serial-port .output {
   color: #777;
 }
 
-.terminal .terminal-info {
+.serial-port .user-input {
+  color: #fff;
+}
+
+.serial-port .message-output {
+  color: #777;
+}
+
+.serial-port .message-info {
   color: rgb(64, 192, 192);
 }
 
-.terminal .terminal-error {
+.serial-port .message-error {
   color: #900;
 }

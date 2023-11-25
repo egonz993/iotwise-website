@@ -4,7 +4,7 @@ import { HomePage } from './pages/HomePage';
 import { LoginPage } from './pages/LoginPage';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { AuthComponent } from './components/AuthComponent/AuthComponent';
-import { TerminalScreen } from './components/Terminal/TerminalScreen';
+import { SerialPortScreen } from './components/SerialPort/SerialPortScreen';
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
           {/* Console  */}
           <Route path='app' element={<HomePage />} />
 
-          {/* Terminal  */}
-          <Route path='terminal' element={<TerminalScreen />} />
+          {/* SerialPort  */}
+          <Route path='serialport' element={<SerialPortScreen />} />
 
         </Route>
 
