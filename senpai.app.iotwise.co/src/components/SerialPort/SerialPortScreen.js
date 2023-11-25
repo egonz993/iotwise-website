@@ -72,6 +72,8 @@ export const SerialPortScreen = () => {
   
       //This timeout is to wait for isConnected state change, either input is disabled and it can't be focused
       setTimeout(() => inputRef.current.focus(), 200)
+
+      serial.readPort()
     }
     
     const onDisconnect = () => {

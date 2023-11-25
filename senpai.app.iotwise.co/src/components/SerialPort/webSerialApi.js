@@ -17,31 +17,30 @@ export class SerpaiPort {
   }
 
   async deviceConnect(onConnect, onDisconnect) {
-    this.port = await navigator.serial.requestPort()
-    // const { usbProductId, usbVendorId } = await this.port.getInfo()
-    
-    const ports = await navigator.serial.getPorts()
+    try {
+      this.port = await navigator.serial.requestPort()
+      const ports = await navigator.serial.getPorts()
 
-    for (let p of ports) {
-      try {
-        await p.open({
-          baudRate: this.baudRate,
-          dataBits: this.dataBits,
-          parity: this.parity,
-          stopBits: this.stopBits
-        })
-
-        p.ondisconnect = (e) => {
-          console.log("ondisconnect", e)
-          onDisconnect()
+      // const { usbProductId, usbVendorId } = await this.port.getInfo()
+      
+      for (let p of ports) {
+        try {
+          await p.open({baudRate: this.baudRate, dataBits: this.dataBits, parity: this.parity, stopBits: this.stopBits})
+          console.log("Connected")
+          p.ondisconnect = (e) => {
+            console.log("ondisconnect", e)
+            onDisconnect()
+          }
+          onConnect()
+          
+          break;
+  
+        } catch (error) {
+          console.log(error)
         }
-
-        this.readPort()
-        onConnect()
-
-      } catch (error) {
-        console.log(error)
       }
+    } catch (error) {
+      console.log(error)      
     }
   }
 
@@ -59,13 +58,13 @@ export class SerpaiPort {
   async readPort() {
     const textDecoder = new TextDecoderStream()
     const reader = textDecoder.readable.getReader()
-    // const readableStreamClosed = this.port.readable.pipeTo(textDecoder.writable)
+    this.port.readable.pipeTo(textDecoder.writable)
 
     try {
       while (true) {
         const { value, done } = await reader.read()
-        console.log(value)
         if (done) { break }
+        console.log(value)
       }
     }
     catch (error) {
