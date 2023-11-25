@@ -12,19 +12,20 @@ export const SerialPortScreen = () => {
 
 
   const { user } = useAuth()
-  
+
   const inputRef = useRef()
   const outputRef = useRef()
-  
-  const [txData, setTxData] = useState('')
+
   const [output, setOutput] = useState([])
+  const [txData, setTxData] = useState('')
+  const [RxData, setRxData] = useState('')
 
   const [isConnected, setIsConnected] = useState(false)
 
   const { records, resetRecordIdx, pushRecord, clearRecords } = useSerialPortRecord({ inputRef, setTxData })
 
   // Add item to console
-  const pushOutput = ({type, user, text}) => {
+  const pushOutput = ({ type, user, text }) => {
     setOutput([...output, { type, time: new Date().getTime(), user, text }])
   }
 
@@ -35,87 +36,69 @@ export const SerialPortScreen = () => {
 
   // Print sent message on console
   const handleInputSubmit = async (event) => {
-    if(event)    event.preventDefault()
-    console.log({event})
-    let type = ''
-    let usr = ''
-    let text = ''
-      
-    if(event.type === 'submit'){
-      type = 'user-input'
-      usr = user.email
-      text = txData
+    if (event) event.preventDefault()
 
+    if (event.type === 'submit') {
       await serial.writePort(txData)
 
       // Add new item to record
       pushRecord(txData)
+
+      pushOutput({ type: 'user-input', user: user.email, text: txData })
       
       // Clear input
       setTxData('')
       resetRecordIdx()
     }
-    else {
-    type = ''
-
-    }
 
     // Add new item to screen
-    pushOutput({ type, user: usr, text: txData })
   }
 
   // Handler for Close Button
   const handleCloseWindow = (event) => {
     const result = window.confirm("¿Cerrar Aplicación?")
-    if(result){
+    if (result) {
       window.close()
     }
   }
 
   // Handler for Connect Button
   const handleDeviceConnection = async (event) => {
-    
+
     const onConnect = () => {
       pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `Device Connected | usbProductId: ${serial.port.getInfo().usbProductId}, usbVendorId: ${serial.port.getInfo().usbVendorId}` })
       console.log()
       setIsConnected(true)
       inputRef.current.focus()
-  
+
       //This timeout is to wait for isConnected state change, either input is disabled and it can't be focused
       setTimeout(() => inputRef.current.focus(), 200)
 
-      onValueRead()
+
+      serial.readPort((value) => {
+        setRxData({ type: 'message-output', user: 'serialport·Device', text: value })
+      })
     }
 
 
     const onDisconnect = () => {
-      setOutput([{type: "message-error", time: new Date().getTime(), user: 'serialport·IoTWise', text: 'Ha ocurrido un error: el dispositivo se ha desconectado inesperadamente'}])
+      setOutput([{ type: "message-error", time: new Date().getTime(), user: 'serialport·IoTWise', text: 'Ha ocurrido un error: el dispositivo se ha desconectado inesperadamente' }])
       setIsConnected(false)
     }
 
-    if(isConnected){
-      if(window.confirm("¿Desconectar Dispositivo?")) {
+    if (isConnected) {
+      if (window.confirm("¿Desconectar Dispositivo?")) {
         await serial.deviceDisconnect()
         pushOutput({ type: "message-error", user: 'serialport·IoTWise', text: 'Device Disconnected' })
         setIsConnected(false)
       }
     }
-    else{
+    else {
       await serial.deviceConnect(onConnect, onDisconnect)
     }
   }
 
-    
-  const onValueRead = () => {
-    serial.readPort((value) => {
-      pushOutput({ type: 'message-output', user: 'serialport·Device', text: value })
-    })
-  }
 
-  useEffect(() => {
-    console.log(output)
-  }, [output])
-  
   // Handler for Open/Close Otion Panel
   const handleOptions = (event) => {
     if (event.type === 'click' || (event.key.toLowerCase() === 'o' && (event.ctrlKey || event.metaKey))) {
@@ -138,7 +121,7 @@ export const SerialPortScreen = () => {
       event.preventDefault();
       const cmd = prompt("Paleta de comandos")
 
-      if(cmd) cmd_execute(cmd, options)
+      if (cmd) cmd_execute(cmd, options)
     }
   }
 
@@ -161,6 +144,11 @@ export const SerialPortScreen = () => {
     }
   })
 
+  // On RxData Received Push to the terminal
+  useEffect(() => {
+    if(RxData)    pushOutput(RxData)
+  }, [RxData])
+
   return (
     <div className="serial-port" style={{ backgroundImage: "url('/images/logo2.svg')" }}>
       <div className='water-mark'>
@@ -179,11 +167,11 @@ export const SerialPortScreen = () => {
         <div className='input-box no-select'>
           <form onSubmit={handleInputSubmit}>
             <div className='input-group'>
-              
+
               <button className="btn-option px-2" type="button" id="button-addon" onClick={handleDeviceConnection} title={`${isConnected ? 'Dispositivo Conectado' : 'Conectar dispositivo'}`}>
                 <i className={`fa-brands fa-usb ${isConnected ? 'text-primary' : 'text-danger blink'}`} />
               </button>
-              
+
               <input
                 type="text"
                 value={txData}
