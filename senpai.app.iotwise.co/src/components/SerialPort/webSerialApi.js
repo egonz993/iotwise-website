@@ -1,72 +1,81 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API
 
-let device
-let port = navigator.serial
 
-port.onconnect = event => {
-  console.log(event)
-}
+export class SerpaiPort {
 
-port.ondisconnect = event => {
-  console.log(event)
-  device.close()
-}
+  constructor({ baudRate, dataBits, parity, stopBits }) {
+    this.baudRate = baudRate
+    this.dataBits = dataBits
+    this.parity = parity
+    this.stopBits = stopBits
 
-const deviceConnect = ({ baudRate, dataBits, parity, stopBits }) => {
-  return new Promise(async (resolve) => {
+    this.port = null
+  }
+
+  getDevice() {
+    console.log(this.port)
+  }
+
+  async deviceConnect(onConnect, onDisconnect) {
+    this.port = await navigator.serial.requestPort()
+    // const { usbProductId, usbVendorId } = await this.port.getInfo()
+    
+    const ports = await navigator.serial.getPorts()
+
+    for (let p of ports) {
+      try {
+        await p.open({
+          baudRate: this.baudRate,
+          dataBits: this.dataBits,
+          parity: this.parity,
+          stopBits: this.stopBits
+        })
+
+        p.ondisconnect = (e) => {
+          console.log("ondisconnect", e)
+          onDisconnect()
+        }
+
+        this.readPort()
+        onConnect()
+
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }
+
+  async deviceDisconnect() {
+    await this.port.close()
+  }
+
+  async writePort(input) {
+    const encoder = new TextEncoder()
+    const writer = this.port.writable.getWriter()
+    await writer.write(encoder.encode(input))
+    writer.releaseLock()
+  }
+
+  async readPort() {
+    const textDecoder = new TextDecoderStream()
+    const reader = textDecoder.readable.getReader()
+    // const readableStreamClosed = this.port.readable.pipeTo(textDecoder.writable)
+
     try {
-      const ports = await port.requestPort()
-      console.log(ports)
-
-      const device = (await port.getPorts())[0]
-      console.log(device)
-
-      const open = await device.open({ baudRate, dataBits, parity, stopBits })
-      console.log(open)
-      
-      readPort()
-      resolve(true)
+      while (true) {
+        const { value, done } = await reader.read()
+        console.log(value)
+        if (done) { break }
+      }
     }
     catch (error) {
       console.log(error)
-      resolve(false)
     }
-  })
-}
-
-const deviceDisconnect = async () => {
-  try {
-    await device.readable.releaseLock()
-    await device.close()
-  } catch (error) {
-    console.log(error)    
-  }
-}
-
-const writePort = async (payload) => {
-  const encoder = new TextEncoder()
-  const writer = device.writable.getWriter()
-  await writer.write(encoder.encode(payload))
-  writer.releaseLock()
-}
-
-const readPort = async () => {
-  const textDecoder = new TextDecoderStream()
-  const reader = textDecoder.readable.getReader()
-  // const readableStreamClosed = device.readable.pipeTo(textDecoder.writable)
-
-  try {
-    while (true) {
-      const { value, done } = await reader.read()
-      if (done) { console.log(value); break }
+    finally {
+      reader.releaseLock()
     }
   }
-  catch (error) {
-    console.log(error)
-  }
-  finally {
-    reader.releaseLock()
-  }
 }
 
-export { deviceConnect, deviceDisconnect, writePort, readPort }
+
+

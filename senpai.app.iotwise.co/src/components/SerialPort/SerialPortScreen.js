@@ -4,10 +4,12 @@ import { useAuth } from '../../hooks/useAuth'
 import { cmd_execute } from './command-pallete'
 import './SerialPortScreen.css'
 
-// import { deviceConnect, deviceDisconnect/*, writePort, readPort */} from "./webSerialApi"
-import { deviceConnect, deviceDisconnect/*, writePort, readPort */} from "./webBluetoothApi"
+import { SerpaiPort } from './webSerialApi'
+
+const serial = new SerpaiPort({ baudRate: 115200, dataBits: 8, parity: "none", stopBits: 1 })
 
 export const SerialPortScreen = () => {
+
 
   const { user } = useAuth()
   
@@ -21,13 +23,9 @@ export const SerialPortScreen = () => {
 
   const { records, resetRecordIdx, pushRecord, clearRecords } = useSerialPortRecord({ inputRef, setInput })
 
-  useEffect(() => {
-    document.title = "IoT Senpai® | Serial Port"
-  })
-
   // Add item to console
-  const pushOutput = ({type, email, text}) => {
-    setOutput([...output, { type, time: new Date().getTime(), email, text }])
+  const pushOutput = ({type, user, text}) => {
+    setOutput([...output, { type, time: new Date().getTime(), user, text }])
   }
 
   // Add item to console
@@ -36,13 +34,15 @@ export const SerialPortScreen = () => {
   }
 
   // Print sent message on console
-  const handleInputSubmit = (event) => {
+  const handleInputSubmit = async (event) => {
     event.preventDefault()
 
     if (input.trim() !== '') {
 
+      await serial.writePort(input)
+
       // Add new item to screen
-      pushOutput({ type: "user-input", email: user.email, text: input })
+      pushOutput({ type: "user-input", user: user.email, text: input })
 
       // Add new item to record
       pushRecord(input)
@@ -53,35 +53,46 @@ export const SerialPortScreen = () => {
     }
   }
 
+  // Handler for Close Button
   const handleCloseWindow = (event) => {
     const result = window.confirm("¿Cerrar Aplicación?")
     if(result){
-      deviceDisconnect()
-      setIsConnected(false)
       window.close()
     }
   }
 
+  // Handler for Connect Button
   const handleDeviceConnection = async (event) => {
+    
+    const onConnect = () => {
+      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `Device Connected | usbProductId: ${serial.port.getInfo().usbProductId}, usbVendorId: ${serial.port.getInfo().usbVendorId}` })
+      console.log()
+      setIsConnected(true)
+      inputRef.current.focus()
+  
+      //This timeout is to wait for isConnected state change, either input is disabled and it can't be focused
+      setTimeout(() => inputRef.current.focus(), 200)
+    }
+    
+    const onDisconnect = () => {
+      setOutput([{type: "message-error", time: new Date().getTime(), user: 'serialport·IoTWise', text: 'Ha ocurrido un error: el dispositivo se ha desconectado inesperadamente'}])
+      setIsConnected(false)
+    }
+
     if(isConnected){
-      const result = window.confirm("¿Desconectar Dispositivo?")
-      if(result){
-        deviceDisconnect()
+      if(window.confirm("¿Desconectar Dispositivo?")) {
+        await serial.deviceDisconnect()
+        pushOutput({ type: "message-error", user: 'serialport·IoTWise', text: 'Device Disconnected' })
         setIsConnected(false)
       }
     }
     else{
-      const result = await deviceConnect({ baudRate: 115200, dataBits: 8, parity: "none", stopBits: 1 })
-      setIsConnected(result)
-      inputRef.current.focus()
-
-      //This timeout is to wait for isConnected state change, either input is disabled and it can't be focused
-      setTimeout(() => inputRef.current.focus(), 500)
+      await serial.deviceConnect(onConnect, onDisconnect)
       
     }
   }
 
-  // Option Panel
+  // Handler for Open/Close Otion Panel
   const handleOptions = (event) => {
     if (event.type === 'click' || (event.key.toLowerCase() === 'o' && (event.ctrlKey || event.metaKey))) {
       event.preventDefault();
@@ -89,7 +100,7 @@ export const SerialPortScreen = () => {
     }
   }
 
-  // Command Pallete
+  // Handler for Command Pallete
   const handleCommandPallete = (event) => {
 
     const options = {
@@ -107,6 +118,11 @@ export const SerialPortScreen = () => {
     }
   }
 
+  // Set Page Title
+  useEffect(() => {
+    document.title = "IoT Senpai® | Serial Port"
+  })
+
   // Scroll screen to bottom on new text append
   useEffect(() => { outputRef.current.scrollTop += outputRef.current.scrollHeight + 100 }, [output, outputRef])
 
@@ -121,7 +137,6 @@ export const SerialPortScreen = () => {
     }
   })
 
-
   return (
     <div className="serial-port" style={{ backgroundImage: "url('/images/logo2.svg')" }}>
       <div className='water-mark'>
@@ -129,7 +144,7 @@ export const SerialPortScreen = () => {
           {output.map((item, index) => (
             <div key={index} className={item.type}>
               <span className='output-time no-select'>{item.time} </span>
-              <span className='output-user no-select'> {item.email} </span>
+              <span className='output-user no-select'> {item.user} </span>
               <span className='output-user d-none d-sm-inline no-select'> $ ~ </span>
               <br className='d-block d-sm-none no-select' />
               <span>{item.text}</span>
@@ -142,7 +157,7 @@ export const SerialPortScreen = () => {
             <div className='input-group'>
               
               <button className="btn-option px-2" type="button" id="button-addon" onClick={handleDeviceConnection} title={`${isConnected ? 'Dispositivo Conectado' : 'Conectar dispositivo'}`}>
-                <i className={`fa fa-link ${isConnected ? 'text-success' : 'text-primary blink'}`} />
+                <i className={`fa-brands fa-usb ${isConnected ? 'text-primary' : 'text-danger blink'}`} />
               </button>
               
               <input
