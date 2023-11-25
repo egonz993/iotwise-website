@@ -55,7 +55,7 @@ export class SerpaiPort {
     writer.releaseLock()
   }
 
-  async readPort() {
+  async readPort(callback) {
     const textDecoder = new TextDecoderStream()
     const reader = textDecoder.readable.getReader()
     this.port.readable.pipeTo(textDecoder.writable)
@@ -64,7 +64,7 @@ export class SerpaiPort {
       while (true) {
         const { value, done } = await reader.read()
         if (done) { break }
-        console.log(value)
+        callback(value)
       }
     }
     catch (error) {

@@ -73,7 +73,10 @@ export const SerialPortScreen = () => {
       //This timeout is to wait for isConnected state change, either input is disabled and it can't be focused
       setTimeout(() => inputRef.current.focus(), 200)
 
-      serial.readPort()
+      serial.readPort((value) => {
+        console.log(value)
+        pushOutput({ type: 'message-output', user: 'serialport·Device', text: value })
+      })
     }
     
     const onDisconnect = () => {
@@ -90,7 +93,6 @@ export const SerialPortScreen = () => {
     }
     else{
       await serial.deviceConnect(onConnect, onDisconnect)
-      
     }
   }
 
