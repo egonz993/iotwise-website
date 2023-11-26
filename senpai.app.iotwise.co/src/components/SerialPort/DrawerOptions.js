@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Drawer from '@mui/material/Drawer';
 
 
-export const DrawerOptions = ({children}) => {
+export const DrawerOptions = ({portOptions, setValue, children}) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [contentIdx, setContentIdx] = useState(1);
@@ -15,29 +15,7 @@ export const DrawerOptions = ({children}) => {
   };
 
   const DrawerContentSerialConfig = () => {
-
-    const [baudRate, setBaudRate] = useState(115200)
-    const [dataBits, setDataBits] = useState(8)
-    const [parity, setParity] = useState('N')
-    const [stopBits, setStopBits] = useState(1)
     
-    const handleBaudRate = () => {
-      const value = prompt("Escriba el valor")
-      setBaudRate(value)
-    }
-    const handleDataBits = () => {
-      const value = prompt("Escriba el valor")
-      setDataBits(value)
-    }
-    const handleParity = () => {
-      const value = prompt("Escriba el valor")
-      setParity(value)
-    }
-    const handleStopBits = () => {
-      const value = prompt("Escriba el valor")
-      setStopBits(value)
-    }
-
     return(
       <div className='children'>
         <div className='title'>
@@ -48,23 +26,23 @@ export const DrawerOptions = ({children}) => {
 
           {/* { baudRate: 115200, dataBits: 8, parity: "none", stopBits: 1 } */}
 
-          <div className='btn-group pt-2 w-100'>
-            <button className='btn btn-dark' onClick={handleBaudRate}>
-              Baud Rate
+          <div className='btn-group p-2 w-100'>
+            <button className='pt-4 btn btn-dark' onClick={() => setValue.baudRate()}>
+              <i className='fa fa-edit'/> Baud Rate
+              <p className='text-info'>{portOptions.baudRate}</p>
             </button>
-            <button className='btn btn-dark' onClick={handleDataBits}>
-              Data Bits
+            <button className='pt-4 btn btn-dark' onClick={() => portOptions.dataBits()}>
+              <i className='fa fa-edit'/> Data Bits
+              <p className='text-info'>{portOptions.dataBits}</p>
             </button>
-            <button className='btn btn-dark' onClick={handleParity}>
-              Parity
+            <button className='pt-4 btn btn-dark' onClick={() => setValue.parity()}>
+              <i className='fa fa-edit'/> Parity
+              <p className='text-info'>{portOptions.parity}</p>
             </button>
-            <button className='btn btn-dark' onClick={handleStopBits}>
-              Stop Bits
+            <button className='pt-4 btn btn-dark' onClick={() => setValue.stopBits()}>
+              <i className='fa fa-edit'/> Stop Bits
+              <p className='text-info'>{portOptions.stopBits}</p>
             </button>
-          </div>
-
-          <div className='text-center p-5'>
-            <p className='display-5'>{`${baudRate} ${dataBits}${parity}${stopBits}`}</p>
           </div>
 
         </div>

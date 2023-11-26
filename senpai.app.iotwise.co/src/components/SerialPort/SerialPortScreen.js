@@ -2,15 +2,17 @@ import React, { useState, useRef, useEffect } from 'react'
 import { useSerialPortRecord } from './useSerialPortRecords'
 import { useAuth } from '../../hooks/useAuth'
 import { cmd_execute } from './command-pallete'
-import './SerialPortScreen.css'
-
 import { SerpaiPort } from './webSerialApi'
 import { DrawerOptions } from './DrawerOptions'
+import { usePortOptions } from './usePortOptions'
+import './SerialPortScreen.css'
+
 
 const serial = new SerpaiPort({ baudRate: 115200, dataBits: 8, parity: "none", stopBits: 1 })
 
 export const SerialPortScreen = () => {
 
+  const { portOptions, setValue } = usePortOptions()
 
   const { user } = useAuth()
 
@@ -28,7 +30,8 @@ export const SerialPortScreen = () => {
 
   // Add item to console
   const pushOutput = ({ type, user, text }) => {
-    setOutput([...output, { type, time: new Date().getTime(), user, text }])
+    // setOutput([...output, { type, time: new Date().getTime(), user, text }])
+    console.log({ time: new Date().getTime(), type, user, text })
   }
 
   // Add item to console
@@ -74,7 +77,9 @@ export const SerialPortScreen = () => {
 
     const onConnect = () => {
       setIsConnected(true)
-      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `Device Connected | usbVendorId: ${serial.port.getInfo().usbVendorId}, usbProductId: ${serial.port.getInfo().usbProductId}` })
+      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `Device Connected` })
+      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `usbVendorId: ${serial.port.getInfo().usbVendorId}, usbProductId: ${serial.port.getInfo().usbProductId}` })
+      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `baudRate: ${portOptions.baudRate}, dataBits: ${portOptions.dataBits}, parity: ${portOptions.parity}, stopBits: ${portOptions.stopBits} ` })
       inputRef.current.focus()
 
       //This timeout is to wait for isConnected state change, either input is disabled and it can't be focused
@@ -196,7 +201,7 @@ export const SerialPortScreen = () => {
               />
 
               <div className="input-group-append button-group">
-                <DrawerOptions>
+                <DrawerOptions portOptions={portOptions} setValue={setValue} >
                   <button className="btn-option px-2" type="button" id="button-addon" ref={btnOptionsRef} title="Abrir opciones de configuración (Ctrl + O)">
                     <i className='fa fa-cog' />
                   </button>
