@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Drawer from '@mui/material/Drawer';
 
-
 export const DrawerOptions = ({portOptions, setValue, children}) => {
 
   const [isOpen, setIsOpen] = useState(false);

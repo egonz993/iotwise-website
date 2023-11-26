@@ -3,20 +3,11 @@
 
 export class SerpaiPort {
 
-  constructor({ baudRate, dataBits, parity, stopBits }) {
-    this.baudRate = baudRate
-    this.dataBits = dataBits
-    this.parity = parity
-    this.stopBits = stopBits
-
+  constructor() {
     this.port = null
   }
 
-  getDevice() {
-    console.log(this.port)
-  }
-
-  async deviceConnect(onConnect, onDisconnect) {
+  async deviceConnect(portoptions, onConnect, onDisconnect) {
     try {
       this.port = await navigator.serial.requestPort()
       // const { usbProductId, usbVendorId } = await this.port.getInfo()
@@ -34,7 +25,7 @@ export class SerpaiPort {
 
       for (let p of ports) {
         try {
-          await p.open({baudRate: this.baudRate, dataBits: this.dataBits, parity: this.parity, stopBits: this.stopBits})
+          await p.open(portoptions)
           console.log("Connected"
           )
           onConnect()

@@ -8,7 +8,8 @@ import { usePortOptions } from './usePortOptions'
 import './SerialPortScreen.css'
 
 
-const serial = new SerpaiPort({ baudRate: 115200, dataBits: 8, parity: "none", stopBits: 1 })
+const serial = new SerpaiPort()
+let cnt = 0;
 
 export const SerialPortScreen = () => {
 
@@ -31,7 +32,7 @@ export const SerialPortScreen = () => {
   // Add item to console
   const pushOutput = ({ type, user, text }) => {
     // setOutput([...output, { type, time: new Date().getTime(), user, text }])
-    console.log({ time: new Date().getTime(), type, user, text })
+    console.log({ cnt: cnt++, time: new Date().getTime(), type, user, text })
   }
 
   // Add item to console
@@ -104,7 +105,7 @@ export const SerialPortScreen = () => {
       }
     }
     else {
-      await serial.deviceConnect(onConnect, onDisconnect)
+      await serial.deviceConnect(portOptions, onConnect, onDisconnect)
     }
   }
 
