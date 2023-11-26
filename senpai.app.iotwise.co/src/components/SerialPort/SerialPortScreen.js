@@ -5,6 +5,7 @@ import { cmd_execute } from './command-pallete'
 import './SerialPortScreen.css'
 
 import { SerpaiPort } from './webSerialApi'
+import { DrawerOptions } from './DrawerOptions'
 
 const serial = new SerpaiPort({ baudRate: 115200, dataBits: 8, parity: "none", stopBits: 1 })
 
@@ -15,6 +16,7 @@ export const SerialPortScreen = () => {
 
   const inputRef = useRef()
   const outputRef = useRef()
+  const btnOptionsRef = useRef()
 
   const [output, setOutput] = useState([])
   const [txData, setTxData] = useState('')
@@ -45,7 +47,7 @@ export const SerialPortScreen = () => {
       pushRecord(txData)
 
       pushOutput({ type: 'user-input', user: user.email, text: txData })
-      
+
       // Clear input
       setTxData('')
       resetRecordIdx()
@@ -103,7 +105,7 @@ export const SerialPortScreen = () => {
   const handleOptions = (event) => {
     if (event.type === 'click' || (event.key.toLowerCase() === 'o' && (event.ctrlKey || event.metaKey))) {
       event.preventDefault();
-      alert('handleOptions')
+      btnOptionsRef.current.click()
     }
   }
 
@@ -146,7 +148,9 @@ export const SerialPortScreen = () => {
 
   // On RxData Received Push to the terminal
   useEffect(() => {
-    if(RxData)    pushOutput(RxData)
+    if (RxData) pushOutput(RxData)
+
+    // eslint-disable-next-line
   }, [RxData])
 
   return (
@@ -183,9 +187,11 @@ export const SerialPortScreen = () => {
               />
 
               <div className="input-group-append button-group">
-                <button className="btn-option px-2" type="button" id="button-addon" onClick={handleOptions} title="Abrir opciones de configuración (Ctrl + O)">
-                  <i className='fa fa-cog' />
-                </button>
+                <DrawerOptions>
+                  <button className="btn-option px-2" type="button" id="button-addon" ref={btnOptionsRef} title="Abrir opciones de configuración (Ctrl + O)">
+                    <i className='fa fa-cog' />
+                  </button>
+                </DrawerOptions>
                 <button className="btn-option px-2" type="button" id="button-addon" onClick={handleCommandPallete} title="Abrir paleta de comandos (Ctrl + P)">
                   <i className='fa fa-code' />
                 </button>
