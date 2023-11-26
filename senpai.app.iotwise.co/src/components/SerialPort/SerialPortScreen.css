@@ -125,19 +125,19 @@
   color: #777;
 }
 
-.serial-port .user-input {
+.serial-port .Tx-Data {
   color: #fff;
 }
 
-.serial-port .message-output {
+.serial-port .Rx-Data {
   color: #00ffb3;
 }
 
-.serial-port .message-info {
+.serial-port .info {
   color: rgb(64, 192, 192);
 }
 
-.serial-port .message-error {
+.serial-port .error {
   color: #900;
 }
 

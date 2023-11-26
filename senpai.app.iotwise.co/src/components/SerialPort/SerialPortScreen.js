@@ -11,13 +11,15 @@ import './SerialPortScreen.css'
 
 const serial = new SerpaiPort()
 const start_time = new Date().getTime()
+
 let cnt = 0;
+let from_cnt = 0;
 
 export const SerialPortScreen = () => {
 
+  const { user } = useAuth()
   const { portOptions, setValue } = usePortOptions()
 
-  const { user } = useAuth()
 
   const inputRef = useRef()
   const outputRef = useRef()
@@ -25,14 +27,13 @@ export const SerialPortScreen = () => {
 
   const [output, setOutput] = useState([])
   const [txData, setTxData] = useState('')
-  const [RxData, setRxData] = useState('')
 
   const [isConnected, setIsConnected] = useState(false)
 
   const { records, resetRecordIdx, pushRecord, clearRecords } = useSerialPortRecord({ inputRef, setTxData })
 
   // Add item to console
-  const pushOutput = ({ type, user, text }) => {
+  const pushOutput = ({ type, text }) => {
     // setOutput([...output, { type, time: new Date().getTime(), user, text }])
     // console.log({ cnt: cnt++, time: new Date().getTime(), type, user, text })
     Database.push(`test/${start_time}/output`, { cnt: cnt++, time: new Date().getTime(), type, user, text })
@@ -57,7 +58,7 @@ export const SerialPortScreen = () => {
         // Add new item to record
         pushRecord(txData)
   
-        pushOutput({ type: 'user-input', user: user.email, text: txData })
+        pushOutput({ type: 'Tx-Data', text: txData })
   
         // Clear input
         setTxData('')
@@ -93,9 +94,9 @@ export const SerialPortScreen = () => {
       })
 
       setIsConnected(true)
-      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `Device Connected` })
-      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `usbVendorId: ${device_info.usbVendorId}, usbProductId: ${device_info.usbProductId}` })
-      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `baudRate: ${portOptions.baudRate}, dataBits: ${portOptions.dataBits}, parity: ${portOptions.parity}, stopBits: ${portOptions.stopBits} ` })
+      pushOutput({ type: "info", text: `Device Connected` })
+      pushOutput({ type: "info", text: `usbVendorId: ${device_info.usbVendorId}, usbProductId: ${device_info.usbProductId}` })
+      pushOutput({ type: "info", text: `baudRate: ${portOptions.baudRate}, dataBits: ${portOptions.dataBits}, parity: ${portOptions.parity}, stopBits: ${portOptions.stopBits} ` })
       inputRef.current.focus()
 
       //This timeout is to wait for isConnected state change, either input is disabled and it can't be focused
@@ -103,19 +104,19 @@ export const SerialPortScreen = () => {
 
 
       serial.readPort((value) => {
-        setRxData({ type: 'message-output', user: 'serialport·Device', text: value })
+        pushOutput({ type: 'Rx-Data', text: value })
       })
     }
 
     const onDisconnect = () => {
       setIsConnected(false)
-      setOutput([{ time: new Date().getTime(), type: "message-error", user: 'serialport·IoTWise', text: 'Ha ocurrido un error: el dispositivo se ha desconectado inesperadamente' }])
+      setOutput([{ time: new Date().getTime(), type: "error", text: 'Ha ocurrido un error: el dispositivo se ha desconectado inesperadamente' }])
     }
 
     if (isConnected) {
       if (window.confirm("¿Desconectar Dispositivo?")) {
         await serial.deviceDisconnect()
-        pushOutput({ type: "message-error", user: 'serialport·IoTWise', text: 'Device Disconnected' })
+        pushOutput({ type: "error", text: 'Device Disconnected' })
         setIsConnected(false)
       }
     }
@@ -137,10 +138,19 @@ export const SerialPortScreen = () => {
   const handleCommandPallete = (event) => {
 
     const options = {
-      txData, setTxData, inputRef,
-      output, setOutput, outputRef, pushOutput, clearOutput,
-      records, pushRecord, resetRecordIdx, clearRecords,
+      user,
+      cnt,fromCnt,
+      portOptions, setValue,
+      inputRef, outputRef, btnOptionsRef,
+      output, setOutput,
+      txData, setTxData,
+      isConnected, setIsConnected,
+      records, resetRecordIdx, pushRecord, clearRecords,
+      pushOutput, clearOutput,
+      handleInputSubmit,
       handleCloseWindow,
+      handleDeviceConnection,
+      handleOptions,
     }
 
     if (event.type === 'click' || (event.key.toLowerCase() === 'p' && (event.ctrlKey || event.metaKey))) {
@@ -149,6 +159,10 @@ export const SerialPortScreen = () => {
 
       if (cmd) cmd_execute(cmd, options)
     }
+  }
+
+  const fromCnt = () => {
+    from_cnt = cnt
   }
 
   // Set Page Title
@@ -170,19 +184,16 @@ export const SerialPortScreen = () => {
     }
   })
 
-  // On RxData Received Push to the terminal
-  useEffect(() => {
-    if (RxData) pushOutput(RxData)
-
-    // eslint-disable-next-line
-  }, [RxData])
-
+  // Update screen on database change
   useEffect(() => {
     Database.onValue(`test/${start_time}/output`, (data) => {
       let _output = []
       if(data){
+        console.log("onValue")
         Object.keys(data).forEach(key => {
-          _output.push(data[key])
+          if(data[key].cnt >= from_cnt){
+            _output.push(data[key])
+          }
         })
         
         setOutput(_output)
@@ -192,13 +203,13 @@ export const SerialPortScreen = () => {
     return () => Database.off(`test/${start_time}/output`)
   }, [])
 
-  const OutputScreen = () => {
+  const OutputScreenComponent = () => {
     return(
       <div className="output _no-select" ref={outputRef} >
       {output.map((item, index) => (
         <div key={index} className={item.type}>
           <span className='output-time no-select'>{item.time} </span>
-          <span className='output-user no-select'> {item.user} </span>
+          <span className='output-user no-select'> {item.type} </span>
           <span className='output-user d-none d-sm-inline no-select'> $ ~ </span>
           <br className='d-block d-sm-none no-select' />
           <span>{item.text}</span>
@@ -211,7 +222,8 @@ export const SerialPortScreen = () => {
   return (
     <div className="serial-port" style={{ backgroundImage: "url('/images/logo2.svg')" }}>
       <div className='water-mark'>
-      <OutputScreen />
+        
+        <OutputScreenComponent />
 
         <div className='input-box no-select'>
           <form onSubmit={handleInputSubmit}>

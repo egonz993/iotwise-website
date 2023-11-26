@@ -1,14 +1,15 @@
-export const cmd_execute = (cmd, opt) => {
+export const cmd_execute = (cmd, opt, cnt) => {
   switch (cmd) {
 
     case 'clear':
     case 'cls':
       opt.clearOutput()
+      opt.fromCnt()
       break;
 
     case 'clear -r':
       opt.clearRecords()
-      opt.pushOutput({ type: 'message-info', user: 'serialport·IoTWise', text: 'cmd: clear -r > clear console records' })
+      opt.pushOutput({ type: 'info', text: 'cmd: clear -r > clear console records' })
       break;
 
     case 'exit':
@@ -18,15 +19,15 @@ export const cmd_execute = (cmd, opt) => {
       break;
 
     case 'set interval':
-      opt.pushOutput({ type: 'message-info', user: 'serialport·IoTWise', text: 'cmd: set interval > Set Data Interval' })
+      opt.pushOutput({ type: 'info', text: 'cmd: set interval > Set Data Interval' })
       break;
 
     case 'clear interval':
-      opt.pushOutput({ type: 'message-info', user: 'serialport·IoTWise', text: 'cmd: clear interval > Clear Data Interval' })
+      opt.pushOutput({ type: 'info', text: 'cmd: clear interval > Clear Data Interval' })
       break;
       
     default:
-      opt.pushOutput({ type: 'message-error', user: 'serialport·IoTWise', text: `cmd: no se reconoce el comando <${cmd}>` })
+      opt.pushOutput({ type: 'error', text: `cmd: no se reconoce el comando <${cmd}>` })
       break;
   }
 
