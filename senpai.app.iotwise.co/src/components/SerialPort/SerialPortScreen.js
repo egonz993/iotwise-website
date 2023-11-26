@@ -181,8 +181,8 @@ export const SerialPortScreen = () => {
     Database.onValue(`test/${start_time}/output`, (data) => {
       let _output = []
       if(data){
-        Object.entries(data).forEach(value => {
-          _output.push(value[1])
+        Object.keys(data).forEach(key => {
+          _output.push(data[key])
         })
         
         setOutput(_output)
