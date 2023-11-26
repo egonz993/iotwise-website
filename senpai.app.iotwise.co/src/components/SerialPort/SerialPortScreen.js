@@ -5,10 +5,12 @@ import { cmd_execute } from './command-pallete'
 import { SerpaiPort } from './webSerialApi'
 import { DrawerOptions } from './DrawerOptions'
 import { usePortOptions } from './usePortOptions'
+import { Database } from '../../services/firebase/database.service'
 import './SerialPortScreen.css'
 
 
 const serial = new SerpaiPort()
+const start_time = new Date().getTime()
 let cnt = 0;
 
 export const SerialPortScreen = () => {
@@ -32,7 +34,8 @@ export const SerialPortScreen = () => {
   // Add item to console
   const pushOutput = ({ type, user, text }) => {
     // setOutput([...output, { type, time: new Date().getTime(), user, text }])
-    console.log({ cnt: cnt++, time: new Date().getTime(), type, user, text })
+    // console.log({ cnt: cnt++, time: new Date().getTime(), type, user, text })
+    Database.push(`test/${start_time}/output`, { cnt: cnt++, time: new Date().getTime(), type, user, text })
   }
 
   // Add item to console
@@ -76,10 +79,22 @@ export const SerialPortScreen = () => {
   // Handler for Connect Button
   const handleDeviceConnection = async (event) => {
 
-    const onConnect = () => {
+    const onConnect = async () => {
+
+      const device_info = {
+        usbVendorId: serial.port.getInfo().usbVendorId,
+        usbProductId: serial.port.getInfo().usbProductId
+      }
+
+      await Database.set(`test/${start_time}`, {
+        start_time,
+        device_info,
+        portOptions
+      })
+
       setIsConnected(true)
       pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `Device Connected` })
-      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `usbVendorId: ${serial.port.getInfo().usbVendorId}, usbProductId: ${serial.port.getInfo().usbProductId}` })
+      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `usbVendorId: ${device_info.usbVendorId}, usbProductId: ${device_info.usbProductId}` })
       pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `baudRate: ${portOptions.baudRate}, dataBits: ${portOptions.dataBits}, parity: ${portOptions.parity}, stopBits: ${portOptions.stopBits} ` })
       inputRef.current.focus()
 
@@ -161,6 +176,21 @@ export const SerialPortScreen = () => {
 
     // eslint-disable-next-line
   }, [RxData])
+
+  useEffect(() => {
+    Database.onValue(`test/${start_time}/output`, (data) => {
+      let _output = []
+      if(data){
+        Object.entries(data).forEach(value => {
+          _output.push(value[1])
+        })
+        
+        setOutput(_output)
+      }
+    })
+
+    return () => Database.off(`test/${start_time}/output`)
+  }, [])
 
   const OutputScreen = () => {
     return(

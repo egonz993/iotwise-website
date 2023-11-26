@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export const usePortOptions = () => {
   
@@ -36,10 +36,5 @@ export const usePortOptions = () => {
     }
   }
   
-
-  useEffect(() => {
-    console.log(portOptions)
-  }, [portOptions])
-
   return { portOptions, setValue }
 }
