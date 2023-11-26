@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const useSerialPortRecord = ({ inputRef, setInput }) => {
+export const useSerialPortRecord = ({ inputRef, setTxData }) => {
 
   const [records, setRecord] = React.useState([""])
   const [recordIdx, setRecordIdx] = React.useState(0)
@@ -25,13 +25,13 @@ export const useSerialPortRecord = ({ inputRef, setInput }) => {
       if (inputElement) inputElement.removeEventListener('keydown', keyDownEvent)
     }
 
-  }, [records, recordIdx, inputRef, setInput])
+  }, [records, recordIdx, inputRef, setTxData])
 
   // Update input recordIdx changed
   React.useEffect(() => {
     const txt = records[recordIdx - 1]
-    if (txt) setInput(txt)
-  }, [records, recordIdx, setInput])
+    if (txt) setTxData(txt)
+  }, [records, recordIdx, setTxData])
 
   const resetRecordIdx = () => {
     setRecordIdx(0)

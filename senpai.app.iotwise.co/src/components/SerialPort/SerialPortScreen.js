@@ -41,16 +41,21 @@ export const SerialPortScreen = () => {
     if (event) event.preventDefault()
 
     if (event.type === 'submit') {
-      await serial.writePort(txData)
 
-      // Add new item to record
-      pushRecord(txData)
+      if(txData.length>0){
 
-      pushOutput({ type: 'user-input', user: user.email, text: txData })
-
-      // Clear input
-      setTxData('')
-      resetRecordIdx()
+        // Write in serial port
+        await serial.writePort(txData)
+  
+        // Add new item to record
+        pushRecord(txData)
+  
+        pushOutput({ type: 'user-input', user: user.email, text: txData })
+  
+        // Clear input
+        setTxData('')
+        resetRecordIdx()
+      }
     }
 
     // Add new item to screen
@@ -68,9 +73,8 @@ export const SerialPortScreen = () => {
   const handleDeviceConnection = async (event) => {
 
     const onConnect = () => {
-      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `Device Connected | usbProductId: ${serial.port.getInfo().usbProductId}, usbVendorId: ${serial.port.getInfo().usbVendorId}` })
-      console.log()
       setIsConnected(true)
+      pushOutput({ type: "message-info", user: 'serialport·IoTWise', text: `Device Connected | usbVendorId: ${serial.port.getInfo().usbVendorId}, usbProductId: ${serial.port.getInfo().usbProductId}` })
       inputRef.current.focus()
 
       //This timeout is to wait for isConnected state change, either input is disabled and it can't be focused
@@ -82,10 +86,9 @@ export const SerialPortScreen = () => {
       })
     }
 
-
     const onDisconnect = () => {
-      setOutput([{ type: "message-error", time: new Date().getTime(), user: 'serialport·IoTWise', text: 'Ha ocurrido un error: el dispositivo se ha desconectado inesperadamente' }])
       setIsConnected(false)
+      setOutput([{ time: new Date().getTime(), type: "message-error", user: 'serialport·IoTWise', text: 'Ha ocurrido un error: el dispositivo se ha desconectado inesperadamente' }])
     }
 
     if (isConnected) {
@@ -153,20 +156,26 @@ export const SerialPortScreen = () => {
     // eslint-disable-next-line
   }, [RxData])
 
+  const OutputScreen = () => {
+    return(
+      <div className="output _no-select" ref={outputRef} >
+      {output.map((item, index) => (
+        <div key={index} className={item.type}>
+          <span className='output-time no-select'>{item.time} </span>
+          <span className='output-user no-select'> {item.user} </span>
+          <span className='output-user d-none d-sm-inline no-select'> $ ~ </span>
+          <br className='d-block d-sm-none no-select' />
+          <span>{item.text}</span>
+        </div>
+      ))}
+    </div>
+    )
+  }
+
   return (
     <div className="serial-port" style={{ backgroundImage: "url('/images/logo2.svg')" }}>
       <div className='water-mark'>
-        <div className="output _no-select" ref={outputRef} >
-          {output.map((item, index) => (
-            <div key={index} className={item.type}>
-              <span className='output-time no-select'>{item.time} </span>
-              <span className='output-user no-select'> {item.user} </span>
-              <span className='output-user d-none d-sm-inline no-select'> $ ~ </span>
-              <br className='d-block d-sm-none no-select' />
-              <span>{item.text}</span>
-            </div>
-          ))}
-        </div>
+      <OutputScreen />
 
         <div className='input-box no-select'>
           <form onSubmit={handleInputSubmit}>

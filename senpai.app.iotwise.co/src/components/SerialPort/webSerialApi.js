@@ -19,18 +19,24 @@ export class SerpaiPort {
   async deviceConnect(onConnect, onDisconnect) {
     try {
       this.port = await navigator.serial.requestPort()
-      const ports = await navigator.serial.getPorts()
-
       // const { usbProductId, usbVendorId } = await this.port.getInfo()
       
+      this.port.onconnect = (e) => {
+        console.log("onconnect", e)
+        onConnect()
+      }
+      this.port.ondisconnect = (e) => {
+        console.log("ondisconnect", e)
+        window.location.reload()
+      }
+      
+      const ports = await navigator.serial.getPorts()
+
       for (let p of ports) {
         try {
           await p.open({baudRate: this.baudRate, dataBits: this.dataBits, parity: this.parity, stopBits: this.stopBits})
-          console.log("Connected")
-          p.ondisconnect = (e) => {
-            console.log("ondisconnect", e)
-            onDisconnect()
-          }
+          console.log("Connected"
+          )
           onConnect()
           
           break;
@@ -40,12 +46,12 @@ export class SerpaiPort {
         }
       }
     } catch (error) {
-      console.log(error)      
+      console.log(error)
     }
   }
 
   async deviceDisconnect() {
-    await this.port.close()
+    window.location.reload()
   }
 
   async writePort(input) {
