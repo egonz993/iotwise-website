@@ -1,12 +1,14 @@
 .serial-port {
+  font-family: 'Courier New', monospace;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
-  background-color: transparent;
+  background-color: #0c0c0c;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
+
 .serial-port .water-mark {
   width: 100%;
   overflow: hidden;
@@ -19,40 +21,40 @@
   }
 }
 
-.serial-port .output::-webkit-scrollbar {
-  width: 0.3em;
-  background-color: #050b50;
-}
- 
-.serial-port .output::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
- 
-.serial-port .output::-webkit-scrollbar-thumb {
-  background-color: #1d56d2;
-  outline: 1px solid #1d56d2;
-}
-
-.serial-port {
-  font-family: 'Courier New', monospace;
-  background-color: #0c0c0c;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  color: #ddd;
-}
-
 .serial-port .output {
   width: 100%;
   height: calc(100vh - 2em);
-  overflow-y: auto;
+  overflow-y: hidden;
 }
-
 
 .serial-port .output ::selection {
   background-color: #ffcc00;
   color: #000;
 }
+
+.serial-port .output textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #ddd;
+  resize: 'none';
+  height: calc(100vh - 2em);
+}
+
+.serial-port .output textarea::-webkit-scrollbar {
+  width: 0.3em;
+  background-color: #050b50;
+}
+ 
+.serial-port .output textarea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.serial-port .output textarea::-webkit-scrollbar-thumb {
+  background-color: #1d56d2;
+  outline: 1px solid #1d56d2;
+}
+
 .serial-port .output-time {
   color: #444;
 }
@@ -147,8 +149,13 @@
 /* ESTILOS PARA DRAWER DE OPCIONES*/
 
 
+.drawer-options-header {
+  padding-top: 10px;
+}
+
 .drawer-options-content::-webkit-scrollbar {
   width: 0.1em;
+  height: 0.1em;
   background-color: #050b50;
 }
  
@@ -164,8 +171,8 @@
 .drawer-options {
   text-align: center;
   margin: 0;
-  padding: 15px 10px 0 0;
-  height: 300px;
+  padding-left: 15px;
+  height: 400px;
   overflow: hidden;
   color: #fff;
   background-color: #222;
@@ -208,10 +215,11 @@
 .drawer-options-content {
   background-color: #333;
   border: solid 2px #444;
-  max-height: 230px;
-  min-height: 230px;
+  max-height: 330px;
+  min-height: 330px;
+  max-width: calc(100% - 95px);
   min-width: calc(100% - 95px);
-  overflow-y: auto;
+  overflow: auto;
   margin-bottom: 50px;
 }
 

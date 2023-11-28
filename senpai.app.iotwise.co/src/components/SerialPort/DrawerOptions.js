@@ -23,28 +23,46 @@ export const DrawerOptions = ({portOptions, setValue, children}) => {
 
         <div className='content'>
 
-          {/* { baudRate: 115200, dataBits: 8, parity: "none", stopBits: 1 } */}
+            <div className='btn-group my-2 col-12'>
+              <button className='pt-4 btn btn-dark' onClick={() => setValue.baudRate()}>
+                <i className='fa fa-edit'/> Baud Rate
+                <p className='text-info'>{portOptions.baudRate}</p>
+              </button>
+              <button className='pt-4 btn btn-dark' onClick={() => setValue.dataBits()}>
+                <i className='fa fa-edit'/> Data Bits
+                <p className='text-info'>{portOptions.dataBits}</p>
+              </button>
+              <button className='pt-4 btn btn-dark' onClick={() => setValue.parity()}>
+                <i className='fa fa-edit'/> Parity
+                <p className='text-info'>{portOptions.parity}</p>
+              </button>
+              <button className='pt-4 btn btn-dark' onClick={() => setValue.stopBits()}>
+                <i className='fa fa-edit'/> Stop Bits
+                <p className='text-info'>{portOptions.stopBits}</p>
+              </button>
+            </div>
 
-          <div className='btn-group p-2 w-100'>
-            <button className='pt-4 btn btn-dark' onClick={() => setValue.baudRate()}>
-              <i className='fa fa-edit'/> Baud Rate
-              <p className='text-info'>{portOptions.baudRate}</p>
-            </button>
-            <button className='pt-4 btn btn-dark' onClick={() => portOptions.dataBits()}>
-              <i className='fa fa-edit'/> Data Bits
-              <p className='text-info'>{portOptions.dataBits}</p>
-            </button>
-            <button className='pt-4 btn btn-dark' onClick={() => setValue.parity()}>
-              <i className='fa fa-edit'/> Parity
-              <p className='text-info'>{portOptions.parity}</p>
-            </button>
-            <button className='pt-4 btn btn-dark' onClick={() => setValue.stopBits()}>
-              <i className='fa fa-edit'/> Stop Bits
-              <p className='text-info'>{portOptions.stopBits}</p>
-            </button>
+            <div className='btn-group my-2 col-12'>
+              <button className={`pt-4 btn btn-dark ${portOptions.uppercase ? 'active' : ''}`} onClick={() => setValue.uppercase()}>
+                <i className='fa fa-edit'/> Mayusculas
+                <p className='text-info'>{`${portOptions.uppercase ? 'TRUE' : 'FALSE'}`}</p>
+              </button>
+              <button className={`pt-4 btn btn-dark ${portOptions.lowercase ? 'active' : ''}`} onClick={() => setValue.lowercase()}>
+                <i className='fa fa-edit'/> Minusculas
+                <p className='text-info'>{`${portOptions.lowercase ? 'TRUE' : 'FALSE'}`}</p>
+              </button>
+              <button className='pt-4 btn btn-dark' onClick={() => setValue.prepend()}>
+                <i className='fa fa-edit'/> Prefijo
+                <p className='text-info'>{JSON.stringify(portOptions.prepend)}</p>
+              </button>
+              <button className='pt-4 btn btn-dark' onClick={() => setValue.append()}>
+                <i className='fa fa-edit'/> Sufijo
+                <p className='text-info'>{JSON.stringify(portOptions.append)}</p>
+              </button>
+            </div>
+
           </div>
 
-        </div>
       </div>
     )
   }

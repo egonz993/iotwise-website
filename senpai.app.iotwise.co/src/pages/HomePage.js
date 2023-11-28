@@ -22,7 +22,7 @@ export const HomePage = () => {
             <p>www.iotwise.co</p>
           </a>
           <div className='btn-group'>
-            <Link className='btn btn-success' to='/serialport' target='_blank'>Probar SerialPort</Link>
+            <Link className='btn btn-success' to='/serialport' >Probar SerialPort</Link>
             <button className='btn btn-danger' onClick={() => auth.signOut()}>Cerrar Sesión</button>
           </div>
         </header>

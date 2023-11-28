@@ -26,8 +26,6 @@ export class SerpaiPort {
       for (let p of ports) {
         try {
           await p.open(portoptions)
-          console.log("Connected"
-          )
           onConnect()
           
           break;
