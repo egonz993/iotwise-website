@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Drawer from '@mui/material/Drawer';
+import { Database } from '../../services/firebase/database.service';
 
 export const DrawerOptions = ({portOptions, setValue, children}) => {
 
@@ -66,8 +67,48 @@ export const DrawerOptions = ({portOptions, setValue, children}) => {
       </div>
     )
   }
-
+  
   const DrawerContentRecords = () => {
+
+    const [records, setRecords] = useState([])
+    
+    useEffect(() => {
+      
+      const getRecords = async () => {
+        const data = await Database.get('test')
+        let render = []
+
+        Object.keys(data).forEach((record, idx) => {
+          render.push(<div key={idx+1} onClick={() => {
+            const nuevaPestana = window.open('', '_blank');
+            nuevaPestana.document.write(`
+            <style>
+            html, body, .content {
+              width: 100%;
+              height: 100vh;
+              margin: 0;
+              padding: 0;
+              background: #000;
+              color: #fff;
+            }
+            </style>
+            <div class=content>
+              <pre>${JSON.parse(data[record].output, null, 2)}</pre>
+            </div>
+            `);
+            nuevaPestana.document.title = new Date(Number(record));
+            nuevaPestana.document.close();
+          }}>
+            <button className='btn btn-dark m-1'>{`${idx+1}. ${new Date(Number(record)).toLocaleString() }`} <sub>{`(${(data[record].output?.length / 1024).toFixed(2)} KiB)`}</sub> </button>
+          </div>)
+        })
+
+        setRecords(render.reverse())
+      }
+
+      getRecords()
+    })
+
     return(
       <div className='children'>
         <div className='title'>
@@ -75,7 +116,7 @@ export const DrawerOptions = ({portOptions, setValue, children}) => {
         </div>
 
         <div className='content'>
-
+          {records}
         </div>
       </div>
     )

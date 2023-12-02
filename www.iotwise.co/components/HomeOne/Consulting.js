@@ -9,7 +9,7 @@ export default function Consulting() {
         <div className="container">
           <div className="section-title">
             <h2>Asesoría y Capacitación</h2>
-            <p>Con más de 10 años de dedicación y experiencia en la ejecución exitosa de proyectos en el ámbito del Internet de las Cosas (IoT), nos enorgullece ofrecer nuestro conocimiento y compromiso para llevar tu visión a la realidad. Estamos listos para colaborar contigo y apoyarte en la implementación de soluciones innovadoras de IoT.</p>
+            <p>Con más de 18 años de dedicación y experiencia en la ejecución exitosa de proyectos en el ámbito del Internet de las Cosas (IoT), nos enorgullece ofrecer nuestro conocimiento y compromiso para llevar tu visión a la realidad. Estamos listos para colaborar contigo y apoyarte en la implementación de soluciones innovadoras de IoT.</p>
 
             <div className='row px-4'
               data-aos="fade-in"

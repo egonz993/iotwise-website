@@ -29,7 +29,7 @@ const AboutComponent = () => {
                 <h2>
                   Somos Expertos en IoT
                 </h2>
-                <p>Con más de 10 años de experiencia, somos líderes en el campo del Internet de las cosas (IoT). Nuestra vasta trayectoria refleja un profundo conocimiento y experiencia en el diseño, implementación y optimización de soluciones IoT, posicionándonos como expertos de confianza en este emocionante y dinámico sector tecnológico.</p>
+                <p>Con más de 18 años de experiencia, somos líderes en el campo del Internet de las cosas (IoT). Nuestra vasta trayectoria refleja un profundo conocimiento y experiencia en el diseño, implementación y optimización de soluciones IoT, posicionándonos como expertos de confianza en este emocionante y dinámico sector tecnológico.</p>
 
                 <div className="row">
                   <div className="col-lg-6 col-sm-6">

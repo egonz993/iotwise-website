@@ -84,13 +84,13 @@ const Technologies = () => {
           <span>Tecnologías</span>
           <h2>Comunicaciones Inalámbricas</h2>
           <p>
-            Las principales tecnologías para comunicación inalámbrica en proyectos IoT
+            Ofrecemos las principales tecnologías para comunicación inalámbrica en proyectos IoT
           </p>
         </div>
 
         <div className="row justify-content-center"
-            data-aos="fade-in"
-            data-aos-delay={100}>
+          data-aos="fade-in"
+          data-aos-delay={100}>
 
           {technologiesData &&
             technologiesData.map((value, i) => (
@@ -104,6 +104,12 @@ const Technologies = () => {
                 </div>
               </div>
             ))}
+        </div>
+
+        <div className="text-center">
+          <Link href="https://store.iotwise.co/" target="_blank" className='default-btn col-6'>
+            <i className='bx bx-cart' /> IR A LA TIENDA
+          </Link>
         </div>
       </div>
 

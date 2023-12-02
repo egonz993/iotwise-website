@@ -75,7 +75,7 @@ const Footer = () => {
                   <li>
                     <Link href="https://cloouder.app.iotwise.co" target="_blank">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      Cloouder®
+                      Cloouder® LNS
                     </Link>
                   </li>
                 </ul>

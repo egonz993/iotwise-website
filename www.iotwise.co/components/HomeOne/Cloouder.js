@@ -8,7 +8,7 @@ export default function Cloouder() {
 
   return (
     <>
-      <section className="store-area pb-100 pt-5 bg-light" id='cloouder'>
+      <section className="store-area pb-100 pt-5" id='cloouder'>
         <div className="container">
           <div className="row align-items-center">
 
@@ -30,8 +30,8 @@ export default function Cloouder() {
                 data-aos-duration="1200"
                 data-aos-delay="200"
               >
-                <h2>Cloouder®</h2>
-                <p>Con nuestro Dashboard, tendrás acceso a una interfaz fácil de usar que te permite monitorear en tiempo real el rendimiento y el estado de tus dispositivos IoT. Podrás personalizar la visualización de datos según tus necesidades específicas, creando paneles que reflejen la información más relevante para tu proyecto. Ya sea que estés gestionando un sistema de automatización en el hogar, una red de sensores industriales o cualquier otro tipo de proyecto IoT, nuestro Dashboard se adapta a ti.</p>
+                <h2>Cloouder® LNS</h2>
+                <p>Con la suscripción a nuestro LoRaWAN Network Server (LNS), estarás equipado con todas las herramientas necesarias para optimizar el rendimiento de tus dispositivos, garantizando una conectividad eficiente y segura en todo momento. Este servidor actúa como el intermediario inteligente que organiza la transmisión de datos, asegurando la eficiencia y confiabilidad de la red. Además, ofrece funciones avanzadas como la gestión de dispositivos y seguridad de extremo a extremo. ¡Únete a nosotros y descubre cómo facilitamos la gestión de tus proyectos IoT!.</p>
 
                 <Link href="https://cloouder.app.iotwise.co" target='_blank' className='default-btn'>
                   {isAuth ? 'IR A LA CONSOLA' : 'PRUEBALO GRATIS'}

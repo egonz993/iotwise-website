@@ -24,11 +24,11 @@ export default function Index() {
 
       <Technologies />
 
-      <Store />
-
       <IoTSenpai />
 
       <Cloouder />
+
+      <Store />
 
       <Consulting />
 

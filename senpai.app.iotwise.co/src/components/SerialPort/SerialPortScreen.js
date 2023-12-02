@@ -15,8 +15,7 @@ let buffer_db = ""
 
 export const SerialPortScreen = () => {
 
-  const { portOptions, setValue } = usePortOptions()
-
+  
   const inputRef = useRef()
   const outputRef = useRef()
   const btnOptionsRef = useRef()
@@ -24,10 +23,10 @@ export const SerialPortScreen = () => {
 
   const [txt, setTxt] = useState([])
   const [txData, setTxData] = useState('')
-
   const [isConnected, setIsConnected] = useState(false)
-
-  const { resetRecordIdx, pushRecord } = useSerialPortRecord({ inputRef, setTxData })
+  
+  const { portOptions, setValue } = usePortOptions()
+  const { resetRecordIdx, pushRecord, clearRecords } = useSerialPortRecord({ inputRef, setTxData })
 
   // Print data to screen
   const print = (input) => {
@@ -38,16 +37,14 @@ export const SerialPortScreen = () => {
     Database.set(`test/${start_time}/output`, JSON.stringify(buffer_db))
   }
 
-
-  
-
   // Add item to console
   const clearOutput = () => {
-    setTxt("")
+    buffer = ""
+    setTxt(buffer)
   }
 
   // Print sent message on console
-  const handleSendTx = async (event) => {
+  const handleInputSend = async (event) => {
     if (event) event.preventDefault()
 
     if (event.type === 'submit') {
@@ -158,13 +155,32 @@ export const SerialPortScreen = () => {
       event.preventDefault();
       const cmd = prompt("Paleta de comandos")
 
-      if (cmd) cmd_execute(cmd)
+      const opt = {
+        inputRef,
+        outputRef,
+        btnOptionsRef,
+        btnConnectRef,
+        txt, setTxt,
+        txData, setTxData,
+        isConnected, setIsConnected,
+        portOptions, setValue ,
+        resetRecordIdx, pushRecord, clearRecords,
+        print,
+        clearOutput,
+        handleInputSend,
+        onInputChange,
+        handleCloseTerminal,
+        handleDeviceConnection,
+        openConfigPanel,
+      }
+
+      if (cmd) cmd_execute(cmd, opt)
     }
   }
 
   // Page Title and Shortcuts
   useEffect(() => {
-    document.title = "IoT Senpai® | Web Serialport"
+    document.title = "IoT Senpai® | SerialPort Online"
 
     document.addEventListener('keydown', openCommandPalette)
     document.addEventListener('keydown', openConfigPanel)
@@ -188,7 +204,7 @@ export const SerialPortScreen = () => {
           <textarea defaultValue={txt} disabled={true} ref={outputRef}  />
         </div>
         <div className='input-box no-select'>
-          <form onSubmit={handleSendTx}>
+          <form onSubmit={handleInputSend}>
             <div className='input-group'>
 
               <button className="btn-option px-2" type="button" id="button-addon" ref={btnConnectRef} onClick={handleDeviceConnection} title={`${isConnected ? 'Dispositivo Conectado' : 'Conectar dispositivo'}`}>

@@ -12,17 +12,14 @@ export const HomePage = () => {
       <div className="App">
         <header className="App-header">
           <h2>IoT Senpai®</h2>
-          <a
-            className="App-link"
-            href="https://iotwise.co"
-            rel="noopener noreferrer"
-          >
+          
+          <div>
             <img src="/images/logo.svg" className="App-logo" alt="logo" />
-            <h2>Página en Construcción</h2>
-            <p>www.iotwise.co</p>
-          </a>
+          </div>
+
           <div className='btn-group'>
-            <Link className='btn btn-success' to='/serialport' >Probar SerialPort</Link>
+            <Link className='btn btn-success' to='/serialport' >SerialPort Online</Link>
+            {/* <Link className='btn btn-primary' to='/bluetooth' >Bluetooth Online</Link> */}
             <button className='btn btn-danger' onClick={() => auth.signOut()}>Cerrar Sesión</button>
           </div>
         </header>

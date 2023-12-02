@@ -6,28 +6,28 @@ const featuresData = [
     iconName: "bx bx-store",
     title: "Tienda Online",
     shortText: "Encuentra una amplia variedad de opciones para tus sensores IoT con tecnologías inalámbricas como LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más.",
-    viewDetails: "#store",
+    viewDetails: "/store",
     aosDelay: "100",
   },
   {
     iconName: "bx bx-laptop",
     title: "IoT Senpai®",
     shortText: "Herramientas online que puedes utilizar para evaluar y configurar tus dispositivos IoT, desde pruebas de funcionamiento hasta configuraciones automatizadas.",
-    viewDetails: "#iot-senpai",
+    viewDetails: "/senpai",
     aosDelay: "200",
   },
   {
     iconName: "bx bx-cloud",
-    title: "Cloouder®",
-    shortText: "Transforma tus datos en decisiones con nuestro Dashboard Personalizable para tus proyectos IoT. Visualiza y controla tus dispositivos conectados de manera intuitiva.",
-    viewDetails: "#cloouder",
+    title: "Cloouder® LNS",
+    shortText: "Con la suscripción a nuestro LoRaWAN Network Server (LNS), estarás equipado con todas las herramientas necesarias para optimizar el rendimiento de tus dispositivos.",
+    viewDetails: "/cloouder",
     aosDelay: "300",
   },
   {
     iconName: "flaticon-engineer",
     title: "Asesoría y Capacitación",
     shortText: "Haz realidad tus proyectos e ideas con el acompañamiento de nuestro equipo de expertos. Puedes agenda una sesión virtual gratuita de 30 minutos con nuestros asesores.",
-    viewDetails: "#consulting",
+    viewDetails: "/contact",
     aosDelay: "300",
   },
 ];
@@ -76,9 +76,9 @@ const Features = () => {
                     <h3>{value.title}</h3>
                     <p>{value.shortText}</p>
 
-                    <a href={value.viewDetails} target={value.target} className="read-more-icon smooth">
+                    <Link href={value.viewDetails} target={value.target} className="read-more-icon smooth">
                       <span className="flaticon-right-arrow"></span>
-                    </a>
+                    </Link>
 
                   </div>
                 </div>
