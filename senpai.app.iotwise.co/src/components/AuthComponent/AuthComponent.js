@@ -13,7 +13,7 @@ export const AuthComponent = () => {
   React.useEffect(() => {
     setTimeout(() => {
       setSplashScreenCompleted(true)
-    }, 1500)
+    }, 500)
   }, [])
 
 

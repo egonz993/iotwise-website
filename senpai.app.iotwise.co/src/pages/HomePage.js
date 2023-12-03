@@ -18,7 +18,8 @@ export const HomePage = () => {
           </div>
 
           <div className='btn-group'>
-            <Link className='btn btn-success' to='/serialport' >SerialPort Online</Link>
+            <Link className='btn btn-success' target='_blank' to='/serialport' >SerialPort Online</Link>
+            <Link className='btn btn-primary' target='_blank' to='/chatbot' >Chatbot</Link>
             {/* <Link className='btn btn-primary' to='/bluetooth' >Bluetooth Online</Link> */}
             <button className='btn btn-danger' onClick={() => auth.signOut()}>Cerrar Sesión</button>
           </div>

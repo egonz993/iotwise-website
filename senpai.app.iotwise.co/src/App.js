@@ -5,6 +5,7 @@ import { LoginPage } from './pages/LoginPage';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { AuthComponent } from './components/AuthComponent/AuthComponent';
 import { SerialPortScreen } from './components/SerialPort/SerialPortScreen';
+import { ChatbotComponent } from './components/ChatbotComponent/ChatbotComponent';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
 
           {/* SerialPort  */}
           <Route path='serialport' element={<SerialPortScreen />} />
+
+          {/* Chatbot  */}
+          <Route path='chatbot' element={<ChatbotComponent />} />
 
         </Route>
 
