@@ -66,17 +66,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 
-                {/* Tienda */}
-                <li className="nav-item">
-                  <Link
-                    href="https://store.iotwise.co"
-                    className='nav-link'
-                  >
-                    Tienda
-                  </Link>
-                </li>
-                
-                {/* About
+                {/* About */}
                 <li className="nav-item">
                   <Link
                     href="/about/"
@@ -86,7 +76,17 @@ const Navbar = () => {
                   >
                     Nosotros
                   </Link>
-                </li> */}
+                </li>
+                
+                {/* Tienda */}
+                <li className="nav-item">
+                  <Link
+                    href="https://store.iotwise.co"
+                    className='nav-link'
+                  >
+                    Tienda
+                  </Link>
+                </li>
 
                 {/* Services */}
                 <li className="nav-item">

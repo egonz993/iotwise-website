@@ -3,9 +3,9 @@ import React from 'react'
 
 export default function Store() {
 
-    return (
-      <>
-        <section className="store-area pb-100 pt-5 bg-light" id='store'>
+  return (
+    <>
+      <section className="store-area pb-100 pt-5 bg-light" id='store'>
         <div className="container">
           <div className="row align-items-center">
 
@@ -31,7 +31,7 @@ export default function Store() {
                 <p>Los sensores IoT desempeñan un papel crucial en la creación de entornos inteligentes y eficientes, en IoT Wise comprendemos la importancia de contar con la conectividad adecuada para garantizar el mejor rendimiento. Explora nuestra extensa gama de soluciones para sensores y módulos IoT, donde podrás descubrir una amplia variedad de opciones que abarcan diversas tecnologías de conectividad, entre las que se incluyen LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchas más.</p>
 
                 <Link href="https://store.iotwise.co/" target="_blank" className='default-btn'>
-                    <i className='bx bx-cart' /> IR A LA TIENDA
+                  <i className='bx bx-cart' /> IR A LA TIENDA
                 </Link>
 
               </div>

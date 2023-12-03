@@ -6,6 +6,7 @@ import PageHead from "../components/Common/PageHead";
 import Technologies from "../components/HomeOne/Technologies";
 import WhatWeOffer from "../components/HomeOne/WhatWeOffer";
 import AboutComponent from "../components/HomeOne/About";
+import { MisionVision } from "../components/HomeOne/MisionVision";
 
 export default function About() {
   return (
@@ -24,7 +25,7 @@ export default function About() {
         <AboutComponent />
       </div>
 
-      <Technologies />
+      <MisionVision />
 
       <WhatWeOffer />
 
