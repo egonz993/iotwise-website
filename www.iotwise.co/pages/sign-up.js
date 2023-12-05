@@ -62,7 +62,7 @@ export default function SignUp() {
                   <h3 className="form-title">¡Crea una cuenta gratis!</h3>
                 </div>
                 <div className="text-center">
-                  <h6 className="form-title">¿Ya tines una cuenta? <Link title="link to signup" href="/login" >Inicia sesión aquí</Link></h6>
+                  <h6 className="form-title">¿Ya tienes una cuenta? <Link title="link to signup" href="/login" >Inicia sesión aquí</Link></h6>
                   <div className="text-center pb-3">
                     <img src="/images/iotwise-logo-black.svg" width={120} />
                   </div>

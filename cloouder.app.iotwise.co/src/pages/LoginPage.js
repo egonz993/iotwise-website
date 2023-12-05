@@ -37,7 +37,7 @@ export const LoginPage = () => {
             <div className="login-logo">
               <h1 className='link-light'>Cloouder<sup>®</sup></h1>
               <img src="/images/logo.svg" alt="logo iot wise" className="brand-image" width={100} />
-              <h6 className="link-light mt-3">¿No tines una cuenta? <a className='link-primary' title="link to signup" href="https://iotwise.co/sign-up" target='_blank' rel="noreferrer">Crea una aquí</a></h6>
+              <h6 className="link-light mt-3">¿No tienes una cuenta? <a className='link-primary' title="link to signup" href="https://iotwise.co/sign-up" target='_blank' rel="noreferrer">Crea una aquí</a></h6>
             </div>
 
             <div className="card-body login-card-body">

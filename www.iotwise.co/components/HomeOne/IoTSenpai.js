@@ -20,7 +20,7 @@ export default function IoTSenpai() {
                 data-aos-delay="200"
               >
                 <h2>IoT Senpai®</h2>
-                <p>Explora una solución integral diseñada para convertirse en tu aliado principal en la gestión de dispositivos inteligentes. IoT Senpai® proporciona herramientas en línea diseñadas para simplificar y automatizar de manera eficiente la evaluación y configuración de tus dispositivos, brindando una experiencia de usuario avanzada y personalizada, apóyate con nuestro chatbot de IA Generativa entrenado con los datos de los principales dispositivos IoT del mercado para convertirse en tu aliado ideal.</p>
+                <p>Explora una solución integral diseñada para convertirse en tu aliado principal en la gestión de dispositivos inteligentes. IoT Senpai® proporciona herramientas en línea diseñadas para simplificar y automatizar de manera eficiente la configuración de tus módulos IoT, brindando una experiencia de usuario avanzada y personalizada, apóyate con nuestro chatbot de IA Generativa entrenado con los datos de los proyectos y soluciones más destacadas en el campo del IoT, convertiéndose en tu aliado ideal.</p>
                 <Link href="https://senpai.app.iotwise.co" target='_blank' className='default-btn'>
                   {isAuth ? 'IR A LA CONSOLA' : 'PRUEBALO GRATIS'}
                 </Link>

@@ -47,7 +47,7 @@ export default function Login() {
                   <h4 className="form-title">Inicia Sesión</h4>
                 </div>
                 <div className="text-center">
-                  <h6 className="form-title">¿No tines una cuenta? <Link title="link to signup" href="/sign-up" >Crea una aquí</Link></h6>
+                  <h6 className="form-title">¿No tienes una cuenta? <Link title="link to signup" href="/sign-up" >Crea una aquí</Link></h6>
                   <div className="text-center pb-3">
                     <img src="/images/iotwise-logo-black.svg" width={120} />
                   </div>
