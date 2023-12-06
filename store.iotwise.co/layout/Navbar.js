@@ -68,14 +68,14 @@ export const Navbar = () => {
             </NavDropdown>
 
             {/* Accesories" */}
-            <NavDropdown title="Accesorios" id="basic-nav-dropdown">
+            <NavDropdown className='nav-dropdown' title="Accesorios" id="basic-nav-dropdown">
               
               <Link href='/' className='nav-link'>Ver Todo</Link>
               <NavDropdown.Divider />
 
+              <Link href='/' className='nav-link'>Cajas</Link>
               <Link href='/' className='nav-link'>Antenas</Link>
               <Link href='/' className='nav-link'>Conectores</Link>
-              <Link href='/' className='nav-link'>Cajas</Link>
               <Link href='/' className='nav-link'>Herramientas</Link>
 
             </NavDropdown>
@@ -94,11 +94,11 @@ export const Navbar = () => {
           <Nav className="ms-auto bg-dark" data-bs-theme="dark">
 
             <Link href='/' className='nav-link' onClick={() => alert("Cart")}>
-              <img src='https://cdn1.iconfinder.com/data/icons/round-ui/112/56-512.png' alt='' width={25} /> <sub>10+</sub>
+            <sup className={`bg-info text-dark rounded-pill px-2 py-1 ${true ? '' : 'd-none'}`}>$724,<sub>80</sub></sup><img src='/cart.png' alt='' width={20} /> <sub>Carrito</sub>
             </Link>
               
             <NavDropdown id="basic-nav-dropdown"
-              title={<><img src='https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png' alt='' width={25} /> <sub>E'Gonzalez</sub></>}
+              title={<><img src='https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png' alt='' width={20} /> E'Gonzalez</>}
             >
               
               <Link href='/' className='nav-link' onClick={() => alert("Action 1")}>
