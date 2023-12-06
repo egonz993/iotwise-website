@@ -25,23 +25,6 @@ export const Navbar = () => {
 
             {/* Home */}
             <Link href='/' className='nav-link' >Inicio</Link>
-            
-            {/* Technologies */}
-            <NavDropdown title="Tecnologías" id="basic-nav-dropdown">
-              
-              <Link href='/' className='nav-link'>Ver Todo</Link>
-              <NavDropdown.Divider />
-
-              <Link href='/' className='nav-link'>LoRaWAN</Link>
-              <Link href='/' className='nav-link'>Helium</Link>
-              <Link href='/' className='nav-link'>Wi-SUN</Link>
-              <Link href='/' className='nav-link'>NB-IoT</Link>
-              <Link href='/' className='nav-link'>LTE</Link>
-              <Link href='/' className='nav-link'>Wi-Fi</Link>
-              <Link href='/' className='nav-link'>Zigbee</Link>
-              <Link href='/' className='nav-link'>Bluetooth</Link>
-
-            </NavDropdown>
 
             {/* WISE® Modules" */}
             <NavDropdown title={<>Módulos u-WISE<sup>®</sup></>} id="basic-nav-dropdown">
@@ -64,6 +47,23 @@ export const Navbar = () => {
               <Link href='/' className='nav-link'>u-WISE<sup>®</sup> | Sensor</Link>
               <Link href='/' className='nav-link'>u-WISE<sup>®</sup> | Actuator</Link>
               <Link href='/' className='nav-link'>u-WISE<sup>®</sup> | Extra</Link>
+
+            </NavDropdown>
+            
+            {/* Technologies */}
+            <NavDropdown title="Tecnologías" id="basic-nav-dropdown">
+              
+              <Link href='/' className='nav-link'>Ver Todo</Link>
+              <NavDropdown.Divider />
+
+              <Link href='/' className='nav-link'>LoRaWAN</Link>
+              <Link href='/' className='nav-link'>Helium</Link>
+              <Link href='/' className='nav-link'>Wi-SUN</Link>
+              <Link href='/' className='nav-link'>NB-IoT</Link>
+              <Link href='/' className='nav-link'>LTE</Link>
+              <Link href='/' className='nav-link'>Wi-Fi</Link>
+              <Link href='/' className='nav-link'>Zigbee</Link>
+              <Link href='/' className='nav-link'>Bluetooth</Link>
 
             </NavDropdown>
 

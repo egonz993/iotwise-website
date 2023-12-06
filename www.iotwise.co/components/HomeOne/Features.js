@@ -71,16 +71,16 @@ const Features = () => {
                   data-aos-delay={value.aosDelay}
                   key={i}
                 >
-                  <div className="single-features">
+                  <Link href={value.viewDetails} target={value.target}  className="single-features">
                     <i className={value.iconName}></i>
                     <h3>{value.title}</h3>
                     <p>{value.shortText}</p>
 
-                    <Link href={value.viewDetails} target={value.target} className="read-more-icon smooth">
+                    <div className="read-more-icon smooth" title="Click para más información">
                       <span className="flaticon-right-arrow"></span>
-                    </Link>
+                    </div>
 
-                  </div>
+                  </Link>
                 </div>
               ))}
           </div>

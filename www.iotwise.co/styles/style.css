@@ -1358,6 +1358,11 @@ Choose Us Area Style
   z-index: 1;
 }
 
+.features-area .single-features {
+  min-height: 28em;
+  color: #777;
+}
+
 .choose-title {
   margin-top: -9px;
   margin-bottom: 30px;

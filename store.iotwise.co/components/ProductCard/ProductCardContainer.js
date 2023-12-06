@@ -7,8 +7,10 @@ export const ProductCardContainer = ({children, title}) => {
         <h3>{title}</h3>
         <hr></hr>
       </div>
-      <div className='row col-12'>
-        {children}
+      <div className='col-12 '>
+        <div className='row mx-1'>
+          {children}
+        </div>
       </div>
     </div>
   )
