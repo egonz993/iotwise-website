@@ -1,0 +1,57 @@
+.nav-link {
+  color: white;
+}
+
+.sidebar {
+  display: inline;
+}
+
+.sidebar-item {
+  border-radius: 50px;
+}
+
+.sidebar-item.active {
+  transition: all 0.3s ease-in-out;
+  background-color: #1d56d2;
+}
+
+.sidebar-item:hover {
+  background-color: #050b50;
+}
+
+.sidebar-divider {
+  background-color: #fff;
+}
+
+.sidebar-icon {
+  color: #fff;
+}
+
+.sidebar .toggle-menu-btn {
+  background-color: transparent;
+  border: 0;
+  color: white;
+}
+
+.sidebar-content {
+  min-width: 300px;
+  height: 100%;
+  padding: 10px;
+  color: white;
+  overflow-y: auto;
+  background-color: #1b1e21;
+}
+
+.sidebar-content::-webkit-scrollbar {
+  width: 0.2em;
+  background-color: #050b50;
+}
+ 
+.sidebar-content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #1d56d2;
+  outline: 1px solid #1d56d2;
+}

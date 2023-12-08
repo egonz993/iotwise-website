@@ -2,9 +2,9 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { HomePage } from './pages/HomePage';
 import { LoginPage } from './pages/LoginPage';
-import "bootstrap/dist/css/bootstrap.min.css"
 import { AuthComponent } from './components/AuthComponent/AuthComponent';
 import { SplashScreen } from './pages/SplashScreen';
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
   return (
