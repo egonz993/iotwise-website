@@ -1,14 +1,12 @@
 import React from 'react'
 import { LayoutComponent } from '../layout/LayoutComponent';
-import { Auth } from '../services/firebase/auth.service';
+import { Outlet } from 'react-router-dom';
 import '../App.css';
-
-const auth = Auth.getInstance()
 
 export const HomePage = () => {
   return (
     <LayoutComponent>
-      
+      <Outlet />
     </LayoutComponent>
   )
 }

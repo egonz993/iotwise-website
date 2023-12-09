@@ -1,3 +1,30 @@
+.layout-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100vh;
+}
+
+
+.layout-content::-webkit-scrollbar {
+  width: 0.2em;
+  background-color: #050b50;
+}
+ 
+.layout-content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.layout-content::-webkit-scrollbar-thumb {
+  background-color: #1d56d2;
+  outline: 1px solid #1d56d2;
+}
+
+.bgindex {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .nav-link {
   color: white;
 }

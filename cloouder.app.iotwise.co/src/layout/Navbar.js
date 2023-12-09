@@ -15,7 +15,7 @@ export const Navbar = () => {
   const { user } = useAuth()
 
   return (
-    <NavbarComponent expand={true} className="navbar bg-dark p-0" data-bs-theme="dark">
+    <NavbarComponent expand={true} className="navbar bg-black p-0" data-bs-theme="dark">
       <Container>
 
         {/* Logo
@@ -28,7 +28,7 @@ export const Navbar = () => {
         <NavbarComponent.Collapse id="basic-navbar-nav bg-dark" data-bs-theme="dark">
 
           {/* Left Items */}
-          <Nav className="me-auto bg-dark" data-bs-theme="dark">
+          <Nav className="me-auto bg-black" data-bs-theme="dark">
 
             {/* Home */}
             <div className='nav-link' >
@@ -39,9 +39,8 @@ export const Navbar = () => {
 
           <div className='text-light d-none d-sm-block'>Cloouder<sup>®</sup> LNS</div>
 
-
           {/* Right Items */}
-          <Nav className="ms-auto bg-dark" data-bs-theme="dark">
+          <Nav className="ms-auto bg-black" data-bs-theme="dark">
               
             <NavDropdown id="basic-nav-dropdown"
               title={

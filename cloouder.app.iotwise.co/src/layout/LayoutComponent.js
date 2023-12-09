@@ -4,9 +4,11 @@ import './layout.css'
 
 export const LayoutComponent = ({children}) => {
   return (
-    <div>
+    <div className='bgindex' style={{backgroundImage: "url('/images/app-background.png')"}}>
       <Navbar />
-      {children}
+      <div className='layout-content p-4'>
+        {children}
+      </div>
     </div>
   )
 }

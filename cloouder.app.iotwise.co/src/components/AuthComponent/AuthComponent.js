@@ -10,10 +10,8 @@ export const AuthComponent = () => {
   const [splashScreenCompleted, setSplashScreenCompleted] = useState(false)
 
   React.useEffect(() => {
-    console.log('splashScreenCompleted', false)
     setTimeout(() => {
       setSplashScreenCompleted(true)
-      console.log('splashScreenCompleted', true)
     }, 1500)
   }, [])
 
