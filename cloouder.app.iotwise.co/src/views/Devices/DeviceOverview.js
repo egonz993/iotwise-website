@@ -1,7 +1,6 @@
 import React from 'react'
-import './components.css'
 
-export const GatewayOverviewComponents = () => {
+export const DeviceOverview = () => {
 
   const CardWidget = ({ title, icon, value, units, description }) => {
 
@@ -19,9 +18,9 @@ export const GatewayOverviewComponents = () => {
     }, [value])
 
     return (
-      <div className={`p-2 col-12 col-lg-6`}>
+      <div className={`p-2 col-12 col-sm-6 col-lg-3`}>
         <div className='card bg-transparent border-0'>
-          <div className='card-info p-4'>
+          <div className='card-info py-2 px-4'>
             <div className='d-flex justify-content-between'>
               <img src={icon} width={45} alt='' />
               <h5 className="card-title pt-3">{title}</h5>
@@ -46,34 +45,34 @@ export const GatewayOverviewComponents = () => {
     <div className="row">
       <CardWidget
         title="Registrados"
-        icon="/images/gateway-wireless.svg"
-        value={11}
+        icon="/images/device-wireless.svg"
+        value={250}
         units=""
-        description="Total de gateways registrados en la plataforma"
+        description="Total de dispositivos registrados en la plataforma"
       />
 
       <CardWidget
         title="Conectados"
         icon="/images/wifi.svg"
-        value={10}
+        value={242}
         units=""
-        description="Gateways conectados"
+        description="Dispositivos que han enviado datos en las últimas 24 horas"
       />
 
       <CardWidget
         title="Desconectados"
         icon="/images/wifi-slash.svg"
-        value={1}
+        value={6}
         units=""
-        description="Gateways desconectados"
+        description="Dispositivos con más de 24 horas sin enviar datos"
       />
 
       <CardWidget
         title="Desconocidos"
         icon="/images/unknow.svg"
-        value={0}
+        value={2}
         units=""
-        description="Gateways que nunca han enviado datos"
+        description="Dispositivos que nunca han enviado datos"
       />
 
     </div>

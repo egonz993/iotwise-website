@@ -23,11 +23,14 @@ export default function SignUp() {
 
   const handleSignupForm = async () => {
 
-    const auth = Auth.getInstance()
-    const result = await auth.createUserWithEmailAndPassword(txtEmail, txtPassword)
+    alert("Pagina en construcción")
 
+    // const auth = Auth.getInstance()
+    // const result = await auth.createUserWithEmailAndPassword(txtEmail, txtPassword)
+
+    const result = null
     if(result.hasOwnProperty("uid")){
-      await Database.set(`users/${result.uid}`, {
+      /*await Database.set(`users/${result.uid}`, {
         uid: result.uid,
         name: txtName,
         lastname: txtLastName,
@@ -36,7 +39,7 @@ export default function SignUp() {
         rol: "user",
       })
       
-      router.push("/user")
+      router.push("/user")*/
     }
     else{
       alert(result)

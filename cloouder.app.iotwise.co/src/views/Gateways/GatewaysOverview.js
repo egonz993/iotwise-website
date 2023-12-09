@@ -1,7 +1,6 @@
 import React from 'react'
-import './components.css'
 
-export const DeviceOverviewComponent = () => {
+export const GatewaysOverview = () => {
 
   const CardWidget = ({ title, icon, value, units, description }) => {
 
@@ -13,15 +12,15 @@ export const DeviceOverviewComponent = () => {
           const newCounter = Math.ceil(prevCounter + value / 50)
           return newCounter >= value ? value : newCounter
         })
-      }, 10)
+      }, 50)
 
       return () => clearInterval(timer)
     }, [value])
 
     return (
-      <div className={`p-2 col-12 col-sm-6 col-lg-3`}>
+      <div className={`p-2 col-12 col-sm-6`}>
         <div className='card bg-transparent border-0'>
-          <div className='card-info py-2 px-4'>
+          <div className='card-info p-4'>
             <div className='d-flex justify-content-between'>
               <img src={icon} width={45} alt='' />
               <h5 className="card-title pt-3">{title}</h5>
@@ -46,34 +45,34 @@ export const DeviceOverviewComponent = () => {
     <div className="row">
       <CardWidget
         title="Registrados"
-        icon="/images/device-wireless.svg"
-        value={2500}
+        icon="/images/gateway-wireless.svg"
+        value={11}
         units=""
-        description="Total de dispositivos registrados en la plataforma"
+        description="Total de gateways registrados en la plataforma"
       />
 
       <CardWidget
         title="Conectados"
         icon="/images/wifi.svg"
-        value={2050}
+        value={10}
         units=""
-        description="Dispositivos que han enviado datos en las últimas 24 horas"
+        description="Gateways conectados"
       />
 
       <CardWidget
         title="Desconectados"
         icon="/images/wifi-slash.svg"
-        value={50}
+        value={1}
         units=""
-        description="Dispositivos con más de 24 horas sin enviar datos"
+        description="Gateways desconectados"
       />
 
       <CardWidget
         title="Desconocidos"
         icon="/images/unknow.svg"
-        value={400}
+        value={0}
         units=""
-        description="Dispositivos que nunca han enviado datos"
+        description="Gateways que nunca han enviado datos"
       />
 
     </div>

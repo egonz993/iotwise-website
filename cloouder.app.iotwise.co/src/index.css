@@ -7,3 +7,49 @@ html, body, #root {
   color: #fff;
   background-color: #050b50;
 }
+
+/* Scroobar */
+
+
+::-webkit-scrollbar {
+  width: 0.2em;
+  height: 0.2em;
+  background-color: #050b50;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #1d56d2;
+  outline: 1px solid #1d56d2;
+}
+
+/* Buttons */
+
+.btn.btn-transparent {
+  background-color: #0003;
+  border-radius: 15px;
+  color: #fff;
+  border: none;
+  transition: all 0.3s;
+}
+
+.btn.btn-transparent:hover {
+  background-color: #0006;
+  color: #1d56d2;
+}
+
+/* Overview Components*/
+
+.card-info {
+  background-color: #00000066;
+  color: #fff;
+  border-radius: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.card-info:hover {
+  background-color: #000a;
+}
