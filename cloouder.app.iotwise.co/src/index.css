@@ -41,6 +41,11 @@ html, body, #root {
   color: #1d56d2;
 }
 
+.txt-action-btn,
+.btn.btn-transparent i {
+  font-size: 0.8em;
+}
+
 /* Overview Components*/
 
 .card-info {

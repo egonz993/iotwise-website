@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const GatewaysOverview = () => {
+export const HomeOverviewGateways = () => {
 
   const CardWidget = ({ title, icon, value, units, description }) => {
 
@@ -18,9 +18,9 @@ export const GatewaysOverview = () => {
     }, [value])
 
     return (
-      <div className={`p-2 col-12 col-sm-6`}>
+      <div className={`p-2 col-12`}>
         <div className='card bg-transparent border-0'>
-          <div className='card-info p-4'>
+          <div className='card-info py-2 px-4'>
             <div className='d-flex justify-content-between'>
               <img src={icon} width={45} alt='' />
               <h5 className="card-title pt-3">{title}</h5>
@@ -42,7 +42,13 @@ export const GatewaysOverview = () => {
   }
 
   return (
+
     <div className="row">
+
+      <div className='w-100 text-center'>
+        <h3>Gateways</h3>
+      </div>
+
       <CardWidget
         title="Registrados"
         icon="/images/gateway-wireless.svg"

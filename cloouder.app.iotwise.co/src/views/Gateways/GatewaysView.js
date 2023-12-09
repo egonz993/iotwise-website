@@ -4,11 +4,8 @@ import { GatewaysBtnGroup } from './GatewaysBtnGroup'
 import { PageTitle } from '../../components/PageTitle'
 import { GatewaysMap } from './GatewaysMap'
 import { GatewaysDatatable } from './GatewaysDatatable'
-import { useScrolltop } from '../../hooks/useScrolltop'
 
 export const GatewaysView = () => {
-
-  useScrolltop()
 
   return (
     <div className='pb-4 mb-4'>

@@ -3,11 +3,8 @@ import { DeviceDatatable } from './DeviceDatatable'
 import { DeviceOverview } from './DeviceOverview'
 import { DeviceBtnGroup } from './DeviceBtnGroup'
 import { PageTitle } from '../../components/PageTitle'
-import { useScrolltop } from '../../hooks/useScrolltop'
 
 export const DevicesView = () => {
-
-  useScrolltop()
 
   return (
     <div className='pb-4 mb-4'>

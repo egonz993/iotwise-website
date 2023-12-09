@@ -4,7 +4,7 @@ import { HomePage } from './pages/HomePage';
 import { LoginPage } from './pages/LoginPage';
 import { AuthComponent } from './components/AuthComponent/AuthComponent';
 import { SplashScreen } from './pages/SplashScreen';
-import { HomeView } from './views/HomeView';
+import { HomeView } from './views/Home/HomeView';
 import { DevicesView } from './views/Devices/DevicesView';
 import { GatewaysView } from './views/Gateways/GatewaysView';
 import { FunctionsView } from './views/FunctionsView';

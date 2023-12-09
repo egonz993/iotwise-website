@@ -1,44 +1,17 @@
 // Documentation: https://www.npmjs.com/package/google-map-react
 
 import React from 'react'
-import GoogleMapReact from 'google-map-react';
-import { useScreenSize } from '../../hooks/useScreensize';
+import GoogleMapReact from 'google-map-react'
 
 const defaultProps = {
   center: {
     lat: 6.25921,
-    lng: -75.57537
+    lng: -75.57537,
   },
-  zoom: 10
+  zoom: 11
 }
 
-export const GatewaysMap = () => {
-
-  const screen = useScreenSize()
-  const [mapHeight, setMapHeight] = React.useState(0)
-
-  React.useEffect(() => {
-    switch (screen) {
-      case 'xs':
-        setMapHeight(300)
-        break;
-      case 'sm':
-        setMapHeight(400)
-        break;
-      case 'md':
-        setMapHeight(400)
-        break;
-      case 'lg':
-        setMapHeight(300)
-        break;
-      case 'xl':
-        setMapHeight(300)
-        break;
-      default:
-        setMapHeight(300)
-        break;
-    }
-  }, [screen])
+export const HomeMap = () => {
 
   const renderMarkers = (map, maps) => {
     let coords = [
@@ -69,16 +42,21 @@ export const GatewaysMap = () => {
     })
   }
 
-
   return (
-    <div className='my-2' style={{ height: mapHeight, backgroundColor: 'transparent', overflow: 'hidden' }}>
-      <GoogleMapReact
+    <>
+      <div className='w-100 text-center'>
+        <h3>Mapa del Proyecto</h3>
+      </div>
+
+      <div style={{ height: '495px', backgroundColor: 'transparent', overflow: 'hidden', marginTop: '1em' }}>
+        <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyBTahGbblN15gRsvU5hJOMsj5UfEQO9B4E" }}
           defaultCenter={defaultProps.center}
           defaultZoom={defaultProps.zoom}
           onGoogleApiLoaded={({map, maps}) => renderMarkers(map, maps)}
 
         />
-    </div>
+      </div>
+    </>
   )
 }
