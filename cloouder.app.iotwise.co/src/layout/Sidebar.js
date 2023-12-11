@@ -52,7 +52,7 @@ export const Sidebar = () => {
           >
             <div className='sidebar-content'>
               <div className='text-center mb-4'>
-                <img src="https://iotwise.co/images/iotwise-logo-white.svg" alt="" width={100} />
+                <img src="/images/logo.svg" alt="" width={100} />
                 <h5>Cloouder<sup>®</sup> LNS</h5>
                 <h6>LoRaWAN Network Server</h6>
               </div>

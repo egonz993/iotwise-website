@@ -4,11 +4,12 @@ import { HomeBtnGroup } from './HomeBtnGroup'
 import { HomeMap } from './HomeMap'
 import { HomeOverviewDevices } from './HomeOverviewDevices'
 import { HomeOverviewGateways } from './HomeOverviewGateways'
+import { HomeChart } from './HomeChart'
 
 export const HomeView = () => {
 
   return (
-    <div className='pb-4 mb-4'>
+    <div>
       <div className='mb-4 d-flex justify-content-between'>
 
         {/* Page Title */}
@@ -35,6 +36,11 @@ export const HomeView = () => {
         <div className='col-12 col-lg-3 py-3'>
           <HomeOverviewGateways />
         </div>
+      </div>
+
+      {/* Charts */}
+      <div className='row'>
+        <HomeChart />
       </div>
 
     </div>

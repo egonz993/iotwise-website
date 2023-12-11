@@ -18,12 +18,6 @@ export const Navbar = () => {
     <NavbarComponent expand={true} className="navbar bg-black p-0" data-bs-theme="dark">
       <Container>
 
-        {/* Logo
-        <NavbarComponent.Brand>
-          <img src='https://iotwise.co/images/iotwise-logo-white.svg' width={50} alt="" />
-        </NavbarComponent.Brand> */}
-
-
         {/* Navbar Items */}
         <NavbarComponent.Collapse id="basic-navbar-nav bg-dark" data-bs-theme="dark">
 
