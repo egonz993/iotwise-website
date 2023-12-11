@@ -6,15 +6,7 @@
   color: white;
   height: 100vh;
   overflow: hidden;
-}
-
-.loading-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  font-size: 2em;
-  bottom: 10%;
+  filter: hue-rotate(-35deg);
 }
 
 .loading-img {
@@ -22,5 +14,14 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  font-size: 3em;
+}
+
+.loading-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 1.2em;
+  bottom: calc(50% - 115px);
 }

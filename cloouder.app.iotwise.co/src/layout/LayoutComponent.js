@@ -6,7 +6,8 @@ import './layout.css'
 export const LayoutComponent = ({children}) => {
   return (
     <div>
-      <div className='bgindex' style={{backgroundImage: "url('/images/app-background2.png')"}} >
+      {/* <div className='bgindex' style={{backgroundImage: "url('/images/app-background2.png')"}} > */}
+      <div className='bgindex' >
         <Navbar />
         <div className='layout-content p-4'>
           {children}
