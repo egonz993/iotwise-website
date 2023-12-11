@@ -46,7 +46,7 @@ export const HomeOverviewGateways = () => {
     <div className="row">
 
       <div className='w-100 text-center'>
-        <h3>Gateways</h3>
+        <h4>Gateways</h4>
       </div>
 
       <CardWidget

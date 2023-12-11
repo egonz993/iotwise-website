@@ -1,25 +1,20 @@
 import React from 'react'
-import { PageTitle } from '../../components/PageTitle'
 import { HomeBtnGroup } from './HomeBtnGroup'
 import { HomeMap } from './HomeMap'
 import { HomeOverviewDevices } from './HomeOverviewDevices'
 import { HomeOverviewGateways } from './HomeOverviewGateways'
 import { HomeChart } from './HomeChart'
+import { PageWrapper } from '../../components/AuthComponent/PageWrapper'
 
 export const HomeView = () => {
 
   return (
-    <div>
-      <div className='mb-4 d-flex justify-content-between'>
+    <PageWrapper
+      title="Inicio"
+      icon="fa fa-home"
+      buttons={<HomeBtnGroup />} 
+    >
 
-        {/* Page Title */}
-        <PageTitle title="Inicio" icon="fa fa-home" />
-
-        {/* Action Buttons */}
-        <HomeBtnGroup />
-      </div>
-
-      {/* Cards Overview */}
       <div className='row'>
         <div className='d-none d-lg-block col-lg-3 py-3'>
           <HomeOverviewDevices />
@@ -43,6 +38,6 @@ export const HomeView = () => {
         <HomeChart />
       </div>
 
-    </div>
+    </PageWrapper>
   )
 }

@@ -63,11 +63,11 @@ export const Sidebar = () => {
                 <SidebarItem title="Inicio" icon="fa fa-home" link="/app/" active={path.pathname === "/app" || path.pathname === "/app/"} />
                 <SidebarItem title="Dispositivos" icon="fa fa-desktop" link="/app/devices" active={path.pathname.includes("/app/devices")} />
                 <SidebarItem title="Gateways" icon="fa fa-wifi" link="/app/gateways" active={path.pathname.includes("/app/gateways")} />
-                <SidebarItem title="Funciones" icon="fa fa-code" link="/app/functions" active={path.pathname.includes("/app/functions")} />
                 <SidebarItem title="Aplicaciones" icon="fa fa-cloud" link="/app/applications" active={path.pathname.includes("/app/applications")} />
                 <SidebarItem title="Grupos" icon="fa fa-sitemap" link="/app/groups" active={path.pathname.includes("/app/groups")} />
                 <SidebarItem title="Perfiles" icon="fa fa-cube" link="/app/profiles" active={path.pathname.includes("/app/profiles")} />
-                <SidebarItem title="Eventos" icon="fa fa-calendar-alt" link="/app/events" active={path.pathname.includes("/app/events")} />
+                <SidebarItem title="Funciones" icon="fa fa-code" link="/app/functions" active={path.pathname.includes("/app/functions")} />
+                <SidebarItem title="Eventos" icon="fa fa-clock" link="/app/events" active={path.pathname.includes("/app/events")} />
 
                 <Divider className='sidebar-divider my-1' />
 

@@ -2,20 +2,16 @@ import React from 'react'
 import { DeviceDatatable } from './DeviceDatatable'
 import { DeviceOverview } from './DeviceOverview'
 import { DeviceBtnGroup } from './DeviceBtnGroup'
-import { PageTitle } from '../../components/PageTitle'
+import { PageWrapper } from '../../components/AuthComponent/PageWrapper'
 
 export const DevicesView = () => {
 
   return (
-    <div className='pb-4 mb-4'>
-      <div className='mb-4 d-flex justify-content-between'>
-
-        {/* Page Title */}
-        <PageTitle title="Dispositivos" icon="fa fa-laptop" />
-
-        {/* Action Buttons */}
-        <DeviceBtnGroup />
-      </div>
+    <PageWrapper
+      title="Dispositivos"
+      icon="fa fa-laptop"
+      buttons={<DeviceBtnGroup />}
+    >
 
       {/* Cards Overview */}
       <DeviceOverview />
@@ -23,6 +19,6 @@ export const DevicesView = () => {
       {/* Datatable */}
       <DeviceDatatable />
 
-    </div>
+    </PageWrapper>
   )
 }

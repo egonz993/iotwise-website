@@ -45,7 +45,7 @@ export const HomeOverviewDevices = () => {
     <div className="row">
 
       <div className='w-100 text-center'>
-        <h3>Dispositivos</h3>
+        <h4>Dispositivos</h4>
       </div>
       
       <CardWidget

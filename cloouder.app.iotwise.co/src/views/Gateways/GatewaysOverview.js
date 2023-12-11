@@ -43,6 +43,11 @@ export const GatewaysOverview = () => {
 
   return (
     <div className="row">
+
+      <div className='w-100 text-center'>
+        <h4>Información General</h4>
+      </div>
+
       <CardWidget
         title="Registrados"
         icon="/images/gateway-wireless.svg"

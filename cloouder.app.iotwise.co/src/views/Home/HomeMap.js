@@ -65,7 +65,7 @@ export const HomeMap = () => {
   return (
     <>
       <div className='w-100 text-center'>
-        <h3>Mapa del Proyecto</h3>
+        <h4>Mapa del Proyecto</h4>
       </div>
 
       <div style={{ height: '495px', backgroundColor: 'transparent', overflow: 'hidden', marginTop: '1em', border: 'solid 5px black', borderRadius: '15px' }}>

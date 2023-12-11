@@ -6,9 +6,9 @@ export const DeviceBtnGroup = () => {
       <button className='btn btn-transparent' onClick={() => alert("Agregar Dispositivo")} >
         <i className='fa fa-plus-circle' /> <span className='d-none d-md-inline txt-action-btn'>Agregar Dispositivo</span>
       </button>
-      
-      <button className='btn btn-transparent' onClick={() => alert("Confiiguraciones")} >
-        <i className='fa fa-cog' /> <span className='d-none d-md-inline txt-action-btn'>Configuración</span>
+
+      <button className='btn btn-transparent' onClick={() => alert("Exportar Dispositivos")} >
+        <i className='fa fa-download' /> <span className='d-none d-md-inline txt-action-btn'>Exportar Dispositivos</span>
       </button>
 
       <button className='btn btn-transparent' onClick={() => alert("Documentación")} >

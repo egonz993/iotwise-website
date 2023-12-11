@@ -6,9 +6,9 @@ export const GatewaysBtnGroup = () => {
       <button className='btn btn-transparent' onClick={() => alert("Agregar Gateway")} >
         <i className='fa fa-plus-circle' /> <span className='d-none d-md-inline txt-action-btn'>Agregar Gateway</span>
       </button>
-      
-      <button className='btn btn-transparent' onClick={() => alert("Confiiguraciones")} >
-        <i className='fa fa-cog' /> <span className='d-none d-md-inline txt-action-btn'>Configuración</span>
+
+      <button className='btn btn-transparent' onClick={() => alert("Exportar Gateways")} >
+        <i className='fa fa-download' /> <span className='d-none d-md-inline txt-action-btn'>Exportar Gateways</span>
       </button>
 
       <button className='btn btn-transparent' onClick={() => alert("Documentación")} >
