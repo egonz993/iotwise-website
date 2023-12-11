@@ -6,11 +6,8 @@
 .bgindex {
   width: 100%;
   min-height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background: rgb(5,11,32);
-  background: linear-gradient(-45deg, rgba(25,25,25,1) 0%, rgba(5,11,80,1) 100%);
+  background: #050b50;
+  background: linear-gradient(60deg, #050b50 0%, #050b35 10%, #050b50 50%, #050b35 90%, #050b50 100%);
 }
 
 .nav-link {

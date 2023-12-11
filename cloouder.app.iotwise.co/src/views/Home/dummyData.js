@@ -251,8 +251,8 @@ export const chart3 = {
       {
         type: 'bar',
         label: "Mensual (x10)",
-        borderColor: "rgba(75, 75, 255, 0.3)",
-        backgroundColor: "rgba(75, 75, 255, 0.1)",
+        borderColor: "rgba(75, 0, 255, 1)",
+        backgroundColor: "rgba(75, 0, 255, 0.1)",
         pointRadius: 2,
         lineTension: 0.3,
         borderWidth: 2,

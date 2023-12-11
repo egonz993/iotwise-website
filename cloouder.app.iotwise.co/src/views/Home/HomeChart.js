@@ -10,16 +10,22 @@ export const HomeChart = () => {
         <h3>Estadísticas de la red LoRaWAN</h3>
       </div>
 
-      <div className='mb-4 pb-4 col-12 col-xl-6' style={{ height: '350px' }}>
-        <Chart {...chart1} />
+      <div className='py-3 col-12 col-xl-6'>
+        <div className='p-3' style={{height: '400px', background: '#0005', borderRadius: '15px'}}>
+          <Chart {...chart1} />
+        </div>
       </div>
 
-      <div className='mb-4 pb-4 col-12 col-xl-6' style={{ height: '350px' }}>
-        <Chart {...chart2} />
+      <div className='py-3 col-12 col-xl-6'>
+        <div className='p-3' style={{height: '400px', background: '#0005', borderRadius: '15px'}}>
+          <Chart {...chart2} />
+        </div>
       </div>
 
-      <div className='mb-4 pb-4 col-12' style={{ height: '350px' }}>
-        <Chart {...chart3} />
+      <div className='py-3 col-12'>
+        <div className='p-3' style={{height: '400px', background: '#0005', borderRadius: '15px'}}>
+          <Chart {...chart3} />
+        </div>
       </div>
     </>
   )
