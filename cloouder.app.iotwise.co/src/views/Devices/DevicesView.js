@@ -4,7 +4,7 @@ import { DeviceOverview } from './DeviceOverview'
 import { DeviceBtnGroup } from './DeviceBtnGroup'
 import { PageWrapper } from '../../components/AuthComponent/PageWrapper'
 
-export const DevicesView = () => {
+export const DevicesView = ({devices}) => {
 
   return (
     <PageWrapper
@@ -14,10 +14,10 @@ export const DevicesView = () => {
     >
 
       {/* Cards Overview */}
-      <DeviceOverview />
+      <DeviceOverview devices={devices}/>
 
       {/* Datatable */}
-      <DeviceDatatable />
+      <DeviceDatatable devices={devices}/>
 
     </PageWrapper>
   )

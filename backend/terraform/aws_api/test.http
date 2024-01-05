@@ -1,0 +1,10 @@
+### API_PostgreSQLTimescale
+GET https://6aogv5aczh.execute-api.us-east-1.amazonaws.com/timescale
+
+
+### API_IoTCoreLorawan
+GET https://6aogv5aczh.execute-api.us-east-1.amazonaws.com/lorawan
+
+
+### API_UserApi
+GET https://6aogv5aczh.execute-api.us-east-1.amazonaws.com/api

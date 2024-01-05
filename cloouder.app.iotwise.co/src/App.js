@@ -13,10 +13,56 @@ import { GroupsView } from './views/GroupsView';
 import { ProfilesView } from './views/ProfilesView';
 import { EventsView } from './views/EventsView';
 import { DocumentationView } from './views/DocumentationView';
+import { useDebounce } from './hooks/useDebounce';
+import { databaseSync } from './helpers/databeseSync';
+import { useState } from 'react';
+import { Database } from './services/firebase/database.service';
 import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
+
+  const [loading, setLoading] = useState(true)
+  const [devices, setDevices] = useState([])
+  const [gateways, setGateways] = useState([])
+
+  useDebounce(async () => {
+    await databaseSync()
+
+    /* Devices */
+    Database.onValue('cloouder/devices', (data) => {
+      let latitude = 0
+      let longitude = 0
+
+      data = data.map((x, idx) => {
+        return {
+          latitude,
+          longitude,
+          ...x,
+          id: idx+1
+        }
+      })
+
+      setDevices(data)
+    })
+
+    /* Gateways */
+    Database.onValue('cloouder/gateways', (data) => {
+
+      data = data.map((x, idx) => {
+        return {
+          ...x,
+          id: idx+1
+        }
+      })
+      setGateways(data)
+    })
+
+    setLoading(false)
+  })
+
+
   return (
+    loading ? <SplashScreen /> : 
     <BrowserRouter>
       <Routes>
 
@@ -27,11 +73,12 @@ function App() {
           <Route path="/"  element={<Navigate redirect to="app" />} />
 
           {/* Console  */}
+          
           <Route path='app' element={<HomePage />}>
 
-            <Route index element={<HomeView />} />
-            <Route path='devices' element={<DevicesView />} />
-            <Route path='gateways' element={<GatewaysView />} />
+            <Route index element={<HomeView devices={devices} gateways={gateways} />} />
+            <Route path='devices' element={<DevicesView devices={devices} />} />
+            <Route path='gateways' element={<GatewaysView gateways={gateways} />} />
             <Route path='functions' element={<FunctionsView />} />
             <Route path='applications' element={<ApplicationsView />} />
             <Route path='groups' element={<GroupsView />} />
@@ -41,10 +88,6 @@ function App() {
 
           </Route>
 
-
-
-          <Route path='loading' element={<SplashScreen />} />
-
         </Route>
 
         {/* Login  */}
@@ -53,6 +96,7 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+
   );
 }
 

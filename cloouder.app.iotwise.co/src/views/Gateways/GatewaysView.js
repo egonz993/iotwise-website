@@ -5,7 +5,7 @@ import { GatewaysMap } from './GatewaysMap'
 import { GatewaysDatatable } from './GatewaysDatatable'
 import { PageWrapper } from '../../components/AuthComponent/PageWrapper'
 
-export const GatewaysView = () => {
+export const GatewaysView = ({gateways}) => {
 
   return (
     <PageWrapper
@@ -18,16 +18,16 @@ export const GatewaysView = () => {
       <div className='row'>
 
         <div className='col-12 col-lg-6'>
-          <GatewaysMap />
+          <GatewaysMap gateways={gateways} />
         </div>
 
         <div className='col-12 col-lg-6'>
-          <GatewaysOverview />
+          <GatewaysOverview gateways={gateways} />
         </div>
       </div>
 
       {/* Datatable */}
-      <GatewaysDatatable />
+      <GatewaysDatatable gateways={gateways} />
 
     </PageWrapper>
   )

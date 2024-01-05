@@ -1,4 +1,5 @@
 import React from 'react'
+import { databaseSync } from '../../helpers/databeseSync'
 
 export const HomeBtnGroup = () => {
   return (
@@ -11,8 +12,8 @@ export const HomeBtnGroup = () => {
         <i className='fa fa-cog' /> <span className='d-none d-md-inline txt-action-btn'>Configuración</span>
       </button>
       
-      <button className='btn btn-transparent' onClick={() => alert("Documentación")} >
-        <i className='fa fa-info-circle' /> <span className='d-none d-md-inline txt-action-btn'>Documentación</span>
+      <button className='btn btn-transparent' onClick={() => databaseSync()} >
+        <i className='fa fa-refresh' /> <span className='d-none d-md-inline txt-action-btn'>Actualizar</span>
       </button>
     </div>
   )

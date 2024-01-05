@@ -9,6 +9,7 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyC6TqKz0EF4a0IuRsjC7OsTmDkrasKu5ss",
   authDomain: "iotwise.firebaseapp.com",
+  // databaseURL: "https://iotwise.firebaseio.com/",
   databaseURL: "https://iotwise-default-rtdb.firebaseio.com",
   projectId: "iotwise",
   storageBucket: "iotwise.appspot.com",

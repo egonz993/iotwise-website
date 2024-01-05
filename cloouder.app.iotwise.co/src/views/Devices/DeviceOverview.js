@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const DeviceOverview = () => {
+export const DeviceOverview = ({devices}) => {
 
   const CardWidget = ({ title, icon, value, units, description }) => {
 
@@ -46,7 +46,7 @@ export const DeviceOverview = () => {
       <CardWidget
         title="Registrados"
         icon="/images/device-wireless.svg"
-        value={250}
+        value={devices.length}
         units=""
         description="Total de dispositivos registrados en la plataforma"
       />
@@ -54,7 +54,12 @@ export const DeviceOverview = () => {
       <CardWidget
         title="Conectados"
         icon="/images/wifi.svg"
-        value={242}
+        value={devices
+          .filter(device => device.LastUplinkReceivedAt)
+          .map(device => new Date().getTime() - new Date(device.LastUplinkReceivedAt).getTime())
+          .filter(last_tx => last_tx <= 24*60*60*1000)
+          .length
+        }
         units=""
         description="Dispositivos que han enviado datos en las últimas 24 horas"
       />
@@ -62,7 +67,12 @@ export const DeviceOverview = () => {
       <CardWidget
         title="Desconectados"
         icon="/images/wifi-slash.svg"
-        value={6}
+        value={devices
+          .filter(device => device.LastUplinkReceivedAt)
+          .map(device => new Date().getTime() - new Date(device.LastUplinkReceivedAt).getTime())
+          .filter(last_tx => last_tx > 24*60*60*1000)
+          .length
+        }
         units=""
         description="Dispositivos con más de 24 horas sin enviar datos"
       />
@@ -70,7 +80,7 @@ export const DeviceOverview = () => {
       <CardWidget
         title="Desconocidos"
         icon="/images/unknow.svg"
-        value={2}
+        value={devices.filter(device => !device.LastUplinkReceivedAt).length}
         units=""
         description="Dispositivos que nunca han enviado datos"
       />

@@ -1,0 +1,740 @@
+{
+  "cloouder": {
+    "destinations": [
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:Destination/Prueba",
+        "Expression": "lorawan/test",
+        "ExpressionType": "MqttTopic",
+        "Name": "Prueba",
+        "RoleArn": "arn:aws:iam::383585396655:role/service-role/AWSIotWirelessDestination-evCXuCTA"
+      },
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:Destination/ProcessLoRa",
+        "Name": "ProcessLoRa"
+      },
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:Destination/IOTWISE_TelelampLorawanDestination",
+        "Description": "Data received for Telelamp Lorawan Devices",
+        "Expression": "iotwise/telelamp/lorawan/uplink",
+        "ExpressionType": "MqttTopic",
+        "Name": "IOTWISE_TelelampLorawanDestination",
+        "RoleArn": "arn:aws:iam::383585396655:role/IOTWISE_DestinationRole"
+      }
+    ],
+    "deviceProfiles": [
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:DeviceProfile/d0e3804f-b9af-43b3-ba4e-2290f7c2d386",
+        "Id": "d0e3804f-b9af-43b3-ba4e-2290f7c2d386",
+        "Name": "AU915-C-OTAA"
+      },
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:DeviceProfile/737f473e-9c80-43db-9907-d7074e53f1c1",
+        "Id": "737f473e-9c80-43db-9907-d7074e53f1c1",
+        "Name": "IOTWISE_AU915_C_OTAA_DeviceProfile"
+      }
+    ],
+    "devices": [
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:WirelessDevice/d17fcc53-0b80-40a7-84b1-c4ca50c794a6",
+        "DestinationName": "Prueba",
+        "Id": "d17fcc53-0b80-40a7-84b1-c4ca50c794a6",
+        "LastUplinkReceivedAt": "2024-01-03T19:56:01.068323976Z",
+        "LoRaWAN": {
+          "DevEui": "00072202fa03f3fa"
+        },
+        "Name": "RAK3172 - f3fa",
+        "Type": "LoRaWAN"
+      },
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:WirelessDevice/3a326a8f-70b5-4e75-91f1-c7a97cc1c16b",
+        "DestinationName": "IOTWISE_TelelampLorawanDestination",
+        "Id": "3a326a8f-70b5-4e75-91f1-c7a97cc1c16b",
+        "LoRaWAN": {
+          "DevEui": "4568974598623164"
+        },
+        "Name": "Prueba 4",
+        "Type": "LoRaWAN"
+      },
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:WirelessDevice/7acb258f-b500-4494-9f1a-15de8bf3aadd",
+        "DestinationName": "IOTWISE_TelelampLorawanDestination",
+        "Id": "7acb258f-b500-4494-9f1a-15de8bf3aadd",
+        "LoRaWAN": {
+          "DevEui": "0504090608070501"
+        },
+        "Name": "Prueba 3",
+        "Type": "LoRaWAN"
+      },
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:WirelessDevice/56d93b11-81af-4e8f-a915-f65792ec1652",
+        "DestinationName": "IOTWISE_TelelampLorawanDestination",
+        "Id": "56d93b11-81af-4e8f-a915-f65792ec1652",
+        "LoRaWAN": {
+          "DevEui": "0504090608070503"
+        },
+        "Name": "Prueba 2",
+        "Type": "LoRaWAN"
+      }
+    ],
+    "gateways": [
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:WirelessGateway/ffe5dce4-be8e-4166-964e-3f67faf79b82",
+        "ConnectionStatus": "Connected",
+        "Id": "ffe5dce4-be8e-4166-964e-3f67faf79b82",
+        "LastUplinkReceivedAt": "2024-01-04T12:59:09.866058502Z",
+        "LoRaWAN": {
+          "GatewayEui": "ac1f09fffe05250e",
+          "RfRegion": "AU915",
+          "SubBands": [
+            1
+          ]
+        },
+        "Name": "RAK7268",
+        "latitude": 6.25921,
+        "longitude": -75.57537
+      },
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:WirelessGateway/91fda41f-d828-498f-b884-1916ef564e92",
+        "Id": "91fda41f-d828-498f-b884-1916ef564e92",
+        "LoRaWAN": {
+          "GatewayEui": "5897456987456985",
+          "RfRegion": "AU915"
+        },
+        "Name": "Prueba",
+        "latitude": 6.25921,
+        "longitude": -75.58037
+      }
+    ],
+    "serviceProfiles": [
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:ServiceProfile/420af78a-3167-4cd9-92e9-b105b67c6eb4",
+        "Id": "420af78a-3167-4cd9-92e9-b105b67c6eb4",
+        "Name": "Prueba"
+      },
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:ServiceProfile/39900974-b074-4a8a-b80e-90c4237df224",
+        "Id": "39900974-b074-4a8a-b80e-90c4237df224",
+        "Name": "RAK3172 Service Profile"
+      },
+      {
+        "Arn": "arn:aws:iotwireless:us-east-1:383585396655:ServiceProfile/2aea8bcb-8aa4-48f2-88dc-67c2971c383a",
+        "Id": "2aea8bcb-8aa4-48f2-88dc-67c2971c383a",
+        "Name": "IOTWISE_Telelamp_ServiceProfile"
+      }
+    ]
+  },
+  "test": {
+    "1701456374422": {
+      "device_info": {
+        "usbProductId": 8963,
+        "usbVendorId": 1659
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t8963\\n- Vendor ID \\t1659\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1701456374422
+    },
+    "1701456441524": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1701456441524
+    },
+    "1701456449266": {
+      "device_info": {
+        "usbProductId": 8963,
+        "usbVendorId": 1659
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t8963\\n- Vendor ID \\t1659\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1701456449266
+    },
+    "1701456791162": {
+      "device_info": {
+        "usbProductId": 8963,
+        "usbVendorId": 1659
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t8963\\n- Vendor ID \\t1659\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"1\\\\r\\\\n\\\"]\\n\\n[\\\"2\\\\r\\\\n\\\"]\\n\\n[\\\"3\\\\r\\\\n\\\"]\\n\\n[\\\"4\\\\r\\\\n\\\"]\\n\\n[\\\"5\\\\r\\\\n\\\"]\\n\\n[\\\"6\\\\r\\\\n\\\"]\\n\\n[\\\"7\\\\r\\\\n\\\"]\\n\\n[\\\"8\\\\r\\\\n\\\"]\\n\\n[\\\"9\\\\r\\\\n\\\"]\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1701456791162
+    },
+    "1701460149176": {
+      "device_info": {
+        "usbProductId": 8963,
+        "usbVendorId": 1659
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t8963\\n- Vendor ID \\t1659\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1701460149176
+    },
+    "1701775564838": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\u0000\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1701775564838
+    },
+    "1701775574499": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1701775574499
+    },
+    "1701775585435": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\u0000+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n\\n************************************\\n         TELEMETRIK\\nTodo por el Agua y la Energ�a\\n\\nFirmware version: 1.0.1\\nWireless Module: 3\\n************************************\\n\\n>> Timers Initializing...\\n>> Energy Meter Initializing...\\n>> OCMP Initializing...\\n\\n************************************\\n         TELEMETRIK\\nTodo por el Agua y la Energ�a\\n\\nFirmware version: 1.0.1\\nWireless Module: 3\\n************************************\\n\\n>> Timers Initializing...\\n>> Energy Meter Initializing...\\n>> OCMP Initializing...\\n>> App Flags Setting...\\n>> App Variables Setting...\\n>> Flash Variables Updating...\\n>> Output Dimming Setting...\\n>> Clear App Buffers...\\n\\n>> MCU READY\\n\\n>> Wireless Module Initializing...\\n\\r\\n>> Wireless Module Connecting...\\r\\n\\r\\n\\r\\n>> AT\\r\\n>> Send: AT\\n>> Awaiting for OK\\r\\n\\nCurrent Work Mode: LoRaWAN.\\r\\n\\r\\nOK\\r\\n>> �\\n************************************\\n         TELEMETRIK\\nTodo por el Agua y la Energ�a\\n\\nFirmware version: 1.0.1\\nWireless Module: 3\\n************************************\\n\\n>> Timers Initializing...\\n>> Energy Meter Initializing...\\n>> OCMP Initializing...\\n>> App Flags Setting...\\n>> App Variables Setting...\\n>> Flash Variables Updating...\\n>> Output Dimming Setting...\\n>> Clear App Buffers...\\n\\n>> MCU READY\\n\\n>> Wireless Module Initializing...\\n\\r\\n>> Wireless Module Connecting...\\r\\n\\r\\n\\r\\n>> AT\\r\\n>> Send: AT\\n>> Awaiting for OK\\r\\nL�ɕ��Work Mode: LoRaWAN.\\r\\n\\r\\nOK\\r\\n>> AT+ADR\\r\\n>> Send: AT+AD�\\n************************************\\n         TELEMETRIK\\nTodo por el Agua y la Energ�a\\n\\nFirmware version: 1.0.1\\nWireless Module: 3\\n************************************\\n\\n>> Timers Initializing...\\n>> Energy Meter Initializing...\\n>> OCMP Initializing...\\n>> App Flags Setting...\\n>> App Variables Setting...\\n>> Flash Variables Updating...\\n>> Output Dimming Setting...\\n>> Clear App Buffers...\\n\\n>> MCU READY\\n\\n>> Wireless Module Initializing...\\n\\r\\n>> Wireless Module Connecting...\\r\\n\\r\\n\\r\\n>> AT\\r\\n>> Send: AT\\n>> Awaiting for OK\\r\\n��21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\r\\nOK\\r\\n>> AT+ADR\\r\\n>> Send: AT+ADR=0\\n>> Awaiting for OK\\r\\n\\r\\n\\n************************************\\n         TELEMETRIK\\nTodo por el Agua y la Energ�a\\n\\nFirmware version: 1.0.1\\nWireless Module: 3\\n************************************\\n\\n>> Timers Initializing...\\n>> Energy Meter Initializing...\\n>> OCMP Initializing...\\n>> App Flags Setting...\\n>> App Variables Setting...\\n>> Flash Variables Updating...\\n>> Output Dimming Setting...\\n>> Clear App Buffers...\\n\\n>> MCU READY\\n\\n>> Wireless Module Initializing...\\n\\r\\n>> Wireless Module Connecting...\\r\\n\\r\\n\\r\\n>> AT\\r\\n>> Send: AT\\n>> Awaiting for OK\\r\\n��21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\r\\nOK\\r\\n>>�\\n************************************\\n         TELEMETRIK\\nTodo por el Agua y la Energ�a\\n\\nFirmware version: 1.0.1\\nWireless Module: 3\\n************************************\\n\\n>> Timers Initializing...\\n>> Energy Meter Initializing...\\n>> OCMP Initializing...\\n>> App Flags Setting...\\n>> App Variables Setting...\\n>> Flash Variables Updating...\\n>> Output Dimming Setting...\\n>> Clear App Buffers...\\n\\n>> MCU READY\\n\\n>> Wireless Module Initializing...\\n\\r\\n>> Wireless Module Connecting...\\r\\n\\r\\n\\r\\n>> AT\\r\\n>> Send: AT\\n>> Awaiting for OK\\r\\nL�ɕ��Work Mode: LoRaWAN.\\r\\n\\r\\nOK\\r\\n>> AT�\\n************************************\\n         TELEMETRIK\\nTodo por el Agua y la Energ�a\\n\\nFirmware version: 1.0.1\\nWireless Module: 3\\n************************************\\n\\n>> Timers Initializing...\\n>> Energy Meter Initializing...\\n>> OCMP Initializing...\\n>> App Flags Setting...\\n>> App Variables Setting...\\n>> Flash Variables Updating...\\n>> Output Dimming Setting...\\n>> Clear App Buffers...\\n\\n>> MCU READY\\n\\n>> Wireless Module Initializing...\\n\\r\\n>> Wireless Module Connecting...\\r\\n\\r\\n\\r\\n>> AT\\r\\n>> Send: AT\\n>> Awaiting for OK\\r\\n Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\r\\nOK\\r\\n>> �\\n************************************\\n         TELEMETRIK\\nTodo por el Agua y la Energ�a\\n\\nFirmware version: 1.0.1\\nWireless Module: 3\\n************************************\\n\\n>> Timers Initializing...\\n>> Energy Meter Initializing...\\n>> OCMP Initializing...\\n>> App Flags Setting...\\n>> App Variables Setting...\\n>> Flash Variables Updating...\\n>> Output Dimming Setting...\\n>> Clear App Buffers...\\n\\n>> MCU READY\\n\\n>> Wireless Module Initializing...\\n\\r\\n>> Wireless Module Connecting...\\r\\n\\r\\n\\r\\n>> AT\\r\\n>> Send: AT\\n>> Awaiting for OK\\r\\n�с21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\r\\nOK\\r\\n>> AT+ADR\\r\\n>> Send: AT+ADR=0\\n>> Awaiting for OK\\r\\n\\r\\n\\n************************************\\n         TELEMETRIK\\nTodo por el Agua y la Energ�a\\n\\nFirmware version: 1.0.1\\nWireless Module: 3\\n************************************\\n\\n>> Timers Initializing...\\n>> Energy Meter Initializing...\\n>> OCMP Initializing...\\n>> App Flags Setting...\\n>> App Variables Setting...\\n>> Flash Variables Updating...\\n>> Output Dimming Setting...\\n>> Clear App Buffers...\\n\\n>> MCU READY\\n\\n>> Wireless Module Initializing...\\n\\r\\n>> Wireless Module Connecting...\\r\\n\\r\\n\\r\\n>> AT\\r\\n>> Send: AT\\n>> Awaiting for OK\\r\\n Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\r\\nOK\\r\\n>> AT+ADR\\r\\n>> Send: AT+ADR=0\\n>> Awaiting for OK\\r\\n\\r\\n\\r\\nOK\\r\\n>> AT+CLASS\\r\\n>> Send: AT+CLASS=C\\n>> Awaiting for OK\\r\\n\\r\\n\\r\\nOK\\r\\n>> AT+BAND\\r\\n>> Send: AT+BAND=6\\n>> Awaiting for OK\\r\\n\\r\\n\\r\\nOK\\r\\n>> AT+MASK\\r\\n>> Send: AT+MASK=0001\\n>> Awaiting for OK\\r\\n\\r\\n\\r\\nOK\\r\\n>> AT+CFM\\r\\n>> Send: AT+CFM=1\\n>> Awaiting for OK\\r\\n\\r\\n\\r\\nOK\\r\\n>> AT+APPKEY\\r\\n>> Send: AT+APPKEY=01020304050607080910111213141516\\n>> Awaiting for OK\\r\\n\\r\\n\\r\\nOK\\r\\n>> AT+RMVMULC\\r\\n>> AT+DEVEUI\\r\\n>> Send: AT+DEVEUI=?\\n>> Awaiting for OK\\r\\n\\r\\n>> AT+DEVEUI\\r\\n>> Send: AT+DEVEUI=?\\n>> Awaiting for OK\\r\\nac1f09fffe05534e\\r\\n\\r\\nOK\\r\\n>> AT+APPEUI\\r\\n>> Send: AT+APPEUI=?\\n>> Awaiting for OK\\r\\n\\r\\n0000000000000000\\r\\n\\r\\nOK\\r\\n>> AT+APPKEY\\r\\n>> Send: AT+APPKEY=?\\n>> Awaiting for OK\\r\\n\\r\\n01020304050607080910111213141516\\r\\n\\r\\nOK\\r\\n>> AT+JOIN\\r\\n>> Send: AT+JOIN=1:1:8:255\\n>> Awaiting for OK\\r\\n\\r\\n\\r\\nOK\\r\\n>> AT CONFIGURATION SUCCESS\\n\\n\\r\\n>> Trying to join...\\r\\n\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n+EVT:JOIN FAILED\\r\\n>> Join failed, trying again...!\\r\\n\\r\\n\\n[\\\"AT?;\\\\r\\\\n\\\"]\\nAT?;\\n>> Send data to wireless module \\n\\n\\n>> OK\\nA\\r\\nT+<CMD>?        : Help on <CMD>\\r\\nAT+<CMD>         : Run <CMD>\\r\\nAT+<CMD>=<value> : Set the value\\r\\nAT+<CMD>=?       : Get the value\\r\\nATZ:          Triggers a reset of the MCU\\r\\nATR:          Restore default parameters\\r\\nATE:          Set command echo\\r\\nAT+DEVEUI:    Get or set the device EUI\\r\\nAT+APPEUI:    Get or set the application EUI\\r\\nAT+APPKEY:    Get or set the application key\\r\\nAT+DEVADDR:   Get or set the device address\\r\\nAT+NWKSKEY:   Get or set the network session key\\r\\nAT+APPSKEY:   Get or set the application session key\\r\\nAT+CFM:       Get or set the confirm mode (0:unconfirmed, 1:confirmed)\\r\\nAT+CFS:       Get\\n[\\\"AT+DEVEUI=?;\\\\r\\\\n\\\"]\\n\\n[\\\"AT+DEVEUI=?;\\\\r\\\\n\\\"]\\n\\n[\\\"AT;\\\\r\\\\n\\\"]\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1701775585435
+    },
+    "1701775867327": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT;\\\\r\\\\n\\\"]\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1701775867327
+    },
+    "1702923493104": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\nac1f09fffe05534e\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+APPKEY=?\\\\r\\\\n\\\"]\\n01020304050607080910111213141516\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+APPEUI=?\\\\r\\\\n\\\"]\\n0000000000000000\\r\\n\\r\\nOK\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\nac1f09fffe05534e\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1702923493104
+    },
+    "1702928239955": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+CLASS=?\\\\r\\\\n\\\"]\\nC\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+BAND?=\\\\r\\\\n\\\"]\\nAT+BAND:      Set number corresponding to active regions (0: EU433 1: CN470 2: RU864 3: IN865 4: EU868 5: US915 6: AU915 7: KR920 8: AS923)\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+BAND=?\\\\r\\\\n\\\"]\\n6\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+BAND?\\\\r\\\\n\\\"]\\nAT+BAND:      Set number corresponding to active regions (0: EU433 1: CN470 2: RU864 3: IN865 4: EU868 5: US915 6: AU915 7: KR920 8: AS923)\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+MASK=?\\\\r\\\\n\\\"]\\n0001\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+ADR=?\\\\r\\\\n\\\"]\\n0\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+APPKEY=?\\\\r\\\\n\\\"]\\n01020304050607080910111213141516\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+APPEUI=?\\\\r\\\\n\\\"]\\n0000000000000000\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1702928239955
+    },
+    "1703604697780": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\nac1f09fffe05534e\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+MASK=?\\\\r\\\\n\\\"]\\n0001\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+BAND=?\\\\r\\\\n\\\"]\\n6\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+BAND?\\\\r\\\\n\\\"]\\nAT+BAND:      Set number corresponding to active regions (0: EU433 1: CN470 2: RU864 3: IN865 4: EU868 5: US915 6: AU915 7: KR920 8: AS923)\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATR\\\\r\\\\n\\\"]\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703604697780
+    },
+    "1703605008615": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\u0000\\n[\\\"AT\\\\r\\\\n\\\"]\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703605008615
+    },
+    "1703605021943": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t9600\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+BAUD=115200\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nRk�o_ogOFbBBKkBC�X��N���W[OOK���gSg\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 9600,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703605021943
+    },
+    "1703605047507": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\n\\r\\nMODE_NOT_SUPPORT\\r\\n\\n[\\\"AT+NWK=1\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT+NWM=1\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\n[\\\"AT+ADR=0\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+CLASS=C\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+BAND=6\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+MASK=0001\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+CFM=0\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\n00072202fa03f3fa\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\n00072202fa03f3fa\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+APPKEY=?\\\\r\\\\n\\\"]\\nf1904f0dd07b684f4a934207d07b684e\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+APPEUI=?\\\\r\\\\n\\\"]\\n681340fb607b68b3\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+JOIN?\\\\r\\\\n\\\"]\\nAT+JOIN:      Join network\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+JOIN=?\\\\r\\\\n\\\"]\\n0:0:8:0\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+JOIN=1:1:8:255\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\n00072202fa03f3fa\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+MASK=?\\\\r\\\\n\\\"]\\n0001\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+VERSION\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+VERSION=?\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT+VER=?\\\\r\\\\n\\\"]\\nV1.0.3\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703605047507
+    },
+    "1703606454563": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+MASK=?\\\\r\\\\n\\\"]\\n0001\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+MASK=0000\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATR\\\\r\\\\n\\\"]\\n\\n[control] «close» | No se reconoce el comando\\n\\n[control] «disconnect» | Connectar/Desconnectar Dispositivo\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703606454563
+    },
+    "1703609533043": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"\\n[control] «connect» | Connectar/Desconnectar Dispositivo\\n****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\n[control] «disconnect» | Connectar/Desconnectar Dispositivo\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703609533043
+    },
+    "1703609550313": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t9600\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\n\\r\\nMODE_NOT_SUPPORT\\r\\n\\n[\\\"AT+NWM=1\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\n00072202fa03f3fa\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+APPKEY=?\\\\r\\\\n\\\"]\\nf1904f0dd07b684f4a934207d07b684e\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+APPEUI=?\\\\r\\\\n\\\"]\\n681340fb607b68b3\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+BAND=6\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+ADR=1\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+MASK=0001\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+CLASS=C\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+JOIN=1:1:8:255\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n�Wg\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\n[control] «disconnect» | Connectar/Desconnectar Dispositivo\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 9600,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703609550313
+    },
+    "1703610183624": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\nOK\\r\\n\\n[\\\"AT+DEVEUI\\\\r\\\\n\\\"]\\nAT_PARAM_ERROR\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\nAT+DEVEUI=AC1F09FFFE082C36\\r\\nOK\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n\\n[\\\"AT+APPKEY=?\\\\r\\\\n\\\"]\\nAT+APPKEY=01020304050607080910111213141516\\r\\nOK\\r\\n\\n[\\\"AT+APPEUI=?\\\\r\\\\n\\\"]\\nAT+APPEUI=AC1F09FFF9153172\\r\\nOK\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\n\\r\\nRAKwireless RAK3172-E Example\\r\\n------------------------------------------------------\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n\\n[\\\"AT+CLASS=?\\\\r\\\\n\\\"]\\nAT+CLASS=C\\r\\nOK\\r\\n\\n[\\\"AT+MASK=?\\\\r\\\\n\\\"]\\nAT+MASK=0001\\r\\nOK\\r\\n\\n[\\\"AT+ADR=?\\\\r\\\\n\\\"]\\nAT+ADR=0\\r\\nOK\\r\\n\\n[\\\"AT+BAND=?=\\\\r\\\\n\\\"]\\nAT_PARAM_ERROR\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n\\n[\\\"AT+BAND=?\\\\r\\\\n\\\"]\\nAT+BAND=6\\r\\nOK\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n\\n[\\\"AT+JNS=?\\\\r\\\\n\\\"]\\nAT_ERROR\\r\\nAT+JNS: Command not found!!\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n\\n[\\\"AT+NJS=?\\\\r\\\\n\\\"]\\nAT+NJS=0\\r\\nOK\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n\\n[\\\"AT+NJS\\\\r\\\\n\\\"]\\nAT_PARAM_ERROR\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n\\n[\\\"AT+NJS=?\\\\r\\\\n\\\"]\\nAT+NJS=0\\r\\nOK\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\n\\r\\nRAKwireless RAK3172-E Example\\r\\n------------------------------------------------------\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703610183624
+    },
+    "1703610874687": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\nOK\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\nRestricted_Wait_2813152_ms\\r\\nRestricted_Wait_2805152_ms\\r\\nRestricted_Wait_2797152_ms\\r\\nRestricted_Wait_2789152_ms\\r\\nRestricted_Wait_2781152_ms\\r\\nRestricted_Wait_2773152_ms\\r\\nRestricted_Wait_2765152_ms\\r\\nRestricted_Wait_2757152_ms\\r\\nRestricted_Wait_2749152_ms\\r\\nRestricted_Wait_2741152_ms\\r\\nRestricted_Wait_2733152_ms\\r\\nRestricted_Wait_2725152_ms\\r\\nRestricted_Wait_2717152_ms\\r\\nRestricted_Wait_2709152_ms\\r\\nRestricted_Wait_2701152_ms\\r\\nRestricted_Wait_2693152_ms\\r\\nRestricted_Wait_2685152_ms\\r\\nRestricted_Wait_2677152_ms\\r\\nRestricted_Wait_2669152_ms\\r\\nRestricted_Wait_2661152_ms\\r\\nRestricted_Wait_2653152_ms\\r\\nRestricted_Wait_2645152_ms\\r\\nRestricted_Wait_2637152_ms\\r\\nRestricted_Wait_2629152_ms\\r\\nRestricted_Wait_2621152_ms\\r\\nRestricted_Wait_2613152_ms\\r\\nRestricted_Wait_2605152_ms\\r\\nRestricted_Wait_2597152_ms\\r\\nRestricted_Wait_2589152_ms\\r\\nRestricted_Wait_2581152_ms\\r\\nRestricted_Wait_2573152_ms\\r\\nRestricted_Wait_2565152_ms\\r\\nRestricted_Wait_2557152_ms\\r\\nRestricted_Wait_2549152_ms\\r\\nRestricted_Wait_2541152_ms\\r\\nRestricted_Wait_2533152_ms\\r\\nRestricted_Wait_2525152_ms\\r\\nRestricted_Wait_2517152_ms\\r\\nRestricted_Wait_2509152_ms\\r\\nRestricted_Wait_2501152_ms\\r\\nRestricted_Wait_2493152_ms\\r\\nRestricted_Wait_2485152_ms\\r\\nRestricted_Wait_2477152_ms\\r\\nRestricted_Wait_2469152_ms\\r\\nRestricted_Wait_2461152_ms\\r\\nRestricted_Wait_2453152_ms\\r\\nRestricted_Wait_2445152_ms\\r\\nRestricted_Wait_2437152_ms\\r\\nRestricted_Wait_2429152_ms\\r\\nRestricted_Wait_2421152_ms\\r\\nRestricted_Wait_2413152_ms\\r\\nRestricted_Wait_2405152_ms\\r\\nRestricted_Wait_2397152_ms\\r\\nRestricted_Wait_2389152_ms\\r\\nRestricted_Wait_2381152_ms\\r\\nRestricted_Wait_2373152_ms\\r\\nRestricted_Wait_2365152_ms\\r\\nRestricted_Wait_2357152_ms\\r\\nRestricted_Wait_2349152_ms\\r\\nRestricted_Wait_2341152_ms\\r\\nRestricted_Wait_2333152_ms\\r\\nRestricted_Wait_2325152_ms\\r\\nRestricted_Wait_2317152_ms\\r\\nRestricted_Wait_2309152_ms\\r\\nRestricted_Wait_2301152_ms\\r\\nRestricted_Wait_2293152_ms\\r\\nRestricted_Wait_2285152_ms\\r\\nRestricted_Wait_2277152_ms\\r\\nRestricted_Wait_2269152_ms\\r\\nRestricted_Wait_2261152_ms\\r\\nRestricted_Wait_2253152_ms\\r\\nRestricted_Wait_2245152_ms\\r\\nRestricted_Wait_2237152_ms\\r\\nRestricted_Wait_2229152_ms\\r\\nRestricted_Wait_2221152_ms\\r\\nRestricted_Wait_2213152_ms\\r\\nRestricted_Wait_2205152_ms\\r\\nRestricted_Wait_2197152_ms\\r\\nRestricted_Wait_2189152_ms\\r\\nRestricted_Wait_2181152_ms\\r\\nRestricted_Wait_2173152_ms\\r\\nRestricted_Wait_2165152_ms\\r\\nRestricted_Wait_2157152_ms\\r\\nRestricted_Wait_2149152_ms\\r\\nRestricted_Wait_2141152_ms\\r\\nRestricted_Wait_2133152_ms\\r\\nRestricted_Wait_2125152_ms\\r\\nRestricted_Wait_2117152_ms\\r\\nRestricted_Wait_2109152_ms\\r\\nRestricted_Wait_2101152_ms\\r\\nRestricted_Wait_2093152_ms\\r\\nRestricted_Wait_2085152_ms\\r\\nRestricted_Wait_2077152_ms\\r\\nRestricted_Wait_2069152_ms\\r\\nRestricted_Wait_2061152_ms\\r\\nRestricted_Wait_2053152_ms\\r\\nRestricted_Wait_2045152_ms\\r\\nRestricted_Wait_2037152_ms\\r\\nRestricted_Wait_2029152_ms\\r\\nRestricted_Wait_2021152_ms\\r\\nRestricted_Wait_2013152_ms\\r\\nRestricted_Wait_2005152_ms\\r\\nRestricted_Wait_1997152_ms\\r\\nRestricted_Wait_1989152_ms\\r\\nRestricted_Wait_1981152_ms\\r\\nRestricted_Wait_1973152_ms\\r\\nRestricted_Wait_1965152_ms\\r\\nRestricted_Wait_1957152_ms\\r\\nRestricted_Wait_1949152_ms\\r\\nRestricted_Wait_1941152_ms\\r\\nRestricted_Wait_1933152_ms\\r\\nRestricted_Wait_1925152_ms\\r\\nRestricted_Wait_1917152_ms\\r\\nRestricted_Wait_1909152_ms\\r\\nRestricted_Wait_1901152_ms\\r\\nRestricted_Wait_1893152_ms\\r\\nRestricted_Wait_1885152_ms\\r\\nRestricted_Wait_1877152_ms\\r\\nRestricted_Wait_1869152_ms\\r\\nRestricted_Wait_1861152_ms\\r\\nRestricted_Wait_1853152_ms\\r\\nRestricted_Wait_1845152_ms\\r\\nRestricted_Wait_1837152_ms\\r\\nRestricted_Wait_1829152_ms\\r\\nRestricted_Wait_1821152_ms\\r\\nRestricted_Wait_1813152_ms\\r\\nRestricted_Wait_1805152_ms\\r\\nRestricted_Wait_1797152_ms\\r\\nRestricted_Wait_1789152_ms\\r\\nRestricted_Wait_1781152_ms\\r\\nRestricted_Wait_1773152_ms\\r\\nRestricted_Wait_1765152_ms\\r\\nRestricted_Wait_1757152_ms\\r\\nRestricted_Wait_1749152_ms\\r\\nRestricted_Wait_1741152_ms\\r\\nRestricted_Wait_1733152_ms\\r\\nRestricted_Wait_1725152_ms\\r\\nRestricted_Wait_1717152_ms\\r\\nRestricted_Wait_1709152_ms\\r\\nRestricted_Wait_1701152_ms\\r\\nRestricted_Wait_1693152_ms\\r\\nRestricted_Wait_1685152_ms\\r\\nRestricted_Wait_1677152_ms\\r\\nRestricted_Wait_1669152_ms\\r\\nRestricted_Wait_1661152_ms\\r\\nRestricted_Wait_1653152_ms\\r\\nRestricted_Wait_1645152_ms\\r\\nRestricted_Wait_1637152_ms\\r\\nRestricted_Wait_1629152_ms\\r\\nRestricted_Wait_1621152_ms\\r\\nRestricted_Wait_1613152_ms\\r\\nRestricted_Wait_1605152_ms\\r\\nRestricted_Wait_1597152_ms\\r\\nRestricted_Wait_1589152_ms\\r\\nRestricted_Wait_1581152_ms\\r\\nRestricted_Wait_1573152_ms\\r\\nRestricted_Wait_1565152_ms\\r\\nRestricted_Wait_1557152_ms\\r\\nRestricted_Wait_1549152_ms\\r\\nRestricted_Wait_1541152_ms\\r\\nRestricted_Wait_1533152_ms\\r\\nRestricted_Wait_1525152_ms\\r\\nRestricted_Wait_1517152_ms\\r\\nRestricted_Wait_1509152_ms\\r\\nRestricted_Wait_1501152_ms\\r\\nRestricted_Wait_1493152_ms\\r\\nRestricted_Wait_1485152_ms\\r\\nRestricted_Wait_1477152_ms\\r\\nRestricted_Wait_1469152_ms\\r\\nRestricted_Wait_1461152_ms\\r\\nRestricted_Wait_1453152_ms\\r\\nRestricted_Wait_1445152_ms\\r\\nRestricted_Wait_1437152_ms\\r\\nRestricted_Wait_1429152_ms\\r\\nRestricted_Wait_1421152_ms\\r\\nRestricted_Wait_1413152_ms\\r\\nRestricted_Wait_1405152_ms\\r\\nRestricted_Wait_1397152_ms\\r\\nRestricted_Wait_1389152_ms\\r\\nRestricted_Wait_1381152_ms\\r\\nRestricted_Wait_1373152_ms\\r\\nRestricted_Wait_1365152_ms\\r\\nRestricted_Wait_1357152_ms\\r\\nRestricted_Wait_1349152_ms\\r\\nRestricted_Wait_1341152_ms\\r\\nRestricted_Wait_1333152_ms\\r\\nRestricted_Wait_1325152_ms\\r\\nRestricted_Wait_1317152_ms\\r\\nRestricted_Wait_1309152_ms\\r\\nRestricted_Wait_1301152_ms\\r\\nRestricted_Wait_1293152_ms\\r\\nRestricted_Wait_1285152_ms\\r\\nRestricted_Wait_1277152_ms\\r\\nRestricted_Wait_1269152_ms\\r\\nRestricted_Wait_1261152_ms\\r\\nRestricted_Wait_1253152_ms\\r\\nRestricted_Wait_1245152_ms\\r\\nRestricted_Wait_1237152_ms\\r\\nRestricted_Wait_1229152_ms\\r\\nRestricted_Wait_1221152_ms\\r\\nRestricted_Wait_1213152_ms\\r\\nRestricted_Wait_1205152_ms\\r\\nRestricted_Wait_1197152_ms\\r\\nRestricted_Wait_1189152_ms\\r\\nRestricted_Wait_1181152_ms\\r\\nRestricted_Wait_1173152_ms\\r\\nRestricted_Wait_1165152_ms\\r\\nRestricted_Wait_1157152_ms\\r\\nRestricted_Wait_1149152_ms\\r\\nRestricted_Wait_1141152_ms\\r\\nRestricted_Wait_1133152_ms\\r\\nRestricted_Wait_1125152_ms\\r\\nRestricted_Wait_1117152_ms\\r\\nRestricted_Wait_1109152_ms\\r\\nRestricted_Wait_1101152_ms\\r\\nRestricted_Wait_1093152_ms\\r\\nRestricted_Wait_1085152_ms\\r\\nRestricted_Wait_1077152_ms\\r\\nRestricted_Wait_1069152_ms\\r\\nRestricted_Wait_1061152_ms\\r\\nRestricted_Wait_1053152_ms\\r\\nRestricted_Wait_1045152_ms\\r\\nRestricted_Wait_1037152_ms\\r\\nRestricted_Wait_1029152_ms\\r\\nRestricted_Wait_1021152_ms\\r\\nRestricted_Wait_1013152_ms\\r\\nRestricted_Wait_1005152_ms\\r\\nRestricted_Wait_997152_ms\\r\\nRestricted_Wait_989152_ms\\r\\nRestricted_Wait_981152_ms\\r\\nRestricted_Wait_973152_ms\\r\\nRestricted_Wait_965152_ms\\r\\nRestricted_Wait_957152_ms\\r\\nRestricted_Wait_949152_ms\\r\\nRestricted_Wait_941152_ms\\r\\nRestricted_Wait_933152_ms\\r\\nRestricted_Wait_925152_ms\\r\\nRestricted_Wait_917152_ms\\r\\nRestricted_Wait_909152_ms\\r\\nRestricted_Wait_901152_ms\\r\\nRestricted_Wait_893152_ms\\r\\nRestricted_Wait_885152_ms\\r\\nRestricted_Wait_877152_ms\\r\\nRestricted_Wait_869152_ms\\r\\nRestricted_Wait_861152_ms\\r\\nRestricted_Wait_853152_ms\\r\\nRestricted_Wait_845152_ms\\r\\nRestricted_Wait_837152_ms\\r\\nRestricted_Wait_829152_ms\\r\\nRestricted_Wait_821152_ms\\r\\nRestricted_Wait_813152_ms\\r\\nRestricted_Wait_805152_ms\\r\\nRestricted_Wait_797152_ms\\r\\nRestricted_Wait_789152_ms\\r\\nRestricted_Wait_781152_ms\\r\\nRestricted_Wait_773152_ms\\r\\nRestricted_Wait_765152_ms\\r\\nRestricted_Wait_757152_ms\\r\\nRestricted_Wait_749152_ms\\r\\nRestricted_Wait_741152_ms\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\n\\r\\nRAKwireless RAK3172-E Example\\r\\n------------------------------------------------------\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\n[\\\"AT+VER=?\\\\r\\\\n\\\"]\\nAT+VER=RUI_3.5.1_RAK3172-E\\r\\nOK\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n+EVT:JOIN_FAILED_RX_TIMEOUT\\r\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703610874687
+    },
+    "1703614138375": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"at\\\\r\\\\n\\\"]\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703614138375
+    },
+    "1703614159281": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t9600\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+BAUD=115200\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nRk�o_ogOFbBBKkBC�Z��N���W[OOK���gSg\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 9600,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703614159281
+    },
+    "1703614186774": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+NJS=?\\\\r\\\\n\\\"]\\n0\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\n00072202fa03f3fa\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+MASK=?\\\\r\\\\n\\\"]\\n0001\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+RCV=?\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT?\\\\r\\\\n\\\"]\\nAT+<CMD>?        : Help on <CMD>\\r\\nAT+<CMD>         : Run <CMD>\\r\\nAT+<CMD>=<value> : Set the value\\r\\nAT+<CMD>=?       : Get the value\\r\\nATZ:          Triggers a reset of the MCU\\r\\nATR:          Restore default parameters\\r\\nATE:          Set command echo\\r\\nAT+DEVEUI:    Get or set the device EUI\\r\\nAT+APPEUI:    Get or set the application EUI\\r\\nAT+APPKEY:    Get or set the application key\\r\\nAT+DEVADDR:   Get or set the device address\\r\\nAT+NWKSKEY:   Get or set the network session key\\r\\nAT+APPSKEY:   Get or set the application session key\\r\\nAT+CFM:       Get or set the confirm mode (0:unconfirmed, 1:confirmed)\\r\\nAT+CFS:       Get or set the confirmation status of the last AT+SEND(0-1)\\r\\nAT+JOIN:      Join network\\r\\nAT+NJM:       Get or set the network join mode (0:ABP, 1:OTAA)\\r\\nAT+NJS:       Get the join status\\r\\nAT+RECV:      Print the last received data in hex format\\r\\nAT+SEND:      Send data along with the application port\\r\\nAT+ADR:       Get or set the adaptive data rate setting (0:disable, 1:enable)\\r\\nAT+CLASS:     Get or set the device class (A, B, C)\\r\\nAT+DCS:       Get or set the ETSI duty cycle setting (0:disable, 1:enable)\\r\\nAT+DUTYTIME:  Get the duty cycle time\\r\\nAT+DR:        Get or set the data rate (0-7 corresponding to DR_X)\\r\\nAT+PNM:       Get or set the public network mode (0=off,1=on)\\r\\nAT+JN1DL:     Get or set the join accept delay between the end of the Tx and the join Rx window 1 in ms\\r\\nAT+JN2DL:     Get or set the join accept delay between the end of the Tx and the join Rx window 2 in ms\\r\\nAT+RX1DL:     Get or set the delay between the end of the Tx and the Rx Window 1 in ms\\r\\nAT+RX2DL:     Get or set the delay between the end of the Tx and the Rx window 2 in ms\\r\\nAT+RX2FQ:     Get or set the Rx2 window Frequency\\r\\nAT+RX2DR:     Get or set the Rx2 window data rate (0-7) corresponding to DR_X\\r\\nAT+TXP:       Get or set the transmit power\\r\\nAT+RETY:      Set the number of retransmissions of Confirm packet data\\r\\nAT+MASK:      Set the channel mask, close or open the channel. Only for US915,AU915,CN470\\r\\nAT+BAND:      Set number corresponding to active regions (0: EU433 1: CN470 2: RU864 3: IN865 4: EU868 5: US915 6: AU915 7: KR920 8: AS923)\\r\\nAT+LPSEND:    Send long packet data (Maximum is 1024 bytes)\\r\\nAT+LINKCHECK: Verify Network Link Status\\r\\nAT+TIMEREQ:   Request the current date and time\\r\\nAT+USEND:     Unified send data along with the application port\\r\\nAT+PGSLOT:    PS:periodicity\\r\\nAT+BFREQ:     Get the Beacon frequency\\r\\nAT+LTIME:     Get the local time in UTC format\\r\\nAT+RSSI:      Get the RSSI of the last received packet\\r\\nAT+SNR:       Get the SNR of the last received packet\\r\\nAT+VER:       Get the version of the firmware\\r\\nAT+SN:        Read the device serial number\\r\\nAT+TRSSI:     Starts RF RSSI tone test\\r\\nAT+TTONE:     Starts RF Tone test\\r\\nAT+TTX:       Set number of packets sent with RF LoRa test\\r\\nAT+TRX:       Set number of packets received with RF LoRa test\\r\\nAT+TCONF:     Configure LoRa RF test\\r\\nAT+TTHX:      Starts RF Tx hopping test from Fstart to Fstop randomly, with Fdelta steps\\r\\nAT+TTH:       Starts RF Tx hopping test from Fstart to Fstop, with Fdelta steps\\r\\nAT+TOFF:      Stops ongoing RF test\\r\\nAT+CERTIF:    Set the module in LoraWAN Certification mode\\r\\nAT+CW:        Send continuous wave\\r\\nAT+NWM:       Get or set the network work NWM (0:P2P, 1:LoRaWAN)\\r\\nAT+PFREQ:     Configure P2P frequency\\r\\nAT+PSF:       Configure P2P SpreadingFactor (6,7,8,9,10,11,12)\\r\\nAT+PBW:       Configure P2P Bandwidth(125, 250, 500)\\r\\nAT+PCR:       Configure P2P code rate(0:4/5, 1:4/6, 2:4/7, 3:4/8)\\r\\nAT+PPL:       Configure P2P Preamble Length (2-65535)\\r\\nAT+PTP:       Configure P2P Power (5-22)\\r\\nAT+P2P:       Configure P2P all parameters\\r\\nAT+PSEND:     P2P send data\\r\\nAT+PRECV:     Set the timeout period for P2P window reception (0-65535) ms\\r\\nAT+ADDMULC:   Add a new multicast group\\r\\nAT+RMVMULC:   Delete multicast group\\r\\nAT+LSTMULC:   View multicast group information\\r\\nATD:          Enter data transparent transmission mode\\r\\nAT+BAUD:      Get or set the the uart baud rate(4800,9600,115200)\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+TRSSI?\\\\r\\\\n\\\"]\\nAT+TRSSI:     Starts RF RSSI tone test\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+TRSSI\\\\r\\\\n\\\"]\\n172s792:Rx FSK Test\\r\\n172s806:>>> RSSI Value= -114 dBm\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+TRSSI\\\\r\\\\n\\\"]\\n177s721:Rx FSK Test\\r\\n177s735:>>> RSSI Value= -119 dBm\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+TRSSI\\\\r\\\\n\\\"]\\n179s057:Rx FSK Test\\r\\n179s071:>>> RSSI Value= -117 dBm\\r\\n\\r\\nOK\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\n00072202fa03f3fa\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703614186774
+    },
+    "1703615050336": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\\n[\\\"AT+SEND=1:00\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n+EVT:RX_C, RSSI -29, SNR 3\\r\\n+EVT:UNICAST\\r\\n+EVT:1:00\\r\\n\\n[\\\"AT+SEND=1:001234\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n+EVT:RX_C, RSSI -29, SNR 3\\r\\n+EVT:UNICAST\\r\\n+EVT:1:00\\r\\n+EVT:RX_C, RSSI -30, SNR 3\\r\\n+EVT:UNICAST\\r\\n+EVT:1:00\\r\\n+EVT:RX_C, RSSI -31, SNR 3\\r\\n+EVT:UNICAST\\r\\n+EVT:1:b7\\r\\n+EVT:RX_C, RSSI -30, SNR 3\\r\\n+EVT:UNICAST\\r\\n+EVT:1:b7\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n+EVT:RX_C, RSSI -32, SNR 3\\r\\n+EVT:UNICAST\\r\\n+EVT:1:1234567887654321\\r\\n+EVT:RX_C, RSSI -31, SNR 4\\r\\n+EVT:UNICAST\\r\\n+EVT:150:1234567887654321\\r\\n\\n[\\\"AT+SEND=2:1234\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"AT+DEVADDR=?\\\\r\\\\n\\\"]\\nd1014293\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+SEND=2:01\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"AT+SEND=2:01\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"AT+ADR=?\\\\r\\\\n\\\"]\\n1\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+SEND=2:01020304050607080910\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"AT+SEND=2:01020304050607080910\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"AT+SEND=2:0102030405060708091011\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"AT+SEND=2:0102030405060708091011\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1703615050336
+    },
+    "1704203406890": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+JNS=?\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT+NJS=?\\\\r\\\\n\\\"]\\n0\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+DEVEUI=?\\\\r\\\\n\\\"]\\n00072202fa03f3fa\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+APPKEY=?\\\\r\\\\n\\\"]\\nf1904f0dd07b684f4a934207d07b684e\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+MASK=?\\\\r\\\\n\\\"]\\n0001\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+ADR=?\\\\r\\\\n\\\"]\\n1\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"AT+BAND=?\\\\r\\\\n\\\"]\\n6\\r\\n\\r\\nOK\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n\\n[control] «cls» | Limpiar Pantalla\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\\n[\\\"AT+SEND=1:00\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOINED\\r\\n\\n[\\\"AT+SEND=1:00\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT+SEND=1:00\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT+SEND=1:00\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+SEND=1:00\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT+NJS=?\\\\r\\\\n\\\"]\\n1\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+SEND=1:00\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT+SEND=1:0000\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n+EVT:RX_C, RSSI -30, SNR 4\\r\\n+EVT:UNICAST\\r\\n+EVT:1:00\\r\\n\\n[\\\"AT+SEND=2:00\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n\\n[\\\"AT+SEND=2:00\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\\n[\\\"AT+SEND=2:00\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOINED\\r\\n\\n[\\\"AT+SEND=2:00\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED FAILED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOINED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOIN FAILED\\r\\n+EVT:JOINED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\\n[\\\"AT+SEND=2:00\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"AT+SEND=2:00\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n+EVT:RX_C, RSSI -29, SNR 3\\r\\n+EVT:UNICAST\\r\\n+EVT:17:00\\r\\n+EVT:RX_C, RSSI -29, SNR 3\\r\\n+EVT:UNICAST\\r\\n+EVT:50:00\\r\\n\\n[\\\"  AT+RCV=?\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT?\\\\r\\\\n\\\"]\\nAT+<CMD>?        : Help on <CMD>\\r\\nAT+<CMD>         : Run <CMD>\\r\\nAT+<CMD>=<value> : Set the value\\r\\nAT+<CMD>=?       : Get the value\\r\\nATZ:          Triggers a reset of the MCU\\r\\nATR:          Restore default parameters\\r\\nATE:          Set command echo\\r\\nAT+DEVEUI:    Get or set the device EUI\\r\\nAT+APPEUI:    Get or set the application EUI\\r\\nAT+APPKEY:    Get or set the application key\\r\\nAT+DEVADDR:   Get or set the device address\\r\\nAT+NWKSKEY:   Get or set the network session key\\r\\nAT+APPSKEY:   Get or set the application session key\\r\\nAT+CFM:       Get or set the confirm mode (0:unconfirmed, 1:confirmed)\\r\\nAT+CFS:       Get or set the confirmation status of the last AT+SEND(0-1)\\r\\nAT+JOIN:      Join network\\r\\nAT+NJM:       Get or set the network join mode (0:ABP, 1:OTAA)\\r\\nAT+NJS:       Get the join status\\r\\nAT+RECV:      Print the last received data in hex format\\r\\nAT+SEND:      Send data along with the application port\\r\\nAT+ADR:       Get or set the adaptive data rate setting (0:disable, 1:enable)\\r\\nAT+CLASS:     Get or set the device class (A, B, C)\\r\\nAT+DCS:       Get or set the ETSI duty cycle setting (0:disable, 1:enable)\\r\\nAT+DUTYTIME:  Get the duty cycle time\\r\\nAT+DR:        Get or set the data rate (0-7 corresponding to DR_X)\\r\\nAT+PNM:       Get or set the public network mode (0=off,1=on)\\r\\nAT+JN1DL:     Get or set the join accept delay between the end of the Tx and the join Rx window 1 in ms\\r\\nAT+JN2DL:     Get or set the join accept delay between the end of the Tx and the join Rx window 2 in ms\\r\\nAT+RX1DL:     Get or set the delay between the end of the Tx and the Rx Window 1 in ms\\r\\nAT+RX2DL:     Get or set the delay between the end of the Tx and the Rx window 2 in ms\\r\\nAT+RX2FQ:     Get or set the Rx2 window Frequency\\r\\nAT+RX2DR:     Get or set the Rx2 window data rate (0-7) corresponding to DR_X\\r\\nAT+TXP:       Get or set the transmit power\\r\\nAT+RETY:      Set the number of retransmissions of Confirm packet data\\r\\nAT+MASK:      Set the channel mask, close or open the channel. Only for US915,AU915,CN470\\r\\nAT+BAND:      Set number corresponding to active regions (0: EU433 1: CN470 2: RU864 3: IN865 4: EU868 5: US915 6: AU915 7: KR920 8: AS923)\\r\\nAT+LPSEND:    Send long packet data (Maximum is 1024 bytes)\\r\\nAT+LINKCHECK: Verify Network Link Status\\r\\nAT+TIMEREQ:   Request the current date and time\\r\\nAT+USEND:     Unified send data along with the application port\\r\\nAT+PGSLOT:    PS:periodicity\\r\\nAT+BFREQ:     Get the Beacon frequency\\r\\nAT+LTIME:     Get the local time in UTC format\\r\\nAT+RSSI:      Get the RSSI of the last received packet\\r\\nAT+SNR:       Get the SNR of the last received packet\\r\\nAT+VER:       Get the version of the firmware\\r\\nAT+SN:        Read the device serial number\\r\\nAT+TRSSI:     Starts RF RSSI tone test\\r\\nAT+TTONE:     Starts RF Tone test\\r\\nAT+TTX:       Set number of packets sent with RF LoRa test\\r\\nAT+TRX:       Set number of packets received with RF LoRa test\\r\\nAT+TCONF:     Configure LoRa RF test\\r\\nAT+TTHX:      Starts RF Tx hopping test from Fstart to Fstop randomly, with Fdelta steps\\r\\nAT+TTH:       Starts RF Tx hopping test from Fstart to Fstop, with Fdelta steps\\r\\nAT+TOFF:      Stops ongoing RF test\\r\\nAT+CERTIF:    Set the module in LoraWAN Certification mode\\r\\nAT+CW:        Send continuous wave\\r\\nAT+NWM:       Get or set the network work NWM (0:P2P, 1:LoRaWAN)\\r\\nAT+PFREQ:     Configure P2P frequency\\r\\nAT+PSF:       Configure P2P SpreadingFactor (6,7,8,9,10,11,12)\\r\\nAT+PBW:       Configure P2P Bandwidth(125, 250, 500)\\r\\nAT+PCR:       Configure P2P code rate(0:4/5, 1:4/6, 2:4/7, 3:4/8)\\r\\nAT+PPL:       Configure P2P Preamble Length (2-65535)\\r\\nAT+PTP:       Configure P2P Power (5-22)\\r\\nAT+P2P:       Configure P2P all parameters\\r\\nAT+PSEND:     P2P send data\\r\\nAT+PRECV:     Set the timeout period for P2P window reception (0-65535) ms\\r\\nAT+ADDMULC:   Add a new multicast group\\r\\nAT+RMVMULC:   Delete multicast group\\r\\nAT+LSTMULC:   View multicast group information\\r\\nATD:          Enter data transparent transmission mode\\r\\nAT+BAUD:      Get or set the the uart baud rate(4800,9600,115200)\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+RECV=?\\\\r\\\\n\\\"]\\n50:00\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+RECV=?\\\\r\\\\n\\\"]\\n0:\\r\\n\\r\\nOK\\r\\n+EVT:RX_C, RSSI -29, SNR 3\\r\\n+EVT:UNICAST\\r\\n+EVT:1:00\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1704203406890
+    },
+    "1704290215512": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"ATZ\\\\r\\\\n\\\"]\\nLoRa (R) is a registered trademark or service mark of Semtech Corporation or its affiliates. LoRaWAN (R) is a licensed mark.\\r\\n\\r\\n______  ___   _   __  _    _ _          _               \\r\\n| ___ \\\\/ _ \\\\ | | / / | |  | (_)        | |              \\r\\n| |_/ / /_\\\\ \\\\| |/ /  | |  | |_ _ __ ___| | ___  ___ ___ \\r\\n|    /|  _  ||    \\\\  | |/\\\\| | | '__/ _ \\\\ |/ _ \\\\/ __/ __|\\r\\n| |\\\\ \\\\| | | || |\\\\  \\\\ \\\\  /\\\\  / | | |  __/ |  __/\\\\__ \\\\__ \\\\\\r\\n\\\\_| \\\\_\\\\_| |_/\\\\_| \\\\_/  \\\\/  \\\\/|_|_|  \\\\___|_|\\\\___||___/___/\\r\\n========================================================\\r\\nRAK3172-H Version:v1.0.3 Oct 21 2021\\r\\nCurrent Work Mode: LoRaWAN.\\r\\n+EVT:JOINED\\r\\n+EVT:RX_C, RSSI -28, SNR 3\\r\\n+EVT:UNICAST\\r\\n+EVT:1:00\\r\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1704290215512
+    },
+    "1704310611935": {
+      "device_info": {
+        "usbProductId": 24577,
+        "usbVendorId": 1027
+      },
+      "output": "\"****************************\\nIoT Wise | Web Serialport\\n\\nDEVICE INFORMATION\\n\\n- Product ID \\t24577\\n- Vendor ID \\t1027\\n- Baud Rate \\t115200\\n- Data Bits \\t8\\n- Stop Bits \\t1\\n- Parity \\tnone\\n****************************\\n\\n[\\\"AT+JNS=?\\\\r\\\\n\\\"]\\n\\r\\nAT_ERROR\\r\\n\\n[\\\"AT+NJS=?\\\\r\\\\n\\\"]\\n1\\r\\n\\r\\nOK\\r\\n\\n[\\\"AT+SEND=1:00\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\\n[\\\"AT+SEND=1:00\\\\r\\\\n\\\"]\\n\\r\\nOK\\r\\n+EVT:SEND CONFIRMED OK\\r\\n\"",
+      "portOptions": {
+        "append": "\r\n",
+        "baudRate": 115200,
+        "dataBits": 8,
+        "device_info": {
+          "pid": "",
+          "vid": ""
+        },
+        "lowercase": false,
+        "parity": "none",
+        "prepend": "",
+        "stopBits": 1,
+        "uppercase": false
+      },
+      "start_time": 1704310611935
+    }
+  },
+  "users": {
+    "2A4h6PHjxdVwgzm76ZbLoI9lHf03": {
+      "email": "info@iotwise.co",
+      "lastname": "Gonzalez",
+      "location": "",
+      "name": "Eduardo",
+      "rol": "user",
+      "uid": "2A4h6PHjxdVwgzm76ZbLoI9lHf03"
+    },
+    "sIsbPExLZhMYvahEd3eg2uZjCyv1": {
+      "email": "egonz993@gmail.com",
+      "lastname": "Gonzalez",
+      "location": "",
+      "name": "Eduardo",
+      "rol": "user",
+      "uid": "sIsbPExLZhMYvahEd3eg2uZjCyv1"
+    }
+  }
+}

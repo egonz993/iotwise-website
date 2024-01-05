@@ -1,0 +1,43 @@
+{
+    "WirelessDeviceId": "8b78b971-f2b7-480e-bfb2-35bb12024420",
+    "PayloadData": "YuxoEwACAAAC8mDXANsANQPiDYMAAGQj",
+    "WirelessMetadata": {
+      "LoRaWAN": {
+        "ADR": true,
+        "Bandwidth": 125,
+        "ClassB": false,
+        "CodeRate": "4/5",
+        "DataRate": "5",
+        "DevAddr": "009bd8f8",
+        "DevEui": "ac1f09fffe0553f6",
+        "FCnt": 37,
+        "FOptLen": 0,
+        "FPort": 1,
+        "Frequency": "915400000",
+        "Gateways": [
+          {
+            "GatewayEui": "7076ff00540904c1",
+            "Rssi": -75,
+            "Snr": 9.5
+          },
+          {
+            "GatewayEui": "7076ff00540904c2",
+            "Rssi": -95,
+            "Snr": -2
+          },
+          {
+            "GatewayEui": "7076ff00540904c3",
+            "Rssi": -135,
+            "Snr": -8
+          }
+        ],
+        "MIC": "c6aed55b",
+        "MType": "ConfirmedDataUp",
+        "Major": "LoRaWANR1",
+        "Modulation": "LORA",
+        "PolarizationInversion": false,
+        "SpreadingFactor": 7,
+        "Timestamp": "2022-08-05T20:09:38Z"
+      }
+    }
+  }

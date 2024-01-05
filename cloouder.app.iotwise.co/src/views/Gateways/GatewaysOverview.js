@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const GatewaysOverview = () => {
+export const GatewaysOverview = ({gateways}) => {
 
   const CardWidget = ({ title, icon, value, units, description }) => {
 
@@ -51,7 +51,7 @@ export const GatewaysOverview = () => {
       <CardWidget
         title="Registrados"
         icon="/images/gateway-wireless.svg"
-        value={14}
+        value={gateways.length}
         units=""
         description="Total de gateways registrados en la plataforma"
       />
@@ -59,7 +59,7 @@ export const GatewaysOverview = () => {
       <CardWidget
         title="Conectados"
         icon="/images/wifi.svg"
-        value={13}
+        value={gateways.filter(gtw => gtw.ConnectionStatus === "Connected").length}
         units=""
         description="Gateways conectados"
       />
@@ -67,7 +67,7 @@ export const GatewaysOverview = () => {
       <CardWidget
         title="Desconectados"
         icon="/images/wifi-slash.svg"
-        value={1}
+        value={gateways.filter(gtw => gtw.ConnectionStatus === "Disconnected").length}
         units=""
         description="Gateways desconectados"
       />
@@ -75,7 +75,7 @@ export const GatewaysOverview = () => {
       <CardWidget
         title="Desconocidos"
         icon="/images/unknow.svg"
-        value={0}
+        value={gateways.filter(gtw => !gtw.LastUplinkReceivedAt).length}
         units=""
         description="Gateways que nunca han enviado datos"
       />

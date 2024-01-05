@@ -6,7 +6,7 @@ import { HomeOverviewGateways } from './HomeOverviewGateways'
 import { HomeChart } from './HomeChart'
 import { PageWrapper } from '../../components/AuthComponent/PageWrapper'
 
-export const HomeView = () => {
+export const HomeView = ({devices, gateways}) => {
 
   return (
     <PageWrapper
@@ -17,19 +17,19 @@ export const HomeView = () => {
 
       <div className='row'>
         <div className='d-none d-lg-block col-lg-3 py-3'>
-          <HomeOverviewDevices />
+          <HomeOverviewDevices devices={devices} />
         </div>
 
         <div className='col-12 col-lg-6 py-3'>
-          <HomeMap />
+          <HomeMap gateways={gateways} />
         </div>
 
         <div className='d-block d-lg-none col-12 py-3'>
-          <HomeOverviewDevices />
+          <HomeOverviewDevices devices={devices} />
         </div>
 
         <div className='col-12 col-lg-3 py-3'>
-          <HomeOverviewGateways />
+          <HomeOverviewGateways gateways={gateways} />
         </div>
       </div>
 

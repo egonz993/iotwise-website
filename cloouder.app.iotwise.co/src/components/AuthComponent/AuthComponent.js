@@ -1,24 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Outlet, Navigate } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
-import { SplashScreen } from '../../pages/SplashScreen'
 
 
 export const AuthComponent = () => {
 
   const { isAuth } = useAuth()
-  const [splashScreenCompleted, setSplashScreenCompleted] = useState(false)
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      setSplashScreenCompleted(true)
-    }, 1500)
-  }, [])
-
 
   return (
-    (isAuth === null || !splashScreenCompleted) ? <SplashScreen /> :
-    <>
+    isAuth !== null && <>
       {isAuth && <Outlet />}
       {!isAuth && <Navigate redirect to="login" />}
     </>

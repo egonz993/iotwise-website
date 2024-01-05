@@ -1,0 +1,22 @@
+
+
+### ListWirelessDevices
+POST https://ecbckuw0vl.execute-api.us-east-1.amazonaws.com/lorawan
+Content-Type: application/json
+
+{
+  "command": "ListWirelessDevices",
+  "options": null
+}
+
+### GetWirelessDevice
+POST https://ecbckuw0vl.execute-api.us-east-1.amazonaws.com/lorawan
+Content-Type: application/json
+
+{
+  "command": "GetWirelessDevice",
+  "options": { 
+    "IdentifierType": "DevEui", 
+    "Identifier": "00072202fa03f3fa"
+  }
+}
