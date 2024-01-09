@@ -7,32 +7,9 @@ import { ProductCardContainer } from '@/components/ProductCard/ProductCardContai
 
 export const index = () => {
   return (
-    <>
-      <Navbar />
-      <Content>
-
-        <ProductCardContainer title="Product Category 1">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </ProductCardContainer>
-
-        <ProductCardContainer title="Product Category 2">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </ProductCardContainer>
-
-      </Content>
-      <Footer />
-    </>
+   <div className='text-center'>
+    <img src='https://fecoljudo.org.co/wp-content/uploads/2020/07/construccion5.png' width="50%" alt='Página en Construcción' />
+   </div>
   )
 }
 

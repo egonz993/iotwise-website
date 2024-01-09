@@ -31,10 +31,11 @@ export default function Cloouder() {
                 data-aos-delay="200"
               >
                 <h2>Cloouder® LNS</h2>
+                <h4>[En Desarrollo]</h4>
                 <p>Con la suscripción a nuestro LoRaWAN Network Server (LNS), estarás equipado con todas las herramientas necesarias para optimizar la administración de tus dispositivos, garantizando una conectividad eficiente y segura en todo momento. Este servidor actúa como el intermediario inteligente que organiza la transmisión y recepción de datos, asegurando la eficiencia y confiabilidad de la red. Además, ofrece funciones avanzadas como almacenamiento de datos, accecibilidad desde una API REST, redireccionamientos HTTP/MQTT y manejo usuarios con diferentes roles. ¡Únete a nuestra comunidad IoT Wise y descubre cómo facilitamos la gestión de tus proyectos IoT con Cloouder® LNS!.</p>
 
-                <Link href="https://cloouder.app.iotwise.co" target='_blank' className='default-btn'>
-                  {isAuth ? 'IR A LA CONSOLA' : 'PRUEBALO GRATIS'}
+                <Link href="https://calendar.app.google/LR1yvioih5HdyWFdA" target='_blank' className='default-btn'>
+                  Solicitar un Demo
                 </Link>
 
               </div>

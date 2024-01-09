@@ -67,7 +67,7 @@ const Navbar = () => {
                 </li>
                 
                 {/* About */}
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link
                     href="/about/"
                     className={`nav-link ${
@@ -76,12 +76,13 @@ const Navbar = () => {
                   >
                     Nosotros
                   </Link>
-                </li>
+                </li> */}
                 
                 {/* Tienda */}
                 <li className="nav-item">
                   <Link
                     href="https://store.iotwise.co"
+                    target="_blank"
                     className='nav-link'
                   >
                     Tienda
@@ -96,7 +97,7 @@ const Navbar = () => {
                       currentPath == "/services/" && "active"
                     }`}
                   >
-                    Servicios
+                    Software
                   </Link>
                 </li>
                 

@@ -67,8 +67,8 @@ const AboutComponent = () => {
                   </div>
                 </div>
 
-                <Link href="/about" className="default-btn">
-                  Conócenos
+                <Link href="https://calendar.app.google/LR1yvioih5HdyWFdA" target="_blank" className="default-btn">
+                  Agénda una sesión virtual gratis
                 </Link>
               </div>
             </div>

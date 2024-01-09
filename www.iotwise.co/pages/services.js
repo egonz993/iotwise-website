@@ -21,11 +21,9 @@ export default function Services() {
 
       <PageBanner pageTitle="NUESTROS SERVICIOS" />
 
-      <Store />
+      <IoTSenpai />
 
       <Cloouder />
-
-      <IoTSenpai />
 
       <Footer />
     </>

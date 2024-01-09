@@ -6,8 +6,8 @@
     "scripts": {
         "dev": "next",
         "build": "next build && next export -o build",
-        "deploy": "next build && next export -o build && aws --profile iotwise-egonzalez s3 sync build s3://iotwise.co",
-        "clear-cache": "aws --profile iotwise-egonzalez cloudfront create-invalidation --distribution-id E127ZQMIKRRDEB --paths \"/*\"",
+        "deploy": "next build && next export -o build && aws --profile iotwise s3 sync build s3://iotwise.co",
+        "clear-cache": "aws --profile iotwise cloudfront create-invalidation --distribution-id E127ZQMIKRRDEB --paths \"/*\"",
         "start": "next start"
     },
     "author": "E'Gonzalez",

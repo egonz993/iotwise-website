@@ -82,6 +82,50 @@ const Footer = () => {
               </div>
             </div>
 
+<div className="col-lg-3 col-md-6">
+  <div
+    className="single-widget"
+    data-aos="fade-in"
+    data-aos-duration="1200"
+    data-aos-delay="400"
+  >
+    <h5 className="link-light">Enlaces de interés</h5>
+
+    <ul>
+      <li>
+        <Link href="/">
+          <i className="right-icon bx bx-chevrons-right"></i>
+          Inicio
+        </Link>
+      </li>
+      {/* <li>
+        <Link href="/about">
+          <i className="right-icon bx bx-chevrons-right"></i>
+          Nosotros
+        </Link>
+      </li> */}
+      <li>
+        <Link href="/services">
+          <i className="right-icon bx bx-chevrons-right"></i>
+          Servicios
+        </Link>
+      </li>
+      <li>
+        <Link href="/contact">
+          <i className="right-icon bx bx-chevrons-right"></i>
+          Contacto
+        </Link>
+      </li>
+      <li>
+        <Link href="/blog">
+          <i className="right-icon bx bx-chevrons-right"></i>
+          Blog
+        </Link>
+      </li>
+    </ul>
+  </div>
+</div>
+
             <div className="col-lg-3 col-md-6">
               <div
                 className="single-widget"
@@ -103,50 +147,6 @@ const Footer = () => {
                     <i className="flaticon-maps-and-flags"></i>
                     <span>Ubicación</span>
                     Medellín, Colombia
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div
-                className="single-widget"
-                data-aos="fade-in"
-                data-aos-duration="1200"
-                data-aos-delay="400"
-              >
-                <h5 className="link-light">Enlaces de interés</h5>
-
-                <ul>
-                  <li>
-                    <Link href="/">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Inicio
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Nosotros
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Servicios
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/contact">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Contacto
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Blog
-                    </Link>
                   </li>
                 </ul>
               </div>
