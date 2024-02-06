@@ -1,0 +1,3 @@
+# Terraform auto-generated files
+.terraform*
+terraform.tfstate*
