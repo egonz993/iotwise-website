@@ -102,7 +102,7 @@ const Navbar = () => {
                   </Link>
                 </li>
 
-                <li className="nav-item link-light">|</li>
+                <li className="nav-item link-light d-none d-md-inline">|</li>
                 
                 {/* Tienda */}
                 <li className="nav-item">
