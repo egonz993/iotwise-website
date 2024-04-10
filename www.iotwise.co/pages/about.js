@@ -25,8 +25,6 @@ export default function About() {
         <AboutComponent />
       </div>
 
-      <MisionVision />
-
       <WhatWeOffer />
 
       <Footer />
