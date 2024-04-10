@@ -12,96 +12,41 @@ export default function PrivacyPolicy() {
 
 
       <div className="text-container ptb-100">
-        <div className="container">
-          <h3>What is lorem ipsum?</h3>
+        <section className="container" >
+          <h3>Políticas de Privacidad</h3>
 
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
+          <p>La presente Política de Privacidad establece los términos en que IoT Wise, Expertos en el Internet de las Cosas S.A.S usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Este comercio está comprometido con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</p>
 
-          <h3>Where does it come from?</h3>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the
-            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-            amet..".
-          </p>
+          <p>De conformidad con la entrada en vigencia de la Ley Estatutaria 1581 de 2012, reglamentada parcialmente por el Decreto 1377 de 2013, por la cual se dictan las disposiciones generales para la protección de datos personales, tiene por objeto desarrollar el derecho constitucional que tienen todas las personas para conocer, actualizar y rectificar la información que se haya recogido sobre ellas en bases de datos o archivos y los demás derechos, libertades y garantías constitucionales a que se refiere el artículo 15 de la Constitución Política.</p>
 
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore
-            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-            aliquid ex ea commodi consequatur? Quis autem vel eum iure
-            reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-            consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
-          </p>
+          <p>IoT Wise, Expertos en el Internet de las Cosas S.A.S, adopta la presente política, teniendo en cuenta su condición de responsable del tratamiento de datos de carácter propio que le asiste, se permite formular el presente texto en aras de dar efectivo cumplimiento a dicha normatividad y en especial para la atención de PQRSD y reclamos acerca del tratamiento de los datos de carácter personal que recoja y maneje.</p>
 
-          <h3>Where can I get some?</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim.
-          </p>
+          <p>El derecho al HÁBEAS DATA, es aquel que tiene toda persona de conocer, actualizar y rectificar la información que se haya recogido sobre ella en archivos y bancos de datos de naturaleza pública o privada, garantizándole a todos los ciudadanos poder de decisión y control sobre su información personal. Por tanto, IoT Wise, Expertos en el Internet de las Cosas S.A.S, acoge tales disposiciones teniendo en cuenta que para el desarrollo de su objeto social, continuamente está recopilando y efectuando diversos tratamientos a las bases de datos de clientes, usuarios, proveedores, municipios asociados y funcionarios y contratistas.</p>
 
-          <p>
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable. If you are going to use a passage of Lorem Ipsum, you
-            need to be sure there isn't anything embarrassing hidden in the
-            middle of text. All the Lorem Ipsum generators on the Internet tend
-            to repeat predefined chunks as necessary, making this the first true
-            generator on the Internet. It uses a dictionary of over 200 Latin
-            words, combined with a handful of model sentence structures, to
-            generate Lorem Ipsum which looks reasonable. The generated Lorem
-            Ipsum is therefore always free from repetition, injected.
-          </p>
+          <p>En virtud de lo anterior dentro del deber legal y corporativo la Entidad debe proteger el derecho a la privacidad de las personas, así como la facultad de conocer, actualizar o solicitar la información que sobre ellas se archive en bases de datos, ha diseñado la presente política de manejo de la información de carácter personal y bases de datos en la cual se describe y explica el tratamiento de la Información Personal a la que tiene acceso a través de nuestro portal web, correo electrónico, información física, mensajes de texto, mensaje de voz, aplicaciones, llamadas telefónicas, cara a cara, y en general a través de todos los medios físicos o electrónicos actuales, o que en el futuro se desarrollen, así como por intermedio de terceros que participan en nuestras relaciones legales con todos nuestros clientes, usuarios, proveedores, municipios asociados y funcionarios y contratistas.</p>
 
-          <p>
-            But I must explain to you how all this mistaken idea of denouncing
-            pleasure and praising pain was born and I will give you a complete
-            account of the system, and expound the actual teachings of the great
-            explorer of the truth, the master-builder of human happiness. No one
-            rejects, dislikes, or avoids pleasure itself, because it is
-            pleasure, but because those who do not know how to pursue pleasure
-            rationally encounter consequences that are extremely painful. Nor
-            again is there anyone who loves or pursues or desires to obtain pain
-            of itself, because it is pain, but because occasionally
-            circumstances occur in which toil and pain can procure him some
-            great pleasure. To take a trivial example, which of us ever
-            undertakes laborious physical exercise, except to obtain some
-            advantage from it? But who has any right to find fault with a man
-            who chooses to enjoy a pleasure that has no annoying consequences,
-            or one who avoids a pain that
-          </p>
-        </div>
+          <p>A la luz de esta política, se entiende de manera general por “Titular” a toda persona natural cuyos datos personales son objeto de tratamiento, y específicamente a los clientes, usuarios, proveedores, municipios asociados y funcionarios y contratistas.</p>
+
+          <p><strong>Información que es recogida</strong></p>
+          <p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,  información de contacto como  su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.</p>
+
+          <p><strong>Uso de la información recogida</strong></p>
+          <p>Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios y de pedidos para mejorar nuestros productos y servicios. Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.</p>
+
+          <p>IoT Wise, Expertos en el Internet de las Cosas S.A.S está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.</p>
+
+          <p><strong>Enlaces a Terceros</strong></p>
+          <p>Este sitio web pudiera contener enlaces a otros sitios que pudieran ser de su interés. Una vez que usted de clic en estos enlaces y abandone nuestra página, ya no tenemos control sobre al sitio al que es redirigido y por lo tanto no somos responsables de los términos o privacidad ni de la protección de sus datos en esos otros sitios terceros. Dichos sitios están sujetos a sus propias políticas de privacidad por lo cual es recomendable que los consulte para confirmar que usted está de acuerdo con estas.</p>
+
+          <p><strong>Control de su información personal</strong></p>
+          <p>En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestro sitio web.  Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, puede marcar o desmarcar la opción de recibir información por correo electrónico.  En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.</p>
+          <p>Este comercio no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.</p>
+
+          <p>IoT Wise, Expertos en el Internet de las Cosas S.A.S se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.</p>
+          
+          <br />
+          <p><strong>Vigencia: 01 de enero de 2024</strong></p>
+        </section>
       </div>
 
       <Footer />
