@@ -38,7 +38,7 @@ const MainBanner = () => {
                   data-aos-delay="200"
                   className="mt-5"
                 >
-                  Soluciones inteligentes para tus proyectos IoT. Descubre el potencial de las comunicaciones con LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más.
+                  Soluciones inteligentes para tus proyectos IoT. Descubre el potencial de las comunicaciones inalámbricas con LoRaWAN, SigFox, NB-IoT, LTE-m, WiSun, y muchos más.
                 </p>
 
                 <div 

@@ -6,8 +6,6 @@ import Footer from "../components/Layouts/Footer";
 import Store from "../components/HomeOne/Store";
 import Consulting from "../components/HomeOne/Consulting";
 import ContactForm from "../components/Contact/ContactForm";
-import Cloouder from "../components/HomeOne/Cloouder";
-import IoTSenpai from "../components/HomeOne/IoTSenpai";
 import AboutComponent from "../components/HomeOne/About";
 import WhatWeOffer from "../components/HomeOne/WhatWeOffer";
 
@@ -28,10 +26,6 @@ export default function Index() {
       <Technologies />
 
       <Store />
-
-      <Cloouder />
-
-      <IoTSenpai />
 
       <Consulting />
 

@@ -2101,25 +2101,15 @@ Footer Top Area Style
   transform: translateX(0px);
   animation: rubberBand 1s linear;
 }
-.single-widget .social-icon li:nth-child(2) a {
-  background-color: #1da1f2;
-  color: #ffffff;
+.single-widget .social-icon li .icon-whatsapp {
+  background: #090;
 }
-.single-widget .social-icon li:nth-child(3) a {
-  background-color: #1da1f2;
-  color: #ffffff;
+.single-widget .social-icon li .icon-instagram {
+  background: #8134af;
+  background: linear-gradient(45deg, rgba(64,93,230,1) 0%, rgba(88,81,219,1) 20%, rgba(131,58,180,1) 40%, rgba(193,53,132,1) 60%, rgba(225,48,108,1) 80%, rgba(253,29,29,1) 100%);
 }
-.single-widget .social-icon li:nth-child(4) a {
-  background-color: #d32f2f;
-  color: #ffffff;
-}
-.single-widget .social-icon li:nth-child(4) a {
-  background-color: #0077b5;
-  color: #ffffff;
-}
-.single-widget .social-icon li:nth-child(5) a {
-  background-color: #ff0000;
-  color: #ffffff;
+.single-widget .social-icon li .icon-youtube {
+  background: #900;
 }
 
 /*
