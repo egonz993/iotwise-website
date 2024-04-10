@@ -65,9 +65,9 @@ const Navbar = () => {
                     Inicio
                   </Link>
                 </li>
-                
+
                 {/* About */}
-                {/* <li className="nav-item">
+                <li className="nav-item">
                   <Link
                     href="/about/"
                     className={`nav-link ${
@@ -75,29 +75,6 @@ const Navbar = () => {
                     }`}
                   >
                     Nosotros
-                  </Link>
-                </li> */}
-                
-                {/* Tienda */}
-                <li className="nav-item">
-                  <Link
-                    href="https://store.iotwise.co"
-                    target="_blank"
-                    className='nav-link'
-                  >
-                    Tienda
-                  </Link>
-                </li>
-
-                {/* Services */}
-                <li className="nav-item">
-                  <Link
-                    href="/services/"
-                    className={`nav-link ${
-                      currentPath == "/services/" && "active"
-                    }`}
-                  >
-                    Software
                   </Link>
                 </li>
                 
@@ -122,6 +99,32 @@ const Navbar = () => {
                     }`}
                   >
                     Blog
+                  </Link>
+                </li>
+
+                <li className="nav-item link-light">|</li>
+                
+                {/* Tienda */}
+                <li className="nav-item">
+                  <Link
+                    href="https://store.iotwise.co"
+                    target="_blank"
+                    className='nav-link'
+                    style={{cursor: 'alias'}}
+                  >
+                    <i className="bx bx-store" /> <sub>Tienda Online</sub>
+                  </Link>
+                </li>
+                
+                {/* Tienda */}
+                <li className="nav-item">
+                  <Link
+                    href="https://serialport.iotwise.co"
+                    target="_blank"
+                    className='nav-link'
+                    style={{cursor: 'alias'}}
+                  >
+                    <i className="bx bx-usb" /> <sub>Serial Port</sub>
                   </Link>
                 </li>
 
