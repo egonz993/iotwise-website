@@ -3,22 +3,22 @@ import Navbar from "../../components/Layouts/Navbar";
 import PageBanner from "../../components/Common/PageBanner";
 import Footer from "../../components/Layouts/Footer";
 import PageHead from "../../components/Common/PageHead";
-import NewsDetailsContent from "./___/NewsDetailsContent";
+import ArticleWisun from "./___/ArticleWisun";
 
 export default function BlogTemplate() {
   return (
     <>
       <PageHead
-        title = "IoT Wise | Blog Article"
+        title = "IoT Wise | Wi - SUN"
         description = "Expertos en el Internet de las Cosas"
         image = "https://iotwise.co/images/iotwise-logo-black.svg"
       />
 
       <Navbar />
 
-      <PageBanner pageTitle="Blog | Article" />
+      <PageBanner pageTitle="Blog | Acerca de Wi - SUN" />
 
-      <NewsDetailsContent /> /* Cambiar al Articulo Nuevo */
+      <ArticleWisun />
 
       <Footer />
     </>

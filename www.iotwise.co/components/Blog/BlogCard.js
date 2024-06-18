@@ -10,7 +10,7 @@ export const BlogCard = ({ id, date, author, title, resume, url }) => {
 
                     <div className="news-content-wrap">
                         <p>
-                            <span className='h5'><strong><i className="bx bx-user" /> {author}</strong></span>
+                            {/* <span className='h5'><strong><i className="bx bx-user" /> {author}</strong></span> */}
                             <br /><i className="h6 bx bx-calendar" /> {date}
                         </p>
 
